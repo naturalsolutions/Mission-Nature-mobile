@@ -1,0 +1,59 @@
+label {
+	color: @legend-color;
+	font-weight: 400;
+}
+
+.form-group {
+  margin-bottom: @form-group-margin-bottom;
+  &:last-child {
+    margin-bottom: 0
+  }
+}
+
+.form-control {
+	background: none;
+	.box-shadow(none);
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	padding-left: 0;
+	.form-control-focus(@brand-primary);
+  &[disabled],
+  &[readonly],
+  fieldset[disabled] & {
+    background: none;
+  }
+}
+
+.form-group-lg {
+	label {
+		font-size: @font-size-large;
+	}
+	.form-control {
+		padding-left: 0;
+	}
+}
+
+.radio,
+.checkbox {
+  label {
+    display: block;
+    padding-left: 0;
+    color: @input-color;
+  }
+  input[type="checkbox"] {
+  	left: auto;
+  	right: 0;
+  }
+}
+select.input-lg{
+  line-height: inherit;
+}
+
+.help-block {
+  margin-top: 0;
+}
+
+.form-control-static.input-lg, .form-control-static.input-sm {
+  height: auto;
+}

@@ -1,0 +1,37 @@
+.log-item {
+	margin-bottom: 10px;
+	padding-top: 10px;
+	.date {
+		font-size: 1rem;
+		color: @gray-light;
+		margin-bottom: 1px;
+	}
+	.media {
+		margin-top: 0;
+		overflow: visible;
+	}
+	.thumb {
+		font-size: 24px;
+		.log-icon {
+			.box-shadow(0 0 8px rgba(0, 0, 0, 0.12));
+		}
+	}
+	.text {
+		font-size: 1.3rem;
+		.meta {
+			margin-top: 3px;
+		}
+	}
+	&.log-type-mission_accept {
+		.log-icon {
+			background-color: @blue;
+        	color: #FFF;
+		}
+	}
+	&.log-type-mission_complete {
+		.log-icon {
+			background-color: @orange-light;
+			color: #FFF;
+		}
+	}
+}

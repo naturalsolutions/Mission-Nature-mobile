@@ -1,0 +1,15 @@
+<div class="col-side col-left pull-left">
+	<% _.each(data.buttons.left, function(btn){ %>
+	<button class="btn btn-lg btn-link btn_<%= btn.name %>" name="<%= btn.name %>">
+		<span class="icon icomoon"><%= btn.icon %></span>
+	</button>
+	<% }); %>
+</div>
+<div class="col-center title text-center"><%= data.title %></div>
+<div class="col-side col-right pull-right">
+	<% _.each(data.buttons.right, function(btn){ %>
+	<button class="btn btn-lg btn-link btn_<%= btn.name %>" name="<%= btn.name %>">
+		<span class="icon icomoon"><%= btn.icon %></span>
+	</button>
+	<% }); %>
+</div>

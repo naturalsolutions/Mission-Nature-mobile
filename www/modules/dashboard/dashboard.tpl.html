@@ -1,0 +1,26 @@
+<div class="header text-center">
+	<div class="score-implode">
+		<div class="score level-<%= data.user.level %>">
+			<img class="score-icon" src="images/score/level_<%= data.user.level %>_awake.png" />
+		</div>
+		<div class="score-name">
+			<% var difficulties = ['beginner', 'confirmed', 'expert'] %>
+			<div class="value">Vous êtes niveau <%= i18n.t('user.score.level.'+data.user.level+'.label') %> :
+				<div class="icon icomoon difficulty">difficulty_<%= difficulties[data.user.level] %> </div>
+			</div>
+			<div class="description"><%= i18n.t('user.score.level.'+data.user.level+'.description') %></div>
+		</div>
+	</div>
+</div>
+<!-- Fake Nav tabs -->
+<ul class="nav nav-tabs page-nav-tabs nav-justified" role="tablist">
+<% _.forEach(data.tabs, function(tab, tabName) { %>
+	<li class="tab tab-<%= tabName %>">
+		<a href="#dashboard/<%= tabName %>"><%= i18n.t('pages.dashboard.tabs.'+ tabName) %> <% if(tab.badge){ %><span class="badge badge-circle no-border bg-pink"><%= tab.badge %></span><% } %></a>
+	</li>
+<% }); %>
+</ul>
+<!-- Fake Tab panes -->
+<div class="container">
+    <div class="tab-content"></div>
+</div>

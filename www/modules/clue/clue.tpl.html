@@ -1,0 +1,12 @@
+<div class="inner pull-left">
+  <img class="map" src="./images/missions_map.jpg" />
+  <div class="environments">
+  <% _.forEach(data.environments, function(environment, environmentName) {%>
+    <div name="<%= environmentName %>" class="marker envname-<%= environmentName %>">
+      <div class="badge-circle">
+       <%= environment.missions.length %>
+       </div>
+    </div>
+  <%}) %>
+  </div>
+</div>

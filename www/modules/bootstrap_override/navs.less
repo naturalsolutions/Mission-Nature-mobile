@@ -1,0 +1,85 @@
+// Tabs
+// -------------------------
+
+// Give the tabs something to sit on
+.nav-tabs {
+  border-bottom: none;
+  text-align: center;
+  text-transform: lowercase;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  .box-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  > li {
+    float: none;
+    // Make the list-items overlay the bottom border
+    margin-bottom: 0;
+    display: inline-block;
+
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+
+    > a {
+      margin-right: 0;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
+
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @gray-dark;
+        border: none;
+        border-bottom: 3px solid @nav-tabs-active-link-hover-border-color;
+      }
+    }
+  }
+
+  // pulling this in mainly for less shorthand
+  &.nav-justified {
+    .nav-justified();
+    .nav-tabs-justified();
+  }
+}
+
+.nav-justified {
+  > li {
+    display: table-cell;
+    width: 1%;
+    > a {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.nav-tabs-justified {
+  border-bottom: 0;
+
+  > li > a {
+    // Override margin from .nav-tabs
+    margin-right: 0;
+    border-radius: @border-radius-base;
+  }
+
+  > .active > a,
+  > .active > a:hover,
+  > .active > a:focus {
+    border: none;
+    border-bottom: 3px solid;
+  }
+
+  @media (min-width: @screen-sm-min) {
+    > li > a {
+      border-bottom: 1px solid @nav-tabs-justified-link-border-color;
+      border-radius: @border-radius-base @border-radius-base 0 0;
+    }
+    > .active > a,
+    > .active > a:hover,
+    > .active > a:focus {
+      border-bottom-color: @nav-tabs-justified-active-link-border-color;
+    }
+  }
+}

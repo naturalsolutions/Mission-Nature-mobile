@@ -1,0 +1,74 @@
+.login {
+    form {
+        margin-bottom: 20px;
+        .user-row-info {
+            margin: -19px;
+            margin-bottom: 0;
+            padding: 19px;
+        }
+        &.has-user {
+            .form-group.field-email {
+                display: none;
+            }
+        }
+        .btn-submit {
+            margin-top: 10px;
+        }
+    }
+    .register {
+        display: none;
+    }
+    &.page {
+        .register {
+            display: block;
+        }
+    }
+}
+
+.user-row-info {
+    .clearfix();
+    .badge-circle {
+        font-size: 20px;
+        position: absolute;
+    }
+    .text {
+        padding-left: 50px;
+    }
+}
+
+.not-network {
+    .profile {
+        .submit,
+        .change-password {
+            display: none;
+        }
+    }
+}
+
+.profile.view {
+    .user-infos {
+        margin-bottom: 15px;
+    }
+    .btn-logout {
+        display: none;
+        margin-top: 2rem;
+    }
+}
+
+body.not-anonymous {
+    .profile.page {
+        .btn-logout {
+            display: inline-block;
+        }
+    }
+}
+.profile{
+    form{
+        ul.form-control{
+            height: inherit;
+        }
+    }
+    input[type="radio"], input[type="checkbox"] {
+        margin-right: 4px;
+    }
+}

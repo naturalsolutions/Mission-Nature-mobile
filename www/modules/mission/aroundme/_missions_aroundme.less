@@ -1,0 +1,136 @@
+@page_missions_aroundme_item_width: 130px;
+@page_missions_aroundme_location_height: 44px;
+@page_missions_aroundme_tab_height: 68px;
+.page-missions-aroundme {
+  .state-localize {
+    &:before {
+      content: "";
+      height: 68px;
+      display: block;
+      background: #FFF;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    }
+    .progress {
+      position: relative;
+      top: -3px;
+      background: none;
+      margin-bottom: 0;
+    }
+    .title {
+      position: relative;
+      top: -40px;
+      font-size: 17px;
+    }
+  }
+	.state-list, .state-localize {
+		.location {
+			background: rgba(255, 255, 255, 0.9);
+			border-bottom: 1px solid #EEE;
+			.btn {
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+		}
+		.missions {
+			margin-bottom: 0;
+			padding-top: 20px;
+			padding-bottom: 180px;
+			position: absolute;
+	    width: 100%;
+	    top: @header-height + @page_missions_aroundme_tab_height;
+	    bottom: 0;
+	    overflow: auto;
+	    li {
+				width: 50%;
+				padding: 10px;
+				padding-left: 15px;
+				padding-bottom: 5px;
+				&:nth-child(odd) {
+					text-align: right;
+					padding-right: 15px;
+				}
+				> .inner {
+					text-align: left;
+					display: inline-block;
+					position: relative;
+				}
+				.delta {
+					position: absolute;
+					right: 88%;
+					bottom: 88%;
+				}
+				.status {
+					position: absolute;
+					right: 0;
+				}
+				&:not(.is-complete) .status .complete {
+					display: none;
+				}
+				&:not(.is-accepted) .status .accept {
+					display: none;
+				}
+				.thumb {
+					position: relative;
+					width: @page_missions_aroundme_item_width;
+					height: @page_missions_aroundme_item_width;
+					.img {
+						position: absolute;
+						top: 14px;
+				    left: 14px;
+				    bottom: 14px;
+				    right: 14px;
+						background: #EEE no-repeat center;
+						background-size: cover;
+						border-radius: 50%;
+					}
+					.donutchart {
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						font-size: @page_missions_aroundme_item_width;
+						opacity: .8;
+						.circle-bg {
+							border-color: rgba(0, 0, 0, 0.2);
+						}
+					}
+				}
+				.title {
+					width: ceil((@page_missions_aroundme_item_width));
+					position: relative;
+					margin-top: 5px;
+					padding-left: 22px;
+					line-height: normal;
+					letter-spacing: -0.1px;
+					.badge {
+						position: absolute;
+						left: 0;
+						top: 0;
+					}
+				}
+			}
+			li:nth-child(odd) {
+    			clear: left;
+			}
+      li.is-placeholder {
+        .donutchart {
+          border: 8px solid #EEE;
+          border-radius: 50%;
+        }
+      }
+		}
+		.location ~ .tab-content {
+			.missions {
+				top: @header-height + @page_missions_aroundme_location_height + @page_missions_aroundme_tab_height;
+			}
+		}
+	}
+	.well{
+		margin-top: 25px;
+		margin-bottom: 25px;
+	}
+}
+ul.ui-autocomplete{
+	background-color: rgba(255,255,255,0.9);
+  list-style-type: none;
+  width: 78% !important;
+}

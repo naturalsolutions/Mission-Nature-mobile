@@ -1,0 +1,167 @@
+<div class="inner">
+    <div class="poster" style="background-image:url('<%= data.posterURL %>');">
+        <img src="<%= data.posterURL %>" />
+        <% if (data.credits) { %>
+            <figcaption>crédits : <%= data.credits.credits %></figcaption>
+        <% } %>
+    </div>
+    <% if (data.isMission) { %>
+        <div class="status accept floating floating-right" style="z-index: 1;">
+            <button type="button" class="btn btn-accept btn-fab btn-default btn-sm">
+                <span class="icon icomoon">check</span>
+            </button>
+            <span class="text text-default">
+                <%= i18n.t('pages.missionSheet.acceptBtnLabel') %></span>
+            <span class="text text-is-accept">
+                <%= i18n.t('pages.missionSheet.acceptedBtnLabel') %></span>
+        </div>
+        <div class="status complete floating floating-right">
+            <div class="btn btn-fab btn-sm bg-orange-light">
+                <span class="icon icomoon">palms</span>
+            </div>
+            <span class="text">
+                <%= i18n.t('pages.missionSheet.completedBtnLabel') %></span>
+        </div>
+        <div class="meta">
+            <span class="difficulty"><span class="icon icomoon">difficulty_<%= data.mission.difficultyName %></span>
+            <span class="hidden-small-height">
+                    <%= i18n.t('mission.difficulty_'+ data.mission.difficulty) %></span></span>
+            <span class="season text-primary">
+                <span class="icon icomoon">time</span>
+                <span class="period">
+                    <%= data.mission.displaySeasonShort %></span>
+                <span class="delta">
+                    <%= i18n.t('mission.deltaLong', {count: data.mission.inSeason.end.delta+1}) %></span>
+            </span>
+        </div>
+    <% } %>
+    <div class="panel-group accordion" id="mission-sheet-accordion" role="tablist">
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#mission-sheet-accordion"
+                        href="#collapse1">
+                        <span class="icon icomoon">taxon</span> <span class="text">
+                            <%= data.taxon.title %></span>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse" role="tabpanel">
+                <div class="panel-body">
+                    <%= data.taxon.description %>
+                    <% var credDesc = data.creditsOther.filter(function(cred) { return cred.get('cat') == 'description'; }); %>
+
+                    <% if( !_.isEmpty(credDesc) ) { %>
+                        <% for( var i = 0; i < credDesc.length; i++) { %>
+                            <p class="credit-photo"> Crédit photographique de l'image <i> <%= credDesc[i].get('taxon') %> </i> : <%= credDesc[i].get('credit') %> </p>
+                        <% } %>
+                    <% } %>
+                    <div>
+                        <button type="button" id="url" class="btn btn-block btn-default btn-sheet">Fiche espèce</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#mission-sheet-accordion"
+                        href="#collapse2">
+                        <span class="icon material">room</span> Où trouver l'espèce ? <span class="text">
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse" role="tabpanel">
+                <div class="panel-body">
+                    <div class="well icons-milieux">
+                    <% for(var i = 0; i < data.taxon.environments.length; i++) { %>
+                        <div class="milieux milieu-<%= data.taxon.environments[i].indice %> "><%= data.taxon.environments[i].label %></div>
+                    <% }; %>
+                    </div>
+                    <div><%= data.taxon.environment_description %></div>
+                    <% var credEnvDesc = data.creditsOther.filter(function(cred) { return cred.get('cat') == 'environment_description'; }); %>
+                    <% if( !_.isEmpty(credEnvDesc) ) { %>
+                        <% for(var i = 0; i < credEnvDesc.length; i++) { %>
+                            <p class="credit-photo"> Crédit photographique de l'image <i> <%= credEnvDesc[i].get('taxon') %> </i> : <%= credEnvDesc[i].get('credit') %> </p>
+                        <% } %>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#mission-sheet-accordion"
+                        href="#collapse3">
+                        <span class="icon icomoon">eye</span>Comment l'identifier ? <span class="text">
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse" role="tabpanel">
+                <div class="panel-body">
+                    <%= data.taxon.characteristic %>
+                    <% var credChar = data.creditsOther.filter(function(cred) { return cred.get('cat') == 'characteristic'; }); %>
+                    <% if( !_.isEmpty(credChar) ) { %>
+                        <% for(var i = 0; i < credChar.length; i++) { %>
+                            <p class="credit-photo"> Crédit photographique de l'image <i> <%= credChar[i].get('taxon') %> </i>: <%= credChar[i].get('credit') %> </p>
+                        <% } %>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#mission-sheet-accordion"
+                        href="#collapse4">
+                        <span class="icon material">warning</span> <span class="text">À ne pas confondre !</span>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse4" class="panel-collapse collapse" role="tabpanel">
+                <div class="panel-body">
+                    <%= data.taxon.not_confuse %>
+                    <% var credNc = data.creditsOther.filter(function(cred) { return cred.get('cat') == 'not_confuse'; }) ;%>
+                    <% if( !_.isEmpty(credNc) ) { %>
+                        <% for(var i = 0; i < credNc.length; i++) { %>
+                            <p class="credit-photo"> Crédit photographique de l'image <i><%= credNc[i].get('taxon') %> </i> : <%= credNc[i].get('credit') %> </p>
+                        <% } %>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#mission-sheet-accordion"
+                        href="#collapse5">
+                        <span class="icon material">language</span> <span class="text">Sources</span>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse5" class="panel-collapse collapse" role="tabpanel">
+                <div class="panel-content">
+                    <div class="list-group list-group-flush">
+                        <% for(var i = 0; i < data.taxon.sources.length; i++) { %>
+                            <div class="list-group-item btn-sheet" id="sources"><%= data.taxon.sources[i] %></div>
+                        <% }; %>
+                        </div>
+                </div>               
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#mission-sheet-accordion"
+                        href="#collapse6">
+                        <span class="icon icomoon">camera</span> <span class="text">Mes observations</span>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse6" class="panel-collapse collapse" role="tabpanel">
+                <div class="panel-body observations">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

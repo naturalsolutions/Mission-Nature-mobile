@@ -1,0 +1,50 @@
+<form class="infos" >
+    <fieldset class="well obs-infos" >
+        <div class="form-group">
+            <label class="col-xs-1 control-label">
+                <span class="icon icomoon">taxon</span>
+            </label>
+            <div class="col-xs-11 form-control-outer" data-fields="missionId"> </div>
+        </div>
+        <div class="form-group">
+            <label class="col-xs-1 control-label">
+                <span class="icon icomoon">taxon</span>
+            </label>
+            <div class="col-xs-11 form-control-outer" data-fields="cd_nom"> </div>
+        </div>
+        <div class="form-group">
+            <!-- <label class="col-xs-1 control-label">
+                <span class="glyphicon glyphicon-pencil"></span>
+            </label> -->
+            <textarea class="col-xs-11 form-control" rows="4" data-fields="obs_note" placeholder="Ajouter un commentaire"></textarea>
+        </div>
+<!--        <div class="form-group">
+            <label class="col-xs-1 control-label">
+                <span class="icon icomoon">location</span>
+            </label>
+            <div class="col-xs-11 form-control-outer" data-fields="departementId"> </div>
+        </div> -->
+    </fieldset>
+    <div class="actions">
+        <button type="submit" class="btn btn-save btn-lg btn-default btn-block pos-relative">
+            <% var spinnerTpl = require('../spinner/spinner.tpl.html'); %>
+            <%= spinnerTpl({className:'spinner-white icon-left loader'}) %>
+            <%= i18n.t('pages.observation.btns.save') %>
+        </button>
+        <button type="submit" class="btn btn-send btn-lg btn-primary btn-block pos-relative">
+            <% var spinnerTpl = require('../spinner/spinner.tpl.html'); %>
+            <%= spinnerTpl({className:'spinner-white icon-left loader'}) %>
+            <%= i18n.t('pages.observation.btns.send') %>
+        </button>
+<!--        <button type="submit" class="btn btn-share btn-lg btn-block bg-facebook pos-relative">
+            <% var spinnerTpl = require('../spinner/spinner.tpl.html'); %>
+            <%= spinnerTpl({className:'spinner-white icon-left loader'}) %>
+            <span class="icon icomoon">facebook_share</span> 
+            <span><%= i18n.t('pages.observation.btns.share') %></span>
+        </button>
+-->
+        <div class="progress progress-lg">
+            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">&nbsp;</div>
+        </div>
+    </div>
+</form>

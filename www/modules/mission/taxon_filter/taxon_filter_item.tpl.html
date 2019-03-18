@@ -1,0 +1,16 @@
+<div class="media-left thumb">
+		<% var thumbURL = './images/mission_taxon/taxon/thumb/' + (data.taxon.id > 9 ? '' : '0') + data.taxon.id + '.jpg'; %>
+    <a class="js-filter-taxon" href="#mission/<%= data.mission_id %>/taxon/<%= data.taxon.id %>">
+		<img class="media-object" src="<%= thumbURL %>" />
+    </a>
+</div>
+<div class="media-body text">
+	<a class="js-filter-taxon" href="#mission/<%= data.mission_id %>/taxon/<%= data.taxon.id %>">
+	    <div class="media-heading title">	    	
+	    	<div class="title"><%= data.taxon.title %></div> 
+	    </div>
+	    <div class="media-heading family">
+	    	<span class="family"><%= data.taxon.family %></span>
+	    </div>
+	</a>
+</div>

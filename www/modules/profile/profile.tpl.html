@@ -1,0 +1,37 @@
+<form novalidate>
+    <div class="well">
+      <fieldset class="user-infos" data-fields="firstname,lastname,email<% if(!data.user.externId) {%>,email2,password,password2<%}%>">
+      </fieldset>
+      <% if(data.user.externId) {%>
+      <button type="button" class="request-npw-js btn-block btn btn-default" ><%= i18n.t('pages.profile.form.change_password') %></button>
+      <% } %>
+    </div>
+    <fieldset class="well newsletter" data-fields="newsletter">
+    </fieldset>
+    <div class="well">
+      <fieldset class="usercategory" data-fields="usercategory">
+        <label>Avec qui partez-vous en mission ?</label>
+      </fieldset>
+      <fieldset class="groupcategory" data-fields="groupcategory">
+      </fieldset>
+    </div>
+
+    <div class="footer">
+      <% if(! data.user.externId) {%>
+        <div class="well">
+          <p>En soumettant ce formulaire, j'accepte que les informations saisies dans l'application "Mission Nature" soient exploitées dans le cadre de l'Observatoire de la Biodiversité du Parc Normandie-Maine et qu'elles alimentent, après un processus de validation, les partenaires du Système d'Information sur la Nature et les Paysages (SINP)
+          </p>
+          <em>Pour connaitre et exercer vos droits, notamment de retrait de votre consentement à l'utilisation des données collectées, veuillez consulter notre <a class="btn btn-xs btn-info" title="Allez sur la page de la politique de confidentialité" href="http://www.parc-naturel-normandie-maine.fr/mentions_legales.html">politique de confidentialité</a>.
+          </em>
+        </div>
+      <% } %>
+      <button type="submit" class="btn btn-lg submit btn-primary btn-block pos-relative">
+        <% var spinnerTpl = require('../spinner/spinner.tpl.html'); %>
+        <%= spinnerTpl({className:'spinner-white icon-left loader'}) %>
+        <%= i18n.t('pages.profile.form.submit') %>
+      </button>
+    </div>
+</form>
+<div class="text-center">
+  <button type="button" class="btn btn-sm btn-link btn-logout"><%= i18n.t('pages.profile.form.logout') %></button>
+</div>

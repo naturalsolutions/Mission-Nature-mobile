@@ -1,0 +1,18 @@
+<form novalidate class="<%= data.user ? 'has-user' : '' %>">
+    <div class="well">
+        <% if ( data.user ) {%>
+        <div class="user-row-info bg-white">
+            <% var firstname = data.user.firstname %>
+            <% var lastname = data.user.lastname %>
+            <span class="badge-circle no-border bg-primary pull-left"><%= firstname.charAt(0)+lastname.charAt(0) %></span>
+            <div class="pull-left text">
+                <%= firstname+' '+lastname %>
+                <div class="text-gray-light"><%= data.user.email %></div>
+            </div>
+        </div>
+        <% } %>
+    </div>
+</form>
+<div>
+    <a href="#registration" class="btn btn-profile btn-default btn-block btn-lg">Créer un compte</a>
+</div>

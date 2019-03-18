@@ -1,0 +1,17 @@
+<button type="button" class="btn btn-close btn-lg btn-link floating floating-right-full text-white">
+    <span class='icon icomoon'>close</span>
+</button>
+<div class="swiper">
+    <ul class="swiper-wrapper list-unstyled">
+    <% _.forEach(data.photos, function(photo, index) { %>
+        <% if( photo.url ) { %>
+          <li class="swiper-slide" style="background-image:url('<%= photo.url %>');"></li>
+        <% }else{ %>
+          <li class="swiper-slide" style="background-image:url('<%= photo.externUrl %>');"></li>
+        <% } %>
+    <% }); %>
+    </ul>
+</div>
+<button type="button" class="btn btn-delete btn-lg btn-link floating floating-right floating-bottom">
+    Supprimer la photo
+</button>

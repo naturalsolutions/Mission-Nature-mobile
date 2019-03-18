@@ -1,0 +1,36 @@
+.panel {
+  border: 0.5px solid transparent;
+  .box-shadow(0 0 2px rgba(0, 0, 0, 0.12));
+}
+
+.panel-group {
+  .panel {
+    + .panel {
+      margin-top: 0;
+    }
+  }
+  .panel-heading {
+//    text-shadow: 0 1px 14px rgba(0, 0, 0, 0.3);
+    .box-shadow(0 0 2px rgba(0, 0, 0, 0.12));
+    .panel-title {
+      font-size: 18px;
+      font-weight: 300;
+      .icon {
+        font-size: 1.7em;
+      }
+      .text {
+        vertical-align: middle;
+      }
+      a {
+        display: block;
+        &:not(.collapsed) {
+          color: @gray-dark;
+        }
+      }
+    }
+    + .panel-collapse > .panel-body,
+    + .panel-collapse > .list-group {
+      border-top: 0;
+    }
+  }
+}

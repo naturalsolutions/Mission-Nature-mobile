@@ -1,0 +1,85 @@
+.fab-dial {
+	.dropdown-menu {
+    	background: transparent;
+	    border: none;
+	    min-width: 0;
+	    .box-shadow(none);
+	    margin: 0;
+    	padding: 0;
+        display: block;
+    	> li {
+            opacity: 1;
+            .transition(opacity 0.2s linear);
+            > a {
+    			margin: 0;
+    			padding: 0;
+    		}
+    	}
+    	.btn-fab {
+    		position: relative;
+    		z-index: 1;
+    	}
+    }
+    &.dropleft {
+    	.dropdown-menu {
+    		left: auto;
+    		top: 0;
+    		right: 100%;
+    		margin-right: 8px;
+    		white-space: nowrap;
+    		> li {
+    			display: inline-block;
+    			padding: 0 4px;
+    			vertical-align: middle;
+    		}
+    	}
+    }
+    &.dropup {
+        .dropdown-menu {
+            margin-bottom: 8px;
+            > li {
+                padding: 8px 0;
+            }
+        }
+    }
+    &.floating-right {
+        .dropdown-menu {
+            text-align: right;
+            left: auto;
+            right: 0;
+            .btn {
+                text-align: right;
+            }
+        }
+    }
+    &.open {
+        .btn-fab {
+        	> span {
+        		&.icon-open {
+	                display: inline-block;
+	            }
+	            &.icon-close {
+	                display: none;
+	            }
+        	}
+        }
+    }
+    &:not(.open) {
+        .dropdown-menu {
+            .btn-fab,
+            .btn-fab * {
+                .animation(none);
+            }
+            > li:not(.always-visible) {
+                display: none;
+            }
+        }
+    }
+    &:not(.open-animate) {
+        .dropdown-menu {
+            > li:not(.always-visible) {
+                opacity: 0;
+            }
+        }
+    }
+}

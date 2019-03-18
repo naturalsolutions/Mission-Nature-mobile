@@ -1,0 +1,274 @@
+{
+    "test": {
+        "key": "singular",
+        "key_plural_2": "few"
+    },
+    "header": {
+        "titles": {
+            "dashboard": "Tableau de bord",
+            "clue": "Carte des missions",
+            "missionsAroundme": "Missions autour de moi",
+            "missionsAroundmeLocalize": "Missions autour de moi",
+            "missionsAroundmeManually": "Localisation",
+            "missions": "Toutes les missions",
+            "missionsFilter": "Filtrer les missions",
+            "observation": "Observation",
+            "profile": "mon profil",
+            "registration": "Inscription",
+            "profile": "Profil",
+            "login": "Connexion",
+            "updatepassword": "Modifier le mot de passe",
+            "about": "A propos"
+        }
+    },
+    "mission": {
+        "label": "Mission",
+        "label_plural": "Missions",
+        "season": {
+            "range": "de %(from)s à %(to)s",
+            "fullyear": "toute l'année"
+        },
+        "deltaLong": "plus que {{count}} jour",
+        "deltaLong_plural": "plus que {{count}} jours",
+        "difficulty_0": "Débutant",
+        "difficulty_1": "Confirmé",
+        "difficulty_2": "Expert",
+        "labelLocalize_interval": "(0){Où le rechercher ?};(1-inf){Où les rechercher ?};",
+        "labelIdentification_interval": "(0){Comment l'identifier ?};(1-inf){Comment les identifier ?};"
+    },
+    "clue": {
+        "sous_bois": "Sous bois",
+        "feuillus": "Forêt de feuillus",
+        "coniferes": "Forêt de conifères",
+        "prairie": "Prairie",
+        "milieu_humide": "Milieu humide",
+        "lisiere": "Lisière",
+        "clairiere": "Clairière"
+    },
+    "logs": {
+        "checkin": "Vous êtes entré en forêt",
+        "checkout": "Vous êtes sorti de forêt <span> %(duration)s </span>",
+        "mission_accept": "Vous avez accepté la mission",
+        "mission_unaccept": "Vous avez annulé la mission",
+        "mission_complete": "Mission accomplie !"
+    },
+    "validation": {
+        "errors": {
+            "required": "Ce champs est requis.",
+            "email": "Veuillez saisir un email valide.",
+            "email_exists": "Cet email existe déjà. Voulez-vous vous connecter ?",
+            "email_not_exists": "Cet email n'existe pas. Voulez-vous créer un compte ?",
+            "email_match": "Les emails ne correspondent pas",
+            "password_match": "Les mots de passe ne correspondent pas.",
+            "password_short": "Le mot de passe doit comprendre au moins 6 caractères."
+        }
+    },
+    "position":{
+        "errors":{
+            "dialogs":{
+                "permission_denied": "La géolocalisation n'est pas activée. Vous pouvez l'activer dans les réglages de votre mobile.",
+                "position_unavailable": "Le service de géolocalisation ne parvient pas retrouver votre position.",
+                "request_timeout": "Le service de géolocalisation ne parvient pas retrouver votre position."
+            }
+        }
+    },
+    "user": {
+        "score": {
+            "level": {
+                "0": {
+                    "label": "Débutant",
+                    "description": "Accomplir une mission de niveau confirmé pour progresser"
+                },
+                "1": {
+                    "label": "Confirmé",
+                    "description": "Accomplir une mission de niveau expert pour progresser"
+                },
+                "2": {
+                    "label": "Expert",
+                    "description": "Vous êtes au niveau maximum"
+                }
+            },
+            "palm": {
+                "bronze": {
+                    "label": "Bronze",
+                    "description": "Au moins 2 missions"
+                },
+                "silver": {
+                    "label": "Argent",
+                    "description": "Au moins 10 missions"
+                },
+                "gold": {
+                    "label": "Or",
+                    "description": "Au moins 30 missions"
+                }
+            },
+            "timeOnMission": {
+                "1": {
+                    "label": "Ciel bleu",
+                    "description": "Vous avez passé moins d'une heure en forêt"
+                },
+                "2": {
+                    "label": "Ciel turquoise",
+                    "description": "Temps moyen passé en forêt"
+                },
+                "3": {
+                    "label": "Ciel vert",
+                    "description": "Temps long passé en forêt"
+                }
+            }
+        }
+    },
+    "dialogs": {
+        "obsShared": {
+            "title": "Mission accomplie !",
+            "message": "Bravo, vous avez transmis votre observation.",
+            "button": "Continuer"
+        },
+        "palm": {
+            "title": "Bravo !",
+            "message": {
+                "bronze": "Vous avez gagné la palme de bronze",
+                "silver": "Vous avez gagné la palme d'argent",
+                "gold": "Vous avez gagné la palme d'or"
+            },
+            "button": "Continuer"
+        },
+        "level": {
+            "title": "Bravo !",
+            "message": {
+                "level_1": "Vous êtes maintenant niveau 1",
+                "level_2": "Vous êtes maintenant niveau 2",
+                "level_3": "Vous êtes maintenant niveau 3"
+            },
+            "button": "Continuer"
+        },
+        "loginError": "Email ou mot de passe incorrect.",
+        "noNetworkConnection": {
+            "default": "Vous n'avez pas de réseau internet",
+            "login": "Vous n'avez pas de réseau internet, vous devrez vous reconnecter pour transmettre vos observations.",
+            "registration": "Vous n'avez pas de réseau internet, vous devrez finaliser votre inscription pour transmettre vos observations.",
+            "observation": "Vous devez avoir accès au réseau internet, pour transmettre vos observations."
+        },
+        "passwdError": "Mot de passe incorrecte.",
+        "errorRetry": "Une erreur est survenue, recommencez",
+        "help": {
+          "btns": {
+            "disable": "Ne plus afficher"
+          }
+        }
+    },
+    "pages": {
+        "home": {
+            "title": "Mission Nature",
+            "btns": {
+                "subscribe": "Inscription",
+                "logged": "Connexion",
+                "soon": "Je me connecterai plus tard"
+            }
+        },
+        "dashboard": {
+            "tabs": {
+                "missions": "Missions",
+                "logs": "Activités",
+                "observations": "Observations"
+            },
+            "missions": {
+                "findMissionBtn": "Trouvez-moi une mission",
+                "findMissionBtn_plural": "Trouvez-moi d'autres missions"
+            },
+            "timeForest": {
+                "enabled": "Vous êtes en forêt",
+                "disabled": "Vous n'êtes pas en forêt"
+            }
+        },
+        "missionsAroundme": {
+            "localize": {
+                "localizing": "Chargement"
+            },
+            "list": {
+                "delta": "%(nb)s j"
+            }
+        },
+        "missionSheet": {
+            "acceptBtnLabel": "accepter",
+            "acceptedBtnLabel": "acceptée",
+            "completedBtnLabel": "accomplie"
+        },
+        "observation": {
+            "missionPlaceholder": "Mission",
+            "taxonPlaceholder": "Espèce",
+            "missionDialogTitle": "Sélectionner une mission",
+            "taxonDialogTitle": "Sélectionner une espèce",
+            "departementDialogTitle": "Sélectionner un département",
+            "btns": {
+                "save": "Enregistrer",
+                "send": "Transmettre",
+                "share": "Partager sur Facebook"
+            },
+            "dialogs": {
+                "out_of_title": "Etes-vous certain de votre observation ?",
+                "out_of_bounds": "Cette espèce s'observe rarement en ce moment",
+                "out_of_date": "Ce n'est pas la saison.",
+                "out_of_departement": "Ce n'est pas le département.",
+                "need_login": "Vous devez être connecté pour transmettre votre observation.",
+                "need_registration": "Vous devez être inscrit pour transmettre votre observation.",
+                "need_complete_registration": "Vous devez finaliser votre inscription pour transmettre votre observation.",
+                "login_complete": "Vous êtes connecté vous pouvez transmettre votre observation.",
+                "need_login_offline": "Vous devez être connecté pour transmettre votre observation."
+            }
+        },
+        "settings": {
+            "updatepassword": "Modifier le mot de passe"
+        },
+        "profile": {
+            "form": {
+                "submit": "Valider",
+                "change_password": "Changer de mot de passe",
+                "logout": "Déconnexion"
+            }
+        }
+    },
+    "sidenav": {
+        "btns": {
+            "login": "Se connecter",
+            "logout": "Se déconnecter",
+            "profile": "Mon profil",
+            "settings": "Paramètres",
+            "about": "A propos",
+            "help": "Aide",
+            "missionsAroundme": "Missions autour de moi",
+            "missions": "Toutes les missions",
+            "missionsTraining": "Missions d'apprentissage",
+            "dashboard": "Tableau de bord",
+            "indices": "Indices",
+            "usage_data": "Utilisation des données"
+        },
+        "link":{
+            "usage_data": "utilisation_donnees",
+            "about": "a_propos"
+        }
+    },
+    "footer": {
+        "btns": {
+            "observation": "Observation",
+            "help_on": "Aide activée",
+            "help_off": "Aide désactivée",
+            "forest_time_on": "Je suis en forêt",
+            "forest_time_off": "Je suis en forêt",
+            "clue": "Milieux"
+        }
+    },
+    "facebook":{
+        "message": "J'ai accompli une mission pour le Parc Régional Normandie-Maine !",
+        "caption": "Mission Nature",
+        "dialog":{
+            "title": "Connexion",
+            "message": "Vous devez être connecté à Facebook pour partager votre obs",
+            "btns":{
+                "cancel": "Annuler",
+                "login": "Me connecter"
+            },
+            "fail": "Echec de l'ouverture de l'application Facebook."
+        }
+    }
+}

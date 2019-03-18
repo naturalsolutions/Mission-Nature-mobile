@@ -1,0 +1,23 @@
+<ul class="list-unstyled">
+  <% _.forEachRight(data.logs, function(log) { %>
+  <li class="well log-item log-type-<%= log.type %> log-category-<%= log.category %>" data-id="<%= log.id %>">
+  	<div class="date"><%= log.createdAt %></div>
+    <div class="media">
+      <div class="media-left thumb">
+        <div class="badge-circle no-border log-icon">
+          <span class="icon icomoon"><%= log.icon %></span>
+        </div>
+      </div>
+      <div class="media-body text media-middle">
+        <div class="description"><%= i18n.t('logs.'+log.type) %></div>
+        <div class="meta">
+          <% if ( log.category == 'mission' ) { %>
+          <span class="badge-circle"><%= log.data.mission.num %></span>
+          <span><%= log.data.mission.title %></span>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </li>
+  <% }); %>
+</ul>

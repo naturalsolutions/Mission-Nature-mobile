@@ -1,0 +1,111 @@
+.page-mission_home {
+  .poster {
+    background: no-repeat center;
+    background-size: cover;
+    img {
+      width: 100%;
+      height: auto;
+      max-height: 250px;
+      visibility: hidden;
+      @media (max-height: 480px) {
+        max-height: 200px;
+      }
+    }
+  }
+  .text-area {
+    padding: 1em 2em 1.5em 2em;
+    text-align: center;
+    .text {
+      margin: 0%;
+    }
+  }
+  .header {
+    &:extend(.header-app);
+    position: relative;
+    top: -2px;
+    background: rgba(255, 255, 255, 0.5);
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    .title {
+      color: @gray-light;
+      font-size: 2rem;
+      font-weight: 400;
+      padding: 16px;
+      padding-right: 90px;
+      position: relative;
+      .icon {
+        font-size: 1.2em;
+        position: absolute;
+        transform: translateY(.1em);
+        color: inherit;
+      }
+      .text {
+        display: block;
+        margin-left: 1.6em;
+      }
+    }    
+  }
+  .status {
+      text-align: center;
+      .translate(0, -40%);
+      margin-right: .8rem;
+      .text {
+        display: block;
+        font-size: 12px;
+        margin-top: 4px;
+      }
+    }
+  .meta {
+    padding: 16px 0 16px 20px;
+    > span {
+      vertical-align: top;
+      margin-left: 6px;
+      text-transform: lowercase;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+    .icon {
+      vertical-align: top;
+    }
+  }
+  .panel-location {
+    img {
+      width: 100%;
+    }
+  }
+  &.is-accept {
+    .status.accept .text-default {
+      display: none;
+    }
+    .btn-accept {
+      .bg-blue();
+    }
+    .meta {
+      .period {
+        display: none;
+      }
+    }
+  }
+  &:not(.is-accept) {
+    .status.accept .text-is-accept {
+      display: none;
+    }
+    .meta {
+      .delta {
+        display: none;
+      }
+    }
+  }
+  &:not(.is-complete) {
+    .status.complete {
+      display: none;
+    }
+  }
+  &.is-complete {
+    .status.accept {
+      display: none;
+    }
+  }
+}

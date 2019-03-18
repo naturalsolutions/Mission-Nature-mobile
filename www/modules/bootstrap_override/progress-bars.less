@@ -1,0 +1,20 @@
+.progress {
+  border: 1px solid #CCC;
+  .box-shadow(none);
+  &.progress-lg {
+    height: auto;
+    border-radius: @border-radius-large;
+    .progress-bar {
+      padding-top: @padding-large-vertical;
+      padding-bottom: @padding-large-vertical;
+      font-size: @font-size-large;
+    }
+  }
+  &.progress-xxs {
+    height: 3px;
+  }
+  &.progress-full-w {
+    border: none;
+    background: rgba(0,0,0,.05);
+  }
+}

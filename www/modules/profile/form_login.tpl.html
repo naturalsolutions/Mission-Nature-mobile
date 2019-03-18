@@ -1,0 +1,11 @@
+<fieldset data-fields="email,password"></fieldset>
+<div class="text-right">
+    <button type="button" class="btn btn-link btn-sm request-npw-js">
+        Mot de passe oublié ?
+    </button>
+</div>
+<button type="submit" class="btn btn-primary btn-block btn-lg btn-submit pos-relative">
+    <% var spinnerTpl = require('../spinner/spinner.tpl.html'); %>
+    <%= spinnerTpl({className:'spinner-white icon-left loader'}) %>
+    Connexion
+</button>

@@ -1,0 +1,13 @@
+  <% if( data.observation.photos[0].url ) { %>
+      <% var photoLink = data.observation.photos[0].url %>
+  <% }else{ %>
+      <% var photoLink = data.observation.photos[0].externUrl %>
+  <% } %>
+<a href="#observation/<%= data.observation.id %>">
+  <img src="images/FFFFFF-0.png" style="background-image:url('<%= photoLink %>');" />
+  <% if ( !data.observation.shared ) { %>
+  <div class="status badge-circle no-border bg-pink">
+    <span class="icon icomoon">transmit</span>
+  </div>
+  <% } %>
+</a>

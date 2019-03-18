@@ -1,0 +1,294 @@
+.page-mission_sheet {
+  .poster {
+    background: no-repeat center;
+    background-size: cover;
+    img {
+      width: 100%;
+      height: auto;
+      max-height: 250px;
+      visibility: hidden;
+      @media (max-height: 480px) {
+        max-height: 200px;
+      }
+    }
+  }
+  .header {
+    &:extend(.header-app);
+    position: relative;
+    top: -2px;
+    background: rgba(255, 255, 255, 0.5);
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    .title {
+      color: @gray-light;
+      font-size: 2rem;
+      font-weight: 400;
+      padding: 16px;
+      padding-right: 90px;
+      position: relative;
+      .icon {
+        font-size: 1.2em;
+        position: absolute;
+        transform: translateY(0.1em);
+        color: inherit;
+      }
+      .text {
+        display: block;
+        margin-left: 1.6em;
+      }
+    }
+  }
+  .status {
+    text-align: center;
+    .translate(0, -40%);
+    margin-right: 0.8rem;
+    .text {
+      display: block;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+  }
+  .meta {
+    padding: 16px 0 16px 20px;
+    > span {
+      vertical-align: top;
+      margin-left: 6px;
+      text-transform: lowercase;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+    .icon {
+      vertical-align: top;
+    }
+  }
+  .accordion {
+    margin: 12px;
+    .panel-content {
+      padding: 0px 15px 0px 15px;
+      .list-group {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        .list-group-item {
+          padding: 10px;
+          font-size: 1em;
+          border: none;
+          border-bottom: 1px solid #dddddd;
+          border-top: 1px solid #dddddd;
+          width: 100%;
+        }
+      }
+    }
+    .panel-body {
+      font-size: 1.6rem;
+      padding: 26px;
+      .credit-photo {
+        font-size: 12px;
+      }
+      .milieux {
+        font-variant: all-small-caps;
+        color: gray;
+      }
+      .grey:before {
+        content:"";
+        display:inline-block;
+        width:40px;
+        height:40px;
+        background:url('images/milieux/icone_af_rocheux.png') no-repeat;
+        background-size:100%;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+      .green:before {
+        content:"";
+        display:inline-block;
+        width:40px;
+        height:40px;
+        background:url('images/milieux/icone_coniferes.png') no-repeat;
+        background-size:100%;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+      .green-light:before {
+        content:"";
+        display:inline-block;
+        width:40px;
+        height:40px;
+        background:url('images/milieux/icone_feuillus.png') no-repeat;
+        background-size:100%;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+      .pink:before {
+        content:"";
+        display:inline-block;
+        width:40px;
+        height:40px;
+        background:url('images/milieux/icone_jardin.png') no-repeat;
+        background-size:100%;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+      .yellow:before {
+        content:"";
+        display:inline-block;
+        width:40px;
+        height:40px;
+        background:url('images/milieux/icone_boisement.png') no-repeat;
+        background-size:100%;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+      .orange:before {
+        content:"";
+        display:inline-block;
+        width:40px;
+        height:40px;
+        background:url('images/milieux/icone_lande.png') no-repeat;
+        background-size:100%;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+      .grey-light:before {
+        content:"";
+        display:inline-block;
+        width:40px;
+        height:40px;
+        background:url('images/milieux/icone_prairie.png') no-repeat;
+        background-size:100%;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+      .blue:before {
+        content:"";
+        display:inline-block;
+        width:40px;
+        height:40px;
+        background:url('images/milieux/icone_riviere_mare.png') no-repeat;
+        background-size:100%;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+      .yellow-light:before {
+        content:"";
+        display:inline-block;
+        width:40px;
+        height:40px;
+        background:url('images/milieux/icone_verger.png') no-repeat;
+        background-size:100%;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+      .orange-light:before {
+        content:"";
+        display:inline-block;
+        width:40px;
+        height:40px;
+        background:url('images/milieux/icone_village.png') no-repeat;
+        background-size:100%;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+      .blue-light:before {
+        content:"";
+        display:inline-block;
+        width:40px;
+        height:40px;
+        background:url('images/milieux/icone_zones_humides.png') no-repeat;
+        background-size:100%;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+      // .badge {
+      //   width: 100%;
+      //   margin-bottom: 1em;
+      //   vertical-align: middle;
+      //   position: relative;
+      //   padding: 10px 15px 10px 15px;
+      //   font-size: 16px;
+      //   font-weight: normal;
+      //   white-space: nowrap;
+      //   color: #000000;
+      //   -webkit-border-radius: 9px;
+      //   -moz-border-radius: 9px;
+      //   border-radius: 9px;
+      // }
+      // .grey {
+      //   background-color: #c1c1c1;
+      // }
+      // .green {
+      //   background-color: #00b050;
+      // }
+      // .green-light {
+      //   background-color: #92d050;
+      // }
+      // .yellow {
+      //   background-color: #ccff33;
+      // }
+      // .pink {
+      //   background-color: #ffccff;
+      // }
+      // .orange {
+      //   background-color: #ffc000;
+      // }
+      // .grey-light {
+      //   background-color: #e2efda;
+      // }
+      // .blue {
+      //   background-color: #9bc2e6;
+      // }
+      // .yellow-light {
+      //   background-color: #ffe699;
+      // }
+      // .orange-light {
+      //   background-color: #f4b084;
+      // }
+      // .blue-light {
+      //   background-color: #33cccc;
+      // }
+      // .btn-block {
+      //   margin-top: 20px;
+      // }
+    }
+  }
+  .panel-location {
+    img {
+      width: 100%;
+    }
+  }
+  &.is-accept {
+    .status.accept .text-default {
+      display: none;
+    }
+    .btn-accept {
+      .bg-blue();
+    }
+    .meta {
+      .period {
+        display: none;
+      }
+    }
+  }
+  &:not(.is-accept) {
+    .status.accept .text-is-accept {
+      display: none;
+    }
+    .meta {
+      .delta {
+        display: none;
+      }
+    }
+  }
+  &:not(.is-complete) {
+    .status.complete {
+      display: none;
+    }
+  }
+  &.is-complete {
+    .status.accept {
+      display: none;
+    }
+  }
+}

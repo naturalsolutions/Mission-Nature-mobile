@@ -1,0 +1,53 @@
+<div class="inner">
+	<% if ( data.departement ) { %>
+	<div class="location text-center">
+		<a href="#missions/aroundme/manually" class="btn btn-lg btn-link text-primary">
+			<%= data.departement.title %> <span class="icon material">edit</span>
+		</a>
+	</div>
+	<% } %>
+	<ul class="nav nav-tabs js-nav-tabs nav-justified" role="tablist">
+	<% var difficulties = ['beginner', 'confirmed', 'expert'] %>
+	<% _.forEach(data.missionTabs, function(missionTab, index) { %>
+		<li role="presentation" class=" <% if ( index == data.lastTabIndex ) { %>active<% } %>">
+			<a href="#tab-difficulty-<%= index %>" role="tab">
+				<span class="icon icomoon text-bottom">difficulty_<%= difficulties[index] %></span> 
+				<div><%= i18n.t('mission.difficulty_'+ (index)) %></div>
+			</a>
+		</li>
+	<% }); %>
+	</ul>
+	<div class="tab-content">
+	<% _.forEach(data.missionTabs, function(missionTab, index) { %>
+		<div role="tabpanel" class="tab-pane <% if ( index == data.lastTabIndex ) { %>active<% } %>" id="tab-difficulty-<%= index %>">
+      <% if ( !missionTab.missions.length ) { %>
+        <div class="btn-lg text-center text-muted">Il n'y a pas de mission de ce niveau actuellement, revenez le mois prochain !</div>
+      <% } %>
+			<ul class="list-unstyled missions clearfix">
+			<% _.forEach(missionTab.missions, function(mission) { %>
+				<li class="pull-left <%= mission.isCompleted ? 'is-complete' : (mission.isAccepted ? 'is-accepted' : '') %>">
+					<a href="#mission/<%= mission.id %>" class="inner">
+						<div class="delta text-nowrap text-primary"><%= i18n.t('pages.missionsAroundme.list.delta', { postProcess: 'sprintf', sprintf: {nb: mission.inSeason.end.delta+1}}) %></div>
+						<div class="status">
+							<div class="badge-circle no-border bg-blue accept">
+					    	<span class="icon icomoon">check</span>
+					    </div>
+					    <div class="badge-circle no-border bg-orange-light complete">
+					    	<span class="icon icomoon">palms</span>
+					    </div>
+				    </div>
+						<div class="thumb">
+							<div class="img" style="background-image:url('./images/taxon/thumb/<%= mission.thumb %>');"></div>
+							<div class="donutchart donutchart-primary" data-donutchart-value="<%= _.round((365-mission.inSeason.end.delta)/365, 2) %>"></div>
+						</div>
+						<div class="title">
+							<span class="badge badge-circle"><%= mission.num %></span> <%= mission.title %>
+						</div>
+					</a>
+				</li>
+			<% }); %>
+			</ul>
+		</div>
+	<% }); %>
+	</div>
+</div>

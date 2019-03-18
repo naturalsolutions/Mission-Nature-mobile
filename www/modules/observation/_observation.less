@@ -1,0 +1,141 @@
+.not-network {
+    .page.observation {
+        .btn-send,
+        .btn-share {
+            display: none;
+        }
+    }
+}
+
+.page.observation {
+    .photo {
+        position: relative;
+        height: 70%;
+        .img {
+            position: relative;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7) no-repeat center;
+            background-size: cover;
+        }
+        .others {
+            position: absolute;
+            bottom: 1.4rem;
+            right: 2rem;
+            margin: 0;
+            > * {
+                width: 32px;
+                height: 32px;
+                background: rgba(0, 0, 0, 0.7) no-repeat center;
+                background-size: cover;
+                border: 1px solid #FFF;
+                margin: 0;
+                margin-right: 1rem;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+        .add-photo {
+            .add-photo-browser {
+                display: none;
+            }
+        }
+        .add-photo-browser {
+            &.btn-add-photo {
+                display: none;
+            }
+        }
+        .btn-add-photo {
+            position: absolute;
+            top: 1em;
+            right: 1em;
+        }
+    }
+    form {
+        padding: 20px;
+        fieldset {
+            padding: 15px;
+            .form-group {
+                margin-left: 0;
+                margin-bottom: 8px;
+                label {
+                    padding: 0;
+                    padding-top: 5px;
+                    font-size: 22px;
+                }
+                select {
+                    border: none;
+                    //border-bottom: 1px solid @gray-light;
+                    box-shadow: none;
+                    background: transparent;
+                    padding-left: 0;
+                }
+                .form-control-outer:after {
+                    content: "";
+                    display: block;
+                    height: 1px;
+                    background: @gray-light;
+                }
+                .display-value {
+                    display: none;
+                    padding-left: 8px;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                    .form-control-outer:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .actions {
+            margin-top: 15px;
+            .btn {
+                > span {
+                    vertical-align: baseline;
+                }
+            }
+            .btn-share {
+                .icon {
+                    .scale(1.7);
+                }
+            }
+        }
+        &:not(.progressing) {
+            .progress {
+                display: none;
+            }
+        }
+        &.progressing {
+            .btn-send {
+                display: none;
+            }
+        }
+    }
+    &:not(.form-status-unsaved) {
+        .btn-save {
+            display: none;
+        }
+    }
+    &:not(.form-status-shared-0) {
+        .btn-send {
+            display: none;
+        }
+    }
+    &:not(.form-status-shared-1) {
+        .btn-share {
+            display: none;
+        }
+    }
+    &.form-status-shared-1 {
+      form {
+        pointer-events: none;
+      }
+    }
+}
+
+.slideshow.slideshow-obs:not(.has-many) {
+    .btn-delete {
+        display: none;
+    }
+}

@@ -1,0 +1,15 @@
+<% if(data.taxon.id > 0) { %>
+<% var thumbURL = './images/mission_taxon/taxon/thumb/' + (data.taxon.id > 9 ? '' : '0') + data.taxon.id + '.jpg'; %>
+<div class="media-left thumb">
+    <a class="js-link-taxon" href="#mission/<%= data.mission_id %>/taxon/<%= data.taxon.id %>">
+		<img class="media-object" src="<%= thumbURL %>" />
+    </a>
+</div>
+<div class="media-body text">
+	<a class="js-link-taxon" href="#mission/<%= data.mission_id %>/taxon/<%= data.taxon.id %>">
+	    <div class="media-heading title">	    	
+	    	<div class="title"><%= data.taxon.title %></div> 
+	    </div>
+	</a>
+</div>
+<% } %>

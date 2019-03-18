@@ -1,0 +1,61 @@
+<div class="inner">
+    <nav class="nav">
+        <ul class="list-unstyled">
+            <li>
+                <a class="btn btn-link" href="#dashboard/missions">
+                    <span class="icon icomoon" style="color: #FFF">dashboard</span> <span style="color: #FFF"> <%= i18n.t('sidenav.btns.dashboard') %> </span>
+                </a>
+            </li>
+        </ul>
+        <ul class="list-unstyled">
+<!--            <li>
+                <a class="btn btn-link" href="#missions/aroundme">
+                    <span class="icon icomoon">missions_aroundme</span> <span> <%= i18n.t('sidenav.btns.missionsAroundme') %> </span>
+                </a>
+            </li>
+-->
+            <li>
+                <a class="btn btn-link" href="#missions/all">
+                    <span class="icon icomoon">missions</span> <span> <%= i18n.t('sidenav.btns.missions') %> </span>
+                </a>
+            </li>
+<!--
+            <li>
+                <a class="btn btn-link" href="#missions/training">
+                    <span class="icon icomoon">missions_trainee</span> <span> <%= i18n.t('sidenav.btns.missionsTraining') %> </span>
+                </a>
+            </li>
+-->
+        </ul>
+        <ul class="list-unstyled">
+            <li>
+                <a id="about" class="btn btn-link">
+                    <span class="icon icomoon">info</span> <span> <%= i18n.t('sidenav.btns.about') %> </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="profile">
+        <!-- <a href="#profile" class="btn btn-block btn-profile">
+            <% var firstname = data.user.firstname %>
+            <% var lastname = data.user.lastname %>
+            <span class="badge badge-circle bg-primary"><%= firstname.charAt(0)+lastname.charAt(0) %></span> <%= firstname+' '+lastname %>
+        </a> -->
+        <div class="panel panel-profile visible-not-anonymous">
+            <div class="panel-heading keep-sidenav-open" data-toggle="collapse" data-target=".panel-collapse-profile">
+                <% var firstname = data.user.firstname %>
+                <% var lastname = data.user.lastname %>
+                <span class="badge-circle bg-primary"><%= firstname.charAt(0)+lastname.charAt(0) %></span> <%= firstname+' '+lastname %>
+            </div>
+            <div class="panel-collapse panel-collapse-profile collapse">
+                <div class="panel-body">
+                    <a href="#profile" class="btn btn-block btn-link"><span class="icon icomoon">profile</span> Mon compte</a>
+                    <a href="#user-selector" class="btn btn-block btn-link btn-change-profile"><span class="icon icomoon">plus</span> Changer de compte</a>
+                </div>
+            </div>
+        </div>
+        <a href="#user-selector" class="btn btn-lg btn-block btn-connexion hidden-not-anonymous">
+            <%= i18n.t('sidenav.btns.login') %>
+        </a>
+    </div>
+</div>

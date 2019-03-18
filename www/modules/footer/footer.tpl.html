@@ -1,0 +1,55 @@
+<!-- <form method="post" action="http://localhost/DRUPAL/OBF_BACK/www/api/file-upload" enctype="multipart/form-data">
+    <input type="file" name="image" accept="image/*" />
+    <input type="submit"></input>
+</form> -->
+<div class="dropup fab-dial floating floating-bottom floating-right">
+    <button class="dropdown-toggle btn-fab btn-lg bg-gray" type="button" data-toggle="dropdown">
+        <span class="icon-close icon material">apps</span>
+        <span class="icon-open icon icomoon">close</span>
+    </button>
+    <ul class="dropdown-menu">
+        <li class="always-visible">
+            <button type="button" class="btn btn-link no-padding capture-photo-js">
+                <span class="label text-gray">Observation</span>
+                <div class="btn-lg btn-fab bg-orange">
+                    <span class="icon material">photo_camera</span>
+                    <!-- <span class="label"><%= i18n.t('footer.btns.observation') %></span> -->
+                </div>
+            </button>
+        </li>
+        <li>
+            <button type="button" class="btn btn-link btn-help no-padding">
+                <span class="label text-gray">
+                    <span class="visible-help"><%= i18n.t('footer.btns.help_on') %></span>
+                    <span class="hidden-help"><%= i18n.t('footer.btns.help_off') %></span>
+                </span>
+                <span class="btn-lg btn-fab bg-blue-royal btn-inner-border">
+                    <span class="icon icomoon">help</span>
+                </span>
+            </button>
+        </li>
+        <!--
+        <li>
+            <button type="button" class="btn btn-link no-padding forest-time-js">
+                <span class="label text-gray">
+                    Temps en forêt <span class="visible-in-forest">activé</span><span class="hidden-in-forest">désactivé</span>
+                    <div class="text-primary time-forest-display-js"></div>
+                </span>
+                <div class="btn-lg btn-fab bg-primary">
+                    <span class="icon icomoon">location_time</span>
+                    <% var spinnerTpl = require('../spinner/spinner-forest.tpl.html'); %>
+                    <%= spinnerTpl({className:'spinner-forest spinner-green icon-right loader visible-in-forest'}) %>
+                </div>
+            </button>
+        </li>
+        -->
+        <!--<li>
+            <button type="button" class="btn btn-link btn-clue no-padding">
+                <span class="label text-gray">Carte des missions</span>
+                <span class="btn-lg btn-fab bg-brown">
+                    <span class="icon icomoon">indices</span>
+                </span>
+            </button>
+        </li>-->
+    </ul>
+</div>

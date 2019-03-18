@@ -1,0 +1,43 @@
+<div class="inner">
+    <div class="poster" style="background-image:url('<%= data.posterURL %>');">
+        <img src="<%= data.posterURL %>" />
+        <% if (data.credits) { %>
+            <figcaption>crédits : <%= data.credits.credit %></figcaption>
+        <% } %>
+    </div>
+
+    <div class="status accept floating floating-right" style="z-index: 1;">
+        <button type="button" class="btn btn-accept btn-fab btn-default btn-sm">
+            <span class="icon icomoon">check</span>
+        </button>
+        <span class="text text-default">
+            <%= i18n.t('pages.missionSheet.acceptBtnLabel') %></span>
+        <span class="text text-is-accept">
+            <%= i18n.t('pages.missionSheet.acceptedBtnLabel') %></span>
+    </div>
+    <div class="status complete floating floating-right">
+        <div class="btn btn-fab btn-sm bg-orange-light">
+            <span class="icon icomoon">palms</span>
+        </div>
+        <span class="text">
+            <%= i18n.t('pages.missionSheet.completedBtnLabel') %></span>
+    </div>
+    <div class="meta">
+        <span class="difficulty"><span class="icon icomoon">difficulty_<%= data.mission.difficultyName %></span>
+        <span class="hidden-small-height">
+                <%= i18n.t('mission.difficulty_'+ data.mission.difficulty) %></span></span>
+        <span class="season text-primary">
+            <span class="icon icomoon">time</span>
+            <span class="period">
+                <%= data.mission.displaySeasonShort %></span>
+            <span class="delta">
+                <%= i18n.t('mission.deltaLong', {count: data.mission.inSeason.end.delta+1}) %></span>
+        </span>
+    </div>
+    <div class="text-area">
+        <p class="text"><%= data.mission.introduction %></p>
+    </div>
+    <div class="container">
+        <div class="item"></div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<ul class="list-unstyled">
+<% _.forEach(data.users, function(user) { %>
+    <% if ( user.email ) { %>
+    <li class="well user-row-info" data-user-id="<%= user.id %>">
+        <% var firstname = user.firstname %>
+        <% var lastname = user.lastname %>
+        <span class="badge-circle no-border bg-primary pull-left"><%= firstname.charAt(0)+lastname.charAt(0) %></span>
+        <div class="text">
+            <%= firstname+' '+lastname %>
+            <div class="text-gray-light text-overflow"><%= user.email %></div>
+        </div>
+    </li>
+    <% } %>
+<% }); %>
+</ul>
+<a href="#login" class="btn btn-default btn-block btn-lg">Ajouter un compte</a>
