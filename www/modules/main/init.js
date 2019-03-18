@@ -156,7 +156,7 @@ function init() {
           var taxonCollection = Taxon.collection.getInstance();
           var taxMission = new (Taxon.collection.getClass())();
           _.forEach(missionData.taxon, function (taxonData) {
-              taxonData.sources = taxonData.sources.split(",");
+              taxonData.sources = taxonData.sources.split("#");
               taxonData.environments = [];
               taxonData.environment.split(",").forEach(function(x, i){
                 taxonData.environments[i]= {};
