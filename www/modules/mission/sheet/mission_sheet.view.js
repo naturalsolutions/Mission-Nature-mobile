@@ -144,7 +144,7 @@ module.exports = Marionette.LayoutView.extend({
       taxon: this.model.toJSON(),
       mission: this.mission.toJSON(),
       isMission: this.isMission,
-      creditsTaxon: this.creditsTaxon.toJSON(),
+      creditsTaxon: this.creditsTaxon ? this.creditsTaxon.toJSON() : "",
       posterURL: this.posterURL
     };
   },
