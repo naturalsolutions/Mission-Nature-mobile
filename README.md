@@ -39,6 +39,16 @@ Enfin, activer la plateforme de test qui vous convient (android ou ios) :
 ```
 cordova platform add android
 ```
+
+## Configuration
+
+Copier le fichier :
+```
+cp www/modules/main/config.js.tpl www/modules/main/config.js
+```
+Puis éditer ce fichier, pour ajouter l'url vers l'application serevur et l'api
+
+
 ### Gestion des plugins Cordova
 
 Merci d'ajouter les plugins au config.xml pour qu'ils puissent être installé par les autres développeurs de manière facile et cohérente.
@@ -66,3 +76,5 @@ ou :
 npm install grunt --save-dev
 ```
 Note : Comme pour les plugins et pour les mêmes raisons, il est important de fixer les versions des dépendances Javascript. Avec l'option --save, npm fixe automatiquement le numéro de version.
+
+
