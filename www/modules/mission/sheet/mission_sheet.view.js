@@ -65,11 +65,6 @@ module.exports = Marionette.LayoutView.extend({
     var currentCredits = this.model.getCredits(credits);
     this.creditsTaxon = currentCredits.findWhere({num: self.model.get('id'), type:"taxon", nom_fichier:poster});
 
-    var creditsOther = currentCredits.filter(function(credit) {
-      if (credit.get('cat'))
-        return  credit.toJSON() ; 
-    });
-    this.creditsOther = new Backbone.Collection(creditsOther);
   },
 
   openWindow: function (ev) {
@@ -150,7 +145,6 @@ module.exports = Marionette.LayoutView.extend({
       mission: this.mission.toJSON(),
       isMission: this.isMission,
       creditsTaxon: this.creditsTaxon.toJSON(),
-      creditsOther: this.creditsOther,
       posterURL: this.posterURL
     };
   },

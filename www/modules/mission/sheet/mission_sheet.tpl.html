@@ -49,13 +49,6 @@
             <div id="collapse1" class="panel-collapse collapse" role="tabpanel">
                 <div class="panel-body">
                     <%= data.taxon.description %>
-                    <% var credDesc = data.creditsOther.filter(function(cred) { return cred.get('cat') == 'description'; }); %>
-
-                    <% if( !_.isEmpty(credDesc) ) { %>
-                        <% for( var i = 0; i < credDesc.length; i++) { %>
-                            <p class="credit-photo"> Crédit photographique de l'image <i> <%= credDesc[i].get('taxon') %> </i> : <%= credDesc[i].get('credit') %> </p>
-                        <% } %>
-                    <% } %>
                     <div>
                         <button type="button" id="url" class="btn btn-block btn-default btn-sheet">Fiche espèce</button>
                     </div>
@@ -79,12 +72,6 @@
                     <% }; %>
                     </div>
                     <div><%= data.taxon.environment_description %></div>
-                    <% var credEnvDesc = data.creditsOther.filter(function(cred) { return cred.get('cat') == 'environment_description'; }); %>
-                    <% if( !_.isEmpty(credEnvDesc) ) { %>
-                        <% for(var i = 0; i < credEnvDesc.length; i++) { %>
-                            <p class="credit-photo"> Crédit photographique de l'image <i> <%= credEnvDesc[i].get('taxon') %> </i> : <%= credEnvDesc[i].get('credit') %> </p>
-                        <% } %>
-                    <% } %>
                 </div>
             </div>
         </div>
@@ -100,12 +87,6 @@
             <div id="collapse3" class="panel-collapse collapse" role="tabpanel">
                 <div class="panel-body">
                     <%= data.taxon.characteristic %>
-                    <% var credChar = data.creditsOther.filter(function(cred) { return cred.get('cat') == 'characteristic'; }); %>
-                    <% if( !_.isEmpty(credChar) ) { %>
-                        <% for(var i = 0; i < credChar.length; i++) { %>
-                            <p class="credit-photo"> Crédit photographique de l'image <i> <%= credChar[i].get('taxon') %> </i>: <%= credChar[i].get('credit') %> </p>
-                        <% } %>
-                    <% } %>
                 </div>
             </div>
         </div>
@@ -121,12 +102,6 @@
             <div id="collapse4" class="panel-collapse collapse" role="tabpanel">
                 <div class="panel-body">
                     <%= data.taxon.not_confuse %>
-                    <% var credNc = data.creditsOther.filter(function(cred) { return cred.get('cat') == 'not_confuse'; }) ;%>
-                    <% if( !_.isEmpty(credNc) ) { %>
-                        <% for(var i = 0; i < credNc.length; i++) { %>
-                            <p class="credit-photo"> Crédit photographique de l'image <i><%= credNc[i].get('taxon') %> </i> : <%= credNc[i].get('credit') %> </p>
-                        <% } %>
-                    <% } %>
                 </div>
             </div>
         </div>
