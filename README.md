@@ -30,10 +30,11 @@ Créer une copie locale de la base de code :
 git clone <depot> .
 ```
 Installer les diverses dépendances du projet :
-
+```
 npm install -g cordova grunt-cli
 npm install
 cordova plugin restore --experimental
+```
 Enfin, activer la plateforme de test qui vous convient (android ou ios) :
 
 cordova platform add android
