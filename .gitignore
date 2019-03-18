@@ -16,7 +16,7 @@ www-*
 .idea
 
 config.js
-www/data/
+www/data/image_source/*
 
 www/images/mission_taxon/mission/thumb/*
 www/images/mission_taxon/mission/poster/*

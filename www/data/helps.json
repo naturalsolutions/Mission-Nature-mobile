@@ -1,0 +1,39 @@
+[{
+    "id": "dashboardmissions",
+    "title": "Bienvenue",
+    "description": "<p> Pour accomplir des missions et gagner des récompenses, retrouvez des espèces recherchées autour de vous et envoyez leurs photos.</p><p> A tout moment, cliquez sur <span class=\"btn-xs btn-fab bg-orange\" style=\"font-size:7px; vertical-align: middle;\"><span class=\"icon-close icon material\">photo_camera</span></span> pour prendre une photo&#8239!</p><p>Cliquez sur <span class=\"btn btn-primary btn-xs\" style=\"vertical-align: top;\">Trouvez-moi une mission</span>  pour débuter votre quête&#8239!</p>"
+  }, {
+    "id": "dashboardlogs",
+    "title": "Activités",
+    "description": "<p>Retrouvez ici, l'ensemble de vos actions.</p>"
+  }, {
+    "id": "dashboardobservations",
+    "title": "Observation",
+    "description": "<p>Les observations transmises s’affichent ici. Les observations seront transmises au Muséum national d’Histoire naturelle pour être validées.</p><p>Partagez avec vos amis vos observations sur Facebook.</p>"
+  }, {
+    "id": "observation",
+    "title": "Observation",
+    "description": "<p>Complétez votre observation en ajoutant jusqu’à deux photos supplémentaires (bouton <button type=\"button\" class=\"btn bg-brown btn-fab\" style=\"font-size:7px;\"><span class=\"icon icomoon\">add_images</span></button> en haut à droite).</p><p>N’oubliez pas de transmettre votre observation pour gravir les niveaux et obtenir des récompenses&#8239!</p>"
+  }, {
+    "id": "missionsaroundme",
+    "title": "Les missions autour de moi",
+    "description": "<p>Les missions disponibles, dans un rayon de 150 km autour de vous, s’affichent ici par priorité et par difficulté.</p><p> Entraînez-vous avec les missions du niveau « Apprenti », cliquez sur une mission pour afficher sa description.</p><p> Retrouvez l’ensemble des missions en cliquant sur le <span class=\"icon icomoon text-primary\" style=\"vertical-align:bottom\">plus</span> en haut à droite de l’écran.</p>"
+  }, {
+    "id": "missionsall",
+    "title": "Toutes les missions",
+    "description": "<p>L’ensemble des missions est disponible ici. Cliquez sur <span class=\"btn btn-xs btn-default\" style=\"font-size: 7px;\"><span class=\"icon icomoon\" style=\"font-size: 17px;\">khebab</span></span> en haut à droite pour filtrer ces missions par mois et par difficulté.</p>"
+
+  }, {
+    "id": "mission",
+    "title": "Fiche mission",
+    "description": "<p>Cette fiche vous donnera les informations utiles de la mission ainsi que les différentes espèces à trouver.</p><p> Cliquez sur le bouton « accepter » &nbsp;<span type=\"button\" class=\"btn btn-fab btn-default btn-xs\" style=\"font-size: 7px; vertical-align: bottom;\"><span class=\"icon icomoon\">check</span></span> pour voir apparaître la mission dans votre tableau de bord. Prenez une photo en cliquant sur <span class=\"btn-xs btn-fab bg-orange\" style=\"font-size:7px; vertical-align: middle;\"><span class=\"icon-close icon material\">photo_camera</span></span> en bas à droite.</p><p> Les photos sont visibles sur la fiche et dans votre tableau de bord.<p>"
+  }, {
+    "id": "missionsheet",
+    "title": "Fiche espèce",
+    "description": "<p>Cette fiche vous donnera les informations relatives à l'espèce et divers indices pour la trouver !</p>"
+  }, {
+    "id": "clue",
+    "title": "Carte des indices",
+    "description": "<p>Cette Carte vous permettra de répérer les espèces dans la forêt selon leur type de milieu.</p>"
+  }
+]
