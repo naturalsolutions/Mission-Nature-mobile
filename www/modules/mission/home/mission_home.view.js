@@ -81,7 +81,7 @@ module.exports = Marionette.CompositeView.extend({
     return {
       mission: this.model.toJSON(),
       posterURL : this.posterURL,
-      credits: this.credits.toJSON()
+      credits: this.credits ? this.credits.toJSON() : ""
     };
   },
 
