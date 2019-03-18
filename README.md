@@ -36,8 +36,9 @@ npm install
 cordova plugin restore --experimental
 ```
 Enfin, activer la plateforme de test qui vous convient (android ou ios) :
-
+```
 cordova platform add android
+```
 ### Gestion des plugins Cordova
 
 Merci d'ajouter les plugins au config.xml pour qu'ils puissent être installé par les autres développeurs de manière facile et cohérente.
