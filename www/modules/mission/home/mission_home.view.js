@@ -72,7 +72,6 @@ module.exports = Marionette.CompositeView.extend({
     var poster = (this.model.get('id') > 9 ? '' : '0') + this.model.get('id') + '.jpg';
     var credits = Credit.collection.getInstance();
     this.credits = credits.findWhere({num: self.model.get('num'), type:"mission", nom_fichier:poster});
-    console.log("this.credits: ", this.credits);
 
     this.posterURL = './images/mission_taxon/taxon/poster/' + poster;
   },
