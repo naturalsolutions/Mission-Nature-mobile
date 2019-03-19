@@ -205,7 +205,7 @@ var Page = Marionette.LayoutView.extend({
         }]
       },
       field_newsletter: {
-        und: ((formValues.newsletter.length) ? '[0]{value:' + true + '}' : null)
+        und: '[0]{value:' + true + '}'
       },
       mail: formValues.email,
       field_user_category: {

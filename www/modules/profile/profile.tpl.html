@@ -6,23 +6,28 @@
       <button type="button" class="request-npw-js btn-block btn btn-default" ><%= i18n.t('pages.profile.form.change_password') %></button>
       <% } %>
     </div>
-    <fieldset class="well newsletter" data-fields="newsletter">
-    </fieldset>
-    <div class="well">
-      <fieldset class="usercategory" data-fields="usercategory">
-        <label>Avec qui partez-vous en mission ?</label>
-      </fieldset>
-      <fieldset class="groupcategory" data-fields="groupcategory">
-      </fieldset>
-    </div>
-
     <div class="footer">
       <% if(! data.user.externId) {%>
-        <div class="well">
-          <p>En soumettant ce formulaire, j'accepte que les informations saisies dans l'application "Mission Nature" soient exploitées dans le cadre de l'Observatoire de la Biodiversité du Parc Normandie-Maine et qu'elles alimentent, après un processus de validation, les partenaires du Système d'Information sur la Nature et les Paysages (SINP)
-          </p>
-          <em>Pour connaitre et exercer vos droits, notamment de retrait de votre consentement à l'utilisation des données collectées, veuillez consulter notre <a class="btn btn-xs btn-info" title="Allez sur la page de la politique de confidentialité" href="http://www.parc-naturel-normandie-maine.fr/mentions_legales.html">politique de confidentialité</a>.
-          </em>
+        <div class="well rgpd">
+          <p>En soumettant ce formulaire, j'accepte que :</p>
+          <ul>
+            <li>
+              les informations saisies (nom, prénom, l’observation et le lieu) dans l'application "Mission Nature" soient exploitées dans le cadre de l'Observatoire de la Biodiversité du Parc Normandie-Maine,
+            </li>
+            <li>
+              les informations saisies (nom, prénom, l’observation et le lieu) dans l'application "Mission Nature" soient exploitées dans le cadre des Observatoires départementaux, régionaux et nationaux de la Biodiversité dans le cadre du Système d'Information sur la Nature et les Paysages (SINP)*.
+            </li>
+            <li>
+              de recevoir la newsletter du Parc naturel régional Normandie-Maine
+            </li>
+          </ul>
+
+
+          <p><em>*SINP : Créé en 2005, le système d’information sur la nature et les paysages (SINP) a été conçu comme une organisation collaborative. Il vise à favoriser une synergie entre ses adhérents pour la production, la gestion, le traitement, la valorisation et la diffusion des données géolocalisées relatives à la biodiversité, à la géodiversité, aux espaces protégés et aux paysages.</em></p>
+          <p>Pour connaitre et exercer vos droits, notamment concernant l'utilisation des données collectées, veuillez nous contacter à <a class="btn btn-xs btn-info" title="Envoyer un email à info@parc-normandie-maine.fr" href="mailto:info@parc-normandie-maine.fr">info@parc-normandie-maine.fr</a></p>
+          <p>En fournissant votre adresse e-mail, vous acceptez de recevoir la newsletter du Parc naturel régional Normandie-Maine et vous reconnaissez avoir pris connaissance de notre politique de confidentialité (traitement et utilisation des données).</p>
+          <p>Vous pourrez vous désabonner à n’importe quel moment en cliquant sur les liens de désabonnement situés en bas de nos e-mails ou sur simple demande à l’adresse :
+          <br> <a class="btn btn-xs btn-info" title="Envoyer un email à communication@parc-normandie-maine.fr" href="mailto:communication@parc-normandie-maine.fr">communication@parc-normandie-maine.fr</a></p>
         </div>
       <% } %>
       <button type="submit" class="btn btn-lg submit btn-primary btn-block pos-relative">
