@@ -2,711 +2,792 @@
   {
     "type": "taxon",
     "taxon": "Hirondelle rustique",
-    "num": "1",
     "nom_fichier": "01.jpg",
-    "credit": "F. Jiguet (INPN)"
+    "credit": "F. Jiguet (INPN)",
+    "num": 1
   },
   {
     "type": "taxon",
     "taxon": "Hirondelle de fenêtre",
-    "num": "2",
     "nom_fichier": "02.jpg",
-    "credit": "O. Roquinarc'h (INPN)"
+    "credit": "O. Roquinarc'h (INPN)",
+    "num": 2
   },
   {
     "type": "taxon",
     "taxon": "Machaon",
-    "num": "4",
     "nom_fichier": "03.jpg",
-    "credit": "Morvan Debroize"
+    "credit": "Morvan Debroize",
+    "num": 3
   },
   {
     "type": "taxon",
     "taxon": "Crapaud",
-    "num": "4",
     "nom_fichier": "04.jpg",
-    "credit": "Morvan Debroize"
+    "credit": "Morvan Debroize",
+    "num": 4
   },
   {
     "type": "taxon",
     "taxon": "Morio",
-    "num": "5",
     "nom_fichier": "05.jpg",
-    "credit": "A. Horellou (INPN)"
+    "credit": "A. Horellou (INPN)",
+    "num": 5
   },
   {
     "type": "taxon",
     "taxon": "Morio",
-    "num": "5",
     "nom_fichier": "05.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 5
   },
   {
     "type": "taxon",
     "taxon": "Damier du frêne",
-    "num": "6",
     "nom_fichier": "06.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 6
   },
   {
     "type": "taxon",
     "taxon": "Bacchante",
-    "num": "7",
     "nom_fichier": "07.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 7
   },
   {
     "type": "taxon",
     "taxon": "Sonneur à ventre jaune",
-    "num": "8",
     "nom_fichier": "08.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 8
   },
   {
     "type": "taxon",
     "taxon": "Carabe splendide",
-    "num": "9",
     "nom_fichier": "09.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 9
   },
   {
     "type": "taxon",
     "taxon": "Carabe à reflets cuivrés",
-    "num": "10",
     "nom_fichier": "10.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 10
   },
   {
     "type": "taxon",
     "taxon": "Grand calosome",
-    "num": "11",
     "nom_fichier": "11.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 11
   },
   {
     "type": "taxon",
     "taxon": "Damier du chèvrefeuille",
-    "num": "12",
     "nom_fichier": "12.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 12
   },
   {
     "type": "taxon",
     "taxon": "Carabe doré",
-    "num": "13",
     "nom_fichier": "13.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 13
   },
   {
     "type": "taxon",
     "taxon": "Polypore du bouleau",
-    "num": "14",
     "nom_fichier": "14.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 14
   },
   {
     "type": "taxon",
     "taxon": "Langue de bœuf",
-    "num": "15",
     "nom_fichier": "15.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 15
   },
   {
     "type": "taxon",
     "taxon": "Polypore marginé",
-    "num": "16",
     "nom_fichier": "16.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 16
   },
   {
     "type": "taxon",
     "taxon": "Amadouvier",
     "nom_fichier": "17.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 17
   },
   {
     "type": "taxon",
     "taxon": "Petit-gris",
     "nom_fichier": "18.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 18
   },
   {
     "type": "taxon",
     "taxon": "Mélibée",
     "nom_fichier": "19.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 19
   },
   {
     "type": "taxon",
     "taxon": "Tabac d'Espagne",
     "nom_fichier": "20.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 20
   },
   {
     "type": "taxon",
     "taxon": "Robert-le-Diable",
     "nom_fichier": "21.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 21
   },
   {
     "type": "taxon",
     "taxon": "Petit Mars changeant",
     "nom_fichier": "22.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 22
   },
   {
     "type": "taxon",
     "taxon": "Grand Mars changeant",
     "nom_fichier": "23.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 23
   },
   {
     "type": "taxon",
     "taxon": "Aurore",
     "nom_fichier": "24.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 24
   },
   {
     "type": "taxon",
     "taxon": "Orvet fragile",
     "nom_fichier": "25.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 25
   },
   {
     "type": "taxon",
     "taxon": "Salamandre tachetée",
     "nom_fichier": "26.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 26
   },
   {
     "type": "taxon",
     "taxon": "Escargot de Bourgogne",
     "nom_fichier": "27.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 27
   },
   {
     "type": "taxon",
     "taxon": "Soucoupe commune",
     "nom_fichier": "28.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 28
   },
   {
     "type": "taxon",
     "taxon": "Aromie musquée",
     "nom_fichier": "29.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 29
   },
   {
     "type": "taxon",
     "taxon": "Grand capricorne",
     "nom_fichier": "30.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 30
   },
   {
     "type": "taxon",
     "taxon": "Petit capricorne",
     "nom_fichier": "31.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 31
   },
   {
     "type": "taxon",
     "taxon": "Lepture tacheté",
     "nom_fichier": "32.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 32
   },
   {
     "type": "taxon",
     "taxon": "Bulime zébré",
     "nom_fichier": "33.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 33
   },
   {
     "type": "taxon",
     "taxon": "Scarabée rhinocéros européen",
     "nom_fichier": "34.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 34
   },
   {
     "type": "taxon",
     "taxon": "Hanneton des pins",
     "nom_fichier": "35.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 35
   },
   {
     "type": "taxon",
     "taxon": "Faux-Hydne gélatineux",
     "nom_fichier": "36.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 36
   },
   {
     "type": "taxon",
     "taxon": "Auriculaire mésentérique",
     "nom_fichier": "37.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 37
   },
   {
     "type": "taxon",
     "taxon": "Polypore soufré",
     "nom_fichier": "38.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 38
   },
   {
     "type": "taxon",
     "taxon": "Pézize vert-de-gris",
     "nom_fichier": "39.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 39
   },
   {
     "type": "taxon",
     "taxon": "Daldanie concentrique",
     "nom_fichier": "40.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 40
   },
   {
     "type": "taxon",
     "taxon": "Xylaire du bois",
     "nom_fichier": "41.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 41
   },
   {
     "type": "taxon",
     "taxon": "Strangalie à forme de capricorne",
     "nom_fichier": "42.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 42
   },
   {
     "type": "taxon",
     "taxon": "Clyte bélier",
     "nom_fichier": "43.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 43
   },
   {
     "type": "taxon",
     "taxon": "Elégante striée",
     "nom_fichier": "44.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 44
   },
   {
     "type": "taxon",
     "taxon": "Maillot cendré",
     "nom_fichier": "45.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 45
   },
   {
     "type": "taxon",
     "taxon": "Lamie tisserand",
     "nom_fichier": "46.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 46
   },
   {
     "type": "taxon",
     "taxon": "Hêtre commun",
     "nom_fichier": "47.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 47
   },
   {
     "type": "taxon",
     "taxon": "Saules",
     "nom_fichier": "48.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 48
   },
   {
     "type": "taxon",
     "taxon": "Bouleaux",
     "nom_fichier": "49.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 49
   },
   {
     "type": "taxon",
     "taxon": "Chêne",
     "nom_fichier": "50.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 50
   },
   {
     "type": "taxon",
     "taxon": "Les fruits",
     "nom_fichier": "51.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 51
   },
   {
     "type": "taxon",
     "taxon": "Les conifères et leurs aiguilles",
     "nom_fichier": "52.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 52
   },
   {
     "type": "taxon",
     "taxon": "Les pins et leurs cônes",
     "nom_fichier": "53.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 53
   },
   {
     "type": "taxon",
     "taxon": "Le bois mort et ses décomposeurs",
     "nom_fichier": "54.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 54
   },
   {
     "type": "taxon",
     "taxon": "Les champignons",
     "nom_fichier": "55.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 55
   },
   {
     "type": "taxon",
     "taxon": "Champignons d'arbres",
     "nom_fichier": "56.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 56
   },
   {
     "type": "taxon",
     "taxon": "Les mousses terrestres",
     "nom_fichier": "57.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 57
   },
   {
     "type": "taxon",
     "taxon": "Les fougères",
     "nom_fichier": "58.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 58
   },
   {
     "type": "taxon",
     "taxon": "Les spores des mousses et des fougères",
     "nom_fichier": "59.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 59
   },
   {
     "type": "taxon",
     "taxon": "Clairières et lisières",
     "nom_fichier": "60.jpg",
-    "credit": "Noé Conservation"
+    "credit": "Noé Conservation",
+    "num": 60
   },
   {
     "type": "taxon",
     "taxon": "Chardonneret élégant",
     "nom_fichier": "61.jpg",
-    "credit": "Sylvain Montagner"
+    "credit": "Sylvain Montagner",
+    "num": 61
   },
   {
     "type": "taxon",
     "taxon": "Chevreuil européen",
     "nom_fichier": "62.jpg",
-    "credit": "Franck MERLIER (INPN)"
+    "credit": "Franck MERLIER (INPN)",
+    "num": 62
   },
   {
     "type": "taxon",
     "taxon": "Orchis mâle",
     "nom_fichier": "63.jpg",
-    "credit": "Morvan Debroize"
+    "credit": "Morvan Debroize",
+    "num": 63
   },
   {
     "type": "taxon",
     "taxon": "Jacinthe des bois",
     "nom_fichier": "64.jpg",
-    "credit": "PNRNM - Morvan Debroize"
+    "credit": "PNRNM - Morvan Debroize",
+    "num": 64
   },
   {
     "type": "taxon",
     "taxon": "Anémone sylvie",
     "nom_fichier": "65.jpg",
-    "credit": "PNRNM - Michael Houseaux"
+    "credit": "PNRNM - Michael Houseaux",
+    "num": 65
   },
   {
     "type": "taxon",
     "taxon": "Jonquille des bois",
     "nom_fichier": "66.jpg",
-    "credit": "Morvan Debroize"
+    "credit": "Morvan Debroize",
+    "num": 66
   },
   {
     "type": "taxon",
     "taxon": "Muscardin",
     "nom_fichier": "67.jpg",
-    "credit": "H. TINGUY (INPN)"
+    "credit": "H. TINGUY (INPN)",
+    "num": 67
   },
   {
     "type": "taxon",
     "taxon": "Hérisson d'Europe",
     "nom_fichier": "68.jpg",
-    "credit": "J.-C. de Massary (INPN)"
+    "credit": "J.-C. de Massary (INPN)",
+    "num": 68
   },
   {
-    "type": "taxon",
-    "cat": "not_confuse",
+    "type": "not_confuse",
     "taxon": "Hirondelle rustique",
-    "num": "1",
     "nom_fichier": "01_4.jpg",
-    "credit": "Morvan Debroize"
+    "credit": "Morvan Debroize",
+    "num": 1
   },
   {
-    "type": "taxon",
-    "cat": "not_confuse",
+    "type": "not_confuse",
     "taxon": "Hirondelle de fenêtre",
-    "num": "2",
     "nom_fichier": "02_4.jpg",
-    "credit": "Morvan Debroize"
+    "credit": "Morvan Debroize",
+    "num": 2
   },
   {
     "type": "not_confuse",
     "taxon": "Machaon",
     "nom_fichier": "03_4.jpg",
-    "credit": "Rémi Jardin"
+    "credit": "Rémi Jardin",
+    "num": 3
   },
   {
     "type": "not_confuse",
     "taxon": "Crapaud",
     "nom_fichier": "04_4.jpg",
-    "credit": "Morvan Debroize"
+    "credit": "Morvan Debroize",
+    "num": 4
   },
   {
     "type": "not_confuse",
     "taxon": "Chardonneret élégant",
     "nom_fichier": "61_4.jpg",
-    "credit": "PNRNM - Morvan Debroize"
+    "credit": "PNRNM - Morvan Debroize",
+    "num": 61
   },
   {
     "type": "not_confuse",
     "taxon": "Chevreuil européen",
     "nom_fichier": "62_4.jpg",
-    "credit": "Nicolas Belcourt (INPN)"
+    "credit": "Nicolas Belcourt (INPN)",
+    "num": 62
   },
   {
     "type": "not_confuse",
     "taxon": "Orchis mâle",
     "nom_fichier": "63_4.jpg",
-    "credit": "Morvan Debroize"
+    "credit": "Morvan Debroize",
+    "num": 63
   },
   {
     "type": "not_confuse",
     "taxon": "Jacinthe des bois",
     "nom_fichier": "64_4.jpg",
-    "credit": "J.-J. Milan (INPN)"
+    "credit": "J.-J. Milan (INPN)",
+    "num": 64
   },
   {
     "type": "not_confuse",
     "taxon": "Anémone sylvie",
     "nom_fichier": "65_4.jpg",
-    "credit": "S. Filoche (INPN)"
+    "credit": "S. Filoche (INPN)",
+    "num": 65
   },
   {
     "type": "not_confuse",
     "taxon": "Jonquille des bois",
     "nom_fichier": "66_4.jpg",
-    "credit": "Sylvain Montagner"
+    "credit": "Sylvain Montagner",
+    "num": 66
   },
   {
     "type": "not_confuse",
     "taxon": "Muscardin",
     "nom_fichier": "67_4.jpg",
-    "credit": "PNRNM - Morvan Debroize"
+    "credit": "PNRNM - Morvan Debroize",
+    "num": 67
   },
   {
     "type": "mission",
-    "num": "1",
     "taxon": "Hirondelles",
     "nom_fichier": "01.jpg",
-    "credit": "Michel Jardin"
+    "credit": "Michel Jardin",
+    "num": 1
   },
   {
     "type": "mission",
     "taxon": "Machaon",
-    "num": "2",
     "nom_fichier": "02.jpg",
-    "credit": "Morvan Debroize"
+    "credit": "Morvan Debroize",
+    "num": 2
   },
   {
     "type": "mission",
     "taxon": "Crapaud",
-    "num": "3",
     "nom_fichier": "03.jpg",
-    "credit": "Cyrille Delattre"
+    "credit": "Cyrille Delattre",
+    "num": 3
   },
   {
     "type": "mission",
     "taxon": "Chardonneret élégant",
     "nom_fichier": "60.jpg",
-    "credit": "Sylvain Montagner"
+    "credit": "Sylvain Montagner",
+    "num": 60
   },
   {
     "type": "mission",
     "taxon": "Chevreuil européen",
     "nom_fichier": "61.jpg",
-    "credit": "O. Roquinarc'h (INPN)"
+    "credit": "O. Roquinarc'h (INPN)",
+    "num": 61
   },
   {
     "type": "mission",
     "taxon": "Orchis mâle",
     "nom_fichier": "62.jpg",
-    "credit": "Morvan Debroize"
+    "credit": "Morvan Debroize",
+    "num": 62
   },
   {
     "type": "mission",
     "taxon": "Printanières",
     "nom_fichier": "63.jpg",
-    "credit": "PNRNM - Michael Houseaux"
+    "credit": "PNRNM - Michael Houseaux",
+    "num": 63
   },
   {
     "type": "mission",
     "taxon": "Muscardin",
     "nom_fichier": "64.jpg",
-    "credit": "H. TINGUY (INPN)"
+    "credit": "H. TINGUY (INPN)",
+    "num": 64
   },
   {
     "type": "mission",
     "taxon": "Hérisson d'Europe",
     "nom_fichier": "65.jpg",
-    "credit": "P. Gourdain"
+    "credit": "P. Gourdain",
+    "num": 65
   },
   {
-    "type": "taxon",
-    "cat": "environment_description",
+    "type": "environment_description",
     "taxon": "Hirondelle rustique",
-    "num": "1",
     "nom_fichier": "01_2.jpg",
-    "credit": "P. Gourdain (INPN)"
+    "credit": "P. Gourdain (INPN)",
+    "num": 1
   },
   {
-    "type": "taxon",
-    "cat": "environment_description",
+    "type": "environment_description",
     "taxon": "Hirondelle de fenêtre",
-    "num": "2",
     "nom_fichier": "02_2.jpg",
-    "credit": "Morvan Debroize"
+    "credit": "Morvan Debroize",
+    "num": 2
   },
   {
     "type": "environment_description",
     "taxon": "Machaon",
     "nom_fichier": "03_2.jpg",
-    "credit": "Morvan Debroize"
+    "credit": "Morvan Debroize",
+    "num": 3
   },
   {
     "type": "environment_description",
     "taxon": "Crapaud",
     "nom_fichier": "04_2.jpg",
-    "credit": "Morvan Debroize"
+    "credit": "Morvan Debroize",
+    "num": 4
   },
   {
     "type": "environment_description",
     "taxon": "Chardonneret élégant",
     "nom_fichier": "61_2.jpg",
-    "credit": "J. LAIGNEL (INPN)"
+    "credit": "J. LAIGNEL (INPN)",
+    "num": 61
   },
   {
     "type": "environment_description",
     "taxon": "Chevreuil européen",
     "nom_fichier": "62_2.jpg",
-    "credit": "Morvan Debroize"
+    "credit": "Morvan Debroize",
+    "num": 62
   },
   {
     "type": "environment_description",
     "taxon": "Orchis mâle",
     "nom_fichier": "63_2.jpg",
-    "credit": "PNRNM - Morvan Debroize"
+    "credit": "PNRNM - Morvan Debroize",
+    "num": 63
   },
   {
     "type": "environment_description",
     "taxon": "Jacinthe des bois",
     "nom_fichier": "64_2.jpg",
-    "credit": "Morvan Debroize"
+    "credit": "Morvan Debroize",
+    "num": 64
   },
   {
     "type": "environment_description",
     "taxon": "Anémone sylvie",
     "nom_fichier": "65_2.jpg",
-    "credit": "P. Gourdain (INPN)"
+    "credit": "P. Gourdain (INPN)",
+    "num": 65
   },
   {
     "type": "environment_description",
     "taxon": "Jonquille des bois",
     "nom_fichier": "66_2.jpg",
-    "credit": "Morvan Debroize"
+    "credit": "Morvan Debroize",
+    "num": 66
   },
   {
     "type": "environment_description",
     "taxon": "Muscardin",
     "nom_fichier": "67_2.jpg",
-    "credit": "PNRNM - Emilie Rossa"
+    "credit": "PNRNM - Emilie Rossa",
+    "num": 67
   },
   {
     "type": "environment_description",
     "taxon": "Hérisson d'Europe",
     "nom_fichier": "68_2.jpg",
-    "credit": "PNRNM - Morvan Debroize"
+    "credit": "PNRNM - Morvan Debroize",
+    "num": 68
   },
   {
-    "type": "taxon",
-    "cat": "characteristic",
+    "type": "characteristic",
     "taxon": "Hirondelle rustique",
-    "num": "1",
     "nom_fichier": "01_3.jpg",
-    "credit": "J.P Siblet (INPN)"
+    "credit": "J.P Siblet (INPN)",
+    "num": 1
   },
   {
-    "type": "taxon",
-    "cat": "characteristic",
+    "type": "characteristic",
     "taxon": "Hirondelle de fenêtre",
-    "num": "2",
     "nom_fichier": "02_3.jpg",
-    "credit": "P. Gourdain (INPN)"
+    "credit": "P. Gourdain (INPN)",
+    "num": 2
   },
   {
     "type": "characteristic",
     "taxon": "Machaon",
     "nom_fichier": "03_3.jpg",
-    "credit": "Morvan Debroize"
+    "credit": "Morvan Debroize",
+    "num": 3
   },
   {
     "type": "characteristic",
     "taxon": "Crapaud",
     "nom_fichier": "04_3.jpg",
-    "credit": "Morvan Debroize"
+    "credit": "Morvan Debroize",
+    "num": 4
   },
   {
     "type": "characteristic",
     "taxon": "Chardonneret élégant",
     "nom_fichier": "61_3.jpg",
-    "credit": "J. LAIGNEL (INPN)"
+    "credit": "J. LAIGNEL (INPN)",
+    "num": 61
   },
   {
     "type": "characteristic",
     "taxon": "Chevreuil européen",
     "nom_fichier": "62_3.jpg",
-    "credit": "Morvan Debroize"
+    "credit": "Morvan Debroize",
+    "num": 62
   },
   {
     "type": "characteristic",
     "taxon": "Orchis mâle",
     "nom_fichier": "63_3.jpg",
-    "credit": "Morvan Debroize"
+    "credit": "Morvan Debroize",
+    "num": 63
   },
   {
     "type": "characteristic",
     "taxon": "Jacinthe des bois",
     "nom_fichier": "64_3.jpg",
-    "credit": "PNRNM - Gabriel Soulard"
+    "credit": "PNRNM - Gabriel Soulard",
+    "num": 64
   },
   {
     "type": "characteristic",
     "taxon": "Anémone sylvie",
     "nom_fichier": "65_3.jpg",
-    "credit": "Morvan Debroize"
+    "credit": "Morvan Debroize",
+    "num": 65
   },
   {
     "type": "characteristic",
     "taxon": "Jonquille des bois",
     "nom_fichier": "66_3.jpg",
-    "credit": "P. Gourdain (INPN)"
+    "credit": "P. Gourdain (INPN)",
+    "num": 66
   },
   {
     "type": "characteristic",
     "taxon": "Muscardin",
     "nom_fichier": "67_3.jpg",
-    "credit": "PNRNM - Morvan Debroize"
+    "credit": "PNRNM - Morvan Debroize",
+    "num": 67
   },
   {
     "type": "characteristic",
     "taxon": "Hérisson d'Europe",
     "nom_fichier": "68_3.jpg",
-    "credit": "Sylvain Montagner"
+    "credit": "Sylvain Montagner",
+    "num": 68
   }
 ]
