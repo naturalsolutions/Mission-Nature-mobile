@@ -15,7 +15,6 @@ var View = Marionette.LayoutView.extend({
   events: {
     'click': 'hide',
     'click .keep-sidenav-open': 'onKeepSidenavOpenClick',
-    'click #about': 'openInAppBrowser',
   },
 
   initialize: function() {
@@ -35,19 +34,6 @@ var View = Marionette.LayoutView.extend({
 
   onRender: function(options) {
     
-  },
-
-  openInAppBrowser: function(e){
-    var self = this;
-    var target = "_blank";
-    var options = "location=yes";
-    var currentId = e.currentTarget.id;
-//    var trad = i18n.t('sidenav.link.'+currentId);
-    var url = "http://www.parc-naturel-normandie-maine.fr/";
-
-    var inAppBrowserRef;
-    inAppBrowserRef = window.open(url, target, options);
-
   },
 
   onCurrentUserChange: function(newUser, prevUser) {

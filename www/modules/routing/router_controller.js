@@ -16,7 +16,8 @@ var Backbone = require('backbone'),
     UpdatePassword = require('../profile/update_password.view'),
     Session = require('../main/session.model'),
     Login = require('../profile/login.view'),
-    UserSelector = require('../profile/user_selector.view');
+    UserSelector = require('../profile/user_selector.view'),
+    About = require('../about/about.view');
 
 module.exports = Marionette.Object.extend({
   initialize: function(options) {
@@ -286,6 +287,14 @@ module.exports = Marionette.Object.extend({
     main.getInstance().rgMain.show(new UpdatePassword.Page({
       name: 'updatepassword',
       model: user
+    }), {
+      preventDestroy: true
+    });
+  },
+
+  about: function() {
+    main.getInstance().rgMain.show(new About.Page({
+      name: 'about'
     }), {
       preventDestroy: true
     });
