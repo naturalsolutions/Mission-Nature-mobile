@@ -222,7 +222,7 @@
         },
         "profile": {
             "form": {
-                "submit": "Valider",
+                "submit": "Valider le formulaire",
                 "change_password": "Changer de mot de passe",
                 "logout": "Déconnexion"
             }
