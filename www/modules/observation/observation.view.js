@@ -326,7 +326,10 @@ var Layout = Marionette.LayoutView.extend({
     } else if ( navigator.onLine ) {
       if (this.$el.hasClass('form-status-shared-0')) {
 //        this.checkBounds().done(function() {
-          self.sendObs();
+        this.checkGeolocation().then(
+          function() {
+            self.sendObs();
+          });
   ///      });
       } else if (this.$el.hasClass('form-status-shared-1'))
         this.shareObs();
@@ -483,7 +486,7 @@ var Layout = Marionette.LayoutView.extend({
       },
       field_code_commune: {
         und: [{
-          value: _.get(this.user.get('city'), 'code', '')
+          value: _.get(this.user.get('city').attributes, 'code' , '')
         }]
       },
       field_observation_note: {

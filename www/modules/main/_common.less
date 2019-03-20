@@ -232,6 +232,40 @@ ul.form-control {
     list-style: none;
 }
 
+// backbone-autocomplete-view https://github.com/dazld/backbone-autocomplete-view
+.ac-user-input, .ac-results {
+ width: 100%;
+ padding-left: 5px;
+}
+.ac-user-input{
+    display: block;
+    background: none;
+	.box-shadow(none);
+	border-top: none;
+	border-left: none;
+    border-right: none;
+    line-height: 3em;
+    font-size: 18px;
+	.form-control-focus(@brand-primary);
+  &[disabled],
+  &[readonly],
+  fieldset[disabled] & {
+    background: none;
+  }
+} 
+.autocomplete-outer {
+    padding-top: 0 !important;
+    background: #FFF;
+}
+.autocomplete-outer .ac-results {
+    position: absolute;
+    background: white;
+    z-index: 1;
+}
+.autocomplete-outer .ac-results .ac-result {
+    padding: 10px 0;
+}
+
 .generate-theme(gray; @gray; #FFF);
 .generate-theme(yellow; @yellow; #333);
 .generate-theme(brown; @brown; #FFF);

@@ -4,6 +4,7 @@ var Marionette = require('backbone.marionette'),
     $ = require('jquery'),
     _ = require('lodash'),
     User = require('../profile/user.model'),
+    AutocompleteView = require('backbone-autocomplete'),
     City = require('./city.model');
 
 module.exports = Marionette.LayoutView.extend({
@@ -20,16 +21,37 @@ module.exports = Marionette.LayoutView.extend({
   onRender: function() {
     var self = this;
     var city = City.model.getInstance();
-    this.$el.find('input.js-autocomplete').autocomplete({
-      select: function(event, ui) {
-        self.selectedItem = ui.item;
+    var MyAutocomplete = AutocompleteView.extend({
+      render: function render() {
+        this.$el.html(this.template());
+        this.resultsView.setElement(this.$('.ac-results'));
+        this.$el.find('input').attr("placeholder", "Saisir une commune");
+        return this;
       },
-      source: function(request, response) {
-        response(city.search(request.term));
+      onSelect: function(model){
+          this.$el.find('input').val(model.get('label'));
+          self.selectedItem = model;
       },
-      appendTo: self.$el.find('.js-autocomplete-results'),
-      minLength: 2
-    });
+      doSearch: function() {
+        if (!this.shouldSearch()) {
+          return;
+        }
+        this.selectedModel = null;
+        var filteredResults = this.collection.search(this.searchValue);
+        this.resultsCollection.reset(filteredResults);
+        this.resultsView.trigger('show');
+
+      },
+  });
+ 
+  var nameCompletion = new MyAutocomplete({
+      className: 'bb-autocomplete-custom',
+      searchField: 'label', // setting the field to use as a search
+      minimumInputLength: 2,
+      collection: city,
+  });
+ 
+  nameCompletion.render().$el.appendTo(self.$el.find('.autocomplete-outer'));
   },
 
   onFormSubmit: function(e) {
