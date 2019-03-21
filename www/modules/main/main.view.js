@@ -27,35 +27,33 @@ var Layout = Marionette.LayoutView.extend({
   initialize: function() {
     var self = this;
     this.dialogs = [];
-    // this.addListeners();
-    //this.listenTo(User.collection.getInstance(), 'change:current', this.onCurrentUserChange);
-/*    var currentPos = CurrentPos.model.getInstance();
+   var currentPos = CurrentPos.model.getInstance();
     currentPos.on('change', function() {
       var lat = _.get(currentPos.get('coords'), 'latitude', '');
       var lon = _.get(currentPos.get('coords'), 'longitude', '');
       var timeStamp = currentPos.get('timestamp');
       var user = User.getCurrent();
 
-      if ( !user.get('forceDepartement') ) {
-        var selectedDepartements = Departement.collection.getInstance().clone();
-        selectedDepartements.forEach(function(departement) {
-          var distFromUser = _.getDistanceFromLatLonInKm(lat, lon, departement.get('lat'), departement.get('lon'));
-          departement.set('distFromUser', distFromUser);
-        });
-        selectedDepartements.comparator = 'distFromUser';
-        selectedDepartements.sort();
+      // if ( !user.get('forceDepartement') ) {
+      //   var selectedDepartements = Departement.collection.getInstance().clone();
+      //   selectedDepartements.forEach(function(departement) {
+      //     var distFromUser = _.getDistanceFromLatLonInKm(lat, lon, departement.get('lat'), departement.get('lon'));
+      //     departement.set('distFromUser', distFromUser);
+      //   });
+      //   selectedDepartements.comparator = 'distFromUser';
+      //   selectedDepartements.sort();
 
-        var i = 1;
-        while (selectedDepartements.at(i)) {
-          var departement = selectedDepartements.at(i);
-          if (departement.get('distFromUser') <= 150)
-              i++;
-          else {
-            selectedDepartements.remove(departement);
-          }
-        }
-        user.set('departementIds', selectedDepartements.pluck('id'));
-      }
+      //   var i = 1;
+      //   while (selectedDepartements.at(i)) {
+      //     var departement = selectedDepartements.at(i);
+      //     if (departement.get('distFromUser') <= 150)
+      //         i++;
+      //     else {
+      //       selectedDepartements.remove(departement);
+      //     }
+      //   }
+      //   user.set('departementIds', selectedDepartements.pluck('id'));
+      // }
       user.save();
     });
     currentPos.on('unwatch', function() {
@@ -63,7 +61,7 @@ var Layout = Marionette.LayoutView.extend({
       user.set('departementIds', []);
     });
     currentPos.watch();
-
+/*
     var timeForest = User.getCurrent().get('timeForest');
     if(timeForest.get('isStart'))
       timeForest.start(timeForest.get('startTime'), timeForest.get('curCountTotalInit'));

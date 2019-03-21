@@ -326,7 +326,10 @@ var Layout = Marionette.LayoutView.extend({
     } else if ( navigator.onLine ) {
       if (this.$el.hasClass('form-status-shared-0')) {
 //        this.checkBounds().done(function() {
-          self.sendObs();
+        this.checkGeolocation().then(
+          function() {
+            self.sendObs();
+          });
   ///      });
       } else if (this.$el.hasClass('form-status-shared-1'))
         this.shareObs();
@@ -447,6 +450,7 @@ var Layout = Marionette.LayoutView.extend({
     self.$el.addClass('sending block-ui');
     this.$el.find('form').addClass('loading');
     var formValues = self.formObs.getValue();
+    var city = _.get(this.user.get('city'), 'attributes' , '');
 
     //clear data photos
     var clearPhoto = function(args) {
@@ -483,7 +487,7 @@ var Layout = Marionette.LayoutView.extend({
       },
       field_code_commune: {
         und: [{
-          value: _.get(this.user.get('city'), 'code', '')
+          value: _.get(city, 'code' , '')
         }]
       },
       field_observation_note: {

@@ -19,7 +19,7 @@ var UserModel = Backbone.Model.extend({
     totalTimeOnMission: 0,
     newsletter: false,
 //    departementIds: [],
-//    positionEnabled: true,
+   positionEnabled: true,
     nbComputedObs: 0,
     level: 0,
     palm: 0,
