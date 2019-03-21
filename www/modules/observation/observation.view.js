@@ -450,6 +450,7 @@ var Layout = Marionette.LayoutView.extend({
     self.$el.addClass('sending block-ui');
     this.$el.find('form').addClass('loading');
     var formValues = self.formObs.getValue();
+    var city = _.get(this.user.get('city'), 'attributes' , '');
 
     //clear data photos
     var clearPhoto = function(args) {
@@ -486,7 +487,7 @@ var Layout = Marionette.LayoutView.extend({
       },
       field_code_commune: {
         und: [{
-          value: _.get(this.user.get('city').attributes, 'code' , '')
+          value: _.get(city, 'code' , '')
         }]
       },
       field_observation_note: {
