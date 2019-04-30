@@ -55,7 +55,7 @@ var UserModel = Backbone.Model.extend({
   },
 
   getHasCity: function() {
-    return this.get('city') && this.get('city').value;
+    return this.get('city') && this.get('city').code;
   },
 
   toJSON: function() {
@@ -160,8 +160,7 @@ var UserModel = Backbone.Model.extend({
   getComputableObservations: function() {
     var observations = this.get('completeObservations');
     return observations.filter(function(obs) {
-      console.log("obs instanceof Backbone.Model", obs instanceof Backbone.Model);
-
+      //console.log("obs instanceof Backbone.Model", obs instanceof Backbone.Model);
       return obs.get('mission').get('difficulty') > 0;
     });
   },
