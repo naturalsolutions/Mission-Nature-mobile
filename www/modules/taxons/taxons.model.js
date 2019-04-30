@@ -25,7 +25,7 @@ var Model = Backbone.Model.extend({
     "environment_description"
     "not_confuse"
     "sources"*/
-    var currentCredits = credits.where({num: self.get('id'), type:"taxon"});
+    var currentCredits = credits.where({num: Number(self.get('id')), type:"taxon"});
     return new Collection(currentCredits);
   }
 });

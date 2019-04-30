@@ -347,7 +347,7 @@ var Layout = Marionette.LayoutView.extend({
     } else if(geoStatus === 'has city'){
       var currentDialog = Dialog.confirm({
         title: 'Validation de la géolocalisation',
-        message: 'Cette observation a été prise à ' + self.user.get('city').value + ' ?',
+        message: 'Cette observation a été prise à ' + self.user.get('city').label + ' ?',
         btnCancelLabel: 'Non',
         btnOKLabel: 'Oui',
         closable: true, // <-- Default value is false
