@@ -7,8 +7,8 @@
     <author email="obf@noe.org" href="http://www.noe.org/">Noé</author>
     <content src="index.html" />
     <access origin="http://149.202.129.99/*" />
+    <access origin="http://missionnature.parc-naturel-normandie-maine.fr/*" />
     <access origin="cdvfile://*" />
-    <access origin="https://graph.facebook.com/*" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="Orientation" value="portrait" />
     <preference name="StatusBarOverlaysWebView" value="false" />
@@ -16,6 +16,7 @@
     <preference name="StatusBarBackgroundColor" value="#000000" />
     <allow-intent href="obfmobile:/*" />
     <allow-intent href="fbapi20150629:/*" />
+    <hook src="scripts/runGruntDefaultTask.js" type="before_prepare" />
     <platform name="ios">
         <allow-navigation href="http://www.parc-naturel-normandie-maine.fr/*" />
     </platform>
