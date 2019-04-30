@@ -63,7 +63,7 @@ module.exports = Marionette.LayoutView.extend({
 
     var credits = Credit.collection.getInstance();
     var currentCredits = this.model.getCredits(credits);
-    this.creditsTaxon = currentCredits.findWhere({num: self.model.get('id'), type:"taxon", nom_fichier:poster});
+    this.creditsTaxon = currentCredits.findWhere({num: Number(self.model.get('id')), type:"taxon", nom_fichier:poster});
 
   },
 

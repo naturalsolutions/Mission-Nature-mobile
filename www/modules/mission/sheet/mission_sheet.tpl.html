@@ -1,8 +1,8 @@
 <div class="inner">
     <div class="poster" style="background-image:url('<%= data.posterURL %>');">
         <img src="<%= data.posterURL %>" />
-        <% if (data.credits) { %>
-            <figcaption>crédits : <%= data.credits.credits %></figcaption>
+        <% if (data.creditsTaxon) { %>
+            <figcaption>crédits : <%= data.creditsTaxon.credit %></figcaption>
         <% } %>
     </div>
     <% if (data.isMission) { %>
