@@ -165,7 +165,9 @@ var View = Marionette.LayoutView.extend({
               name: formValues.email
             }),
             error: function(jqXHR, textStatus, errorThrown) {
-              console.log(errorThrown);
+              dialogItself.close();
+              self.dialogRequestNewpwFail(errorThrown);
+              //console.log(errorThrown);
             },
             success: function(response) {
               if (response)
@@ -182,6 +184,20 @@ var View = Marionette.LayoutView.extend({
     Dialog.show({
       title: 'Demande de renouvellement de mot de passe',
       message: 'Un email vous a été envoyé avec les instructions à suivre pour le renouvellement de votre mot de passe',
+      type: 'type-success',
+      buttons: [{
+        label: 'Fermer',
+        action: function(dialogItself) {
+          dialogItself.close();
+        }
+      }]
+    });
+  },
+
+  dialogRequestNewpwFail: function(errorThrown) {
+    Dialog.show({
+      title: 'Une erreur est survenue',
+      message: errorThrown,
       type: 'type-success',
       buttons: [{
         label: 'Fermer',
