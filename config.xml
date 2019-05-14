@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="fr.parc_naturel_normandie_maine.MissionNature" version="0.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="fr.parc_naturel_normandie_maine.MissionNature" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Mission Nature</name>
     <description>
         Partez à la recherche des espèces de la nature avec Mission Nature !
     </description>
-    <author email="obf@noe.org" href="http://www.noe.org/">Noé</author>
+    <author email="info@parc-normandie-maine.fr" href="http://www.parc-naturel-normandie-maine.fr/">Mission Nature</author>
     <content src="index.html" />
     <access origin="http://149.202.129.99/*" />
     <access origin="http://missionnature.parc-naturel-normandie-maine.fr/*" />
