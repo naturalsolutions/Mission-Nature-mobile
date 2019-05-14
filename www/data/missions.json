@@ -1,0 +1,716 @@
+[
+    {
+        "id": 1,
+        "num": "1",
+        "title": "A tire d\u2019aile en ville ou en campagne !",
+        "plural": 0,
+        "difficulty": 1,
+        "seasons": [
+            {
+                "startAt": "03",
+                "endAt": "09"
+            }
+        ],
+        "introduction": "Il existe en France cinq esp\u00e8ces d\u2019Hirondelles, toutes migratrices. L'Hirondelle rustique et l'Hirondelle de fen\u00eatre sont les plus communes sur notre territoire et sont intimement li\u00e9es \u00e0 l\u2019Homme, que se soit en ville ou en campagne. ",
+        "id_taxons": [
+            "0",
+            "1",
+            "2"
+        ],
+        "taxon": [
+            {
+                "id": "0",
+                "cd_nom": "0",
+                "title": "je ne sais pas",
+                "family": "inconnu",
+                "url": "inconnu",
+                "description": "inconnu",
+                "characteristic": "inconnu",
+                "environment": "0",
+                "environment_description": "inconnu",
+                "not_confuse": "inconnu",
+                "sources": "inconnu"
+            },
+            {
+                "id": "1",
+                "cd_nom": "3696",
+                "title": "Hirondelle rustique",
+                "family": "Oiseaux",
+                "url": "http:\/\/observatoire.parc-naturel-normandie-maine.fr\/atlas\/espece\/3696",
+                "description": "L\u2019Hirondelle rustique est une grande migratrice, dont le retour en France a lieu \u00e0 partir des mois de mars et avril pour sa p\u00e9riode de reproduction. Cette esp\u00e8ce n\u2019est que peu m\u00e9fiante vis-\u00e0-vis de l\u2019Homme, puisqu\u2019elle utilise diff\u00e9rentes habitations pour b\u00e2tir son nid.",
+                "characteristic": "Elle poss\u00e8de une longue queue tr\u00e8s \u00e9chancr\u00e9e avec deux longs filets, \u00e0 la diff\u00e9rence de l\u2019Hirondelle de fen\u00eatre. Autre particularit\u00e9, la couleur rouge-brique de sa gorge et la couleur blanch\u00e2tre de son ventre pouvant virer au blanc cr\u00e8me.\n<figure><img class='img-thumbnail mx-auto d-block' src='data\/image_source\/01_3.jpg'><div class='credits'>J.P Siblet (INPN)<\/div><figcaption>Hirondelle rustique (Hirundo rustica)<\/figcaption><\/figure>  ",
+                "environment": "5",
+                "environment_description": "L\u2019Hirondelle rustique est le plus souvent un oiseau des campagnes, recherchant des plafonds avec solives dans les \u00e9tables, \u00e9curies et autres granges pour b\u00e2tir son nid. \n<figure><img class='img-thumbnail mx-auto d-block' src='data\/image_source\/01_2.jpg'><div class='credits'>P. Gourdain (INPN)<\/div><figcaption>Nid ouvert de l'Hirondelle rustique<\/figcaption><\/figure>  ",
+                "not_confuse": "Malgr\u00e9 sa silhouette similaire, le Martinet noir n'est pas \u00e0 confondre avec l'hirondelle. L\u2019esp\u00e8ce est compl\u00e8tement noire avec de grandes ailes effil\u00e9es l\u00e9g\u00e8rement arqu\u00e9es. C\u2019est un oiseau principalement citadin et il a la particularit\u00e9 de ne jamais se poser au sol (sauf accident).\n<figure><img class='img-thumbnail mx-auto d-block' src='data\/image_source\/01_4.jpg'><div class='credits'>Morvan Debroize<\/div><figcaption>Martinet noir (Apus apus)<\/figcaption><\/figure>   ",
+                "sources": "https:\/\/www.lpo.fr\/actualites\/contre-les-moustiques-faites-une-place-aux-hirondelles#http:\/\/www.enquete-hirondelles.fr\/wp-content\/uploads\/2012\/05\/Identifier-les-hironelles-du-b%C3%A2ti.jpg#http:\/\/www.hirondelles.oiseaux.net\/migration.html#http:\/\/www.oiseaux.net\/oiseaux\/hirondelle.rustique.html#http:\/\/www.oiseaux.net\/oiseaux\/hirondelle.de.fenetre.html "
+            },
+            {
+                "id": "2",
+                "cd_nom": "459478",
+                "title": "Hirondelle de fen\u00eatre",
+                "family": "Oiseaux",
+                "url": "http:\/\/observatoire.parc-naturel-normandie-maine.fr\/atlas\/espece\/459478",
+                "description": "L\u2019Hirondelle de fen\u00eatre est une grande migratrice, dont le retour en France a lieu \u00e0 partir des mois de mars et avril pour sa p\u00e9riode de reproduction. Cette esp\u00e8ce n\u2019est que peu m\u00e9fiante vis-\u00e0-vis de l\u2019Homme, puisqu\u2019elle utilise diff\u00e9rentes habitations pour b\u00e2tir son nid.",
+                "characteristic": "L\u2019Hirondelle de fen\u00eatre, plus petite que l\u2019Hirondelle rustique, poss\u00e8de une queue beaucoup moins \u00e9chancr\u00e9e, sans filet. La gorge, le ventre et le croupion sont d\u2019un blanc pur assez caract\u00e9ristique. En vol, elle se reconna\u00eet facilement par la couleur blanche de son croupion que ne poss\u00e8de pas l\u2019Hirondelle rustique.\n<figure><img class='img-thumbnail mx-auto d-block' src='data\/image_source\/02_3.jpg'><div class='credits'>P. Gourdain (INPN)<\/div><figcaption>Hirondelle de fen\u00eatre (Delichon urbicum)<\/figcaption><\/figure>  ",
+                "environment": "10",
+                "environment_description": "L\u2019Hirondelle de fen\u00eatre est plut\u00f4t un oiseau des villes, recherchant des coins de fen\u00eatres o\u00f9 installer son nid.\n<figure><img class='img-thumbnail mx-auto d-block' src='data\/image_source\/02_2.jpg'><div class='credits'>Morvan Debroize<\/div><figcaption>Nid de l'Hirondelle de fen\u00eatre<\/figcaption><\/figure>  ",
+                "not_confuse": "Malgr\u00e9 sa silhouette similaire, le Martinet noir n'est pas \u00e0 confondre avec l'hirondelle. L\u2019esp\u00e8ce est compl\u00e8tement noire avec de grandes ailes effil\u00e9es l\u00e9g\u00e8rement arqu\u00e9es. C\u2019est un oiseau principalement citadin et il a la particularit\u00e9 de ne jamais se poser au sol (sauf accident). \n<figure><img class='img-thumbnail mx-auto d-block' src='data\/image_source\/02_4.jpg'><div class='credits'>Morvan Debroize<\/div><figcaption>Martinet noir (Apus apus)<\/figcaption><\/figure> ",
+                "sources": "https:\/\/www.lpo.fr\/actualites\/contre-les-moustiques-faites-une-place-aux-hirondelles#http:\/\/www.enquete-hirondelles.fr\/wp-content\/uploads\/2012\/05\/Identifier-les-hironelles-du-b%C3%A2ti.jpg#http:\/\/www.hirondelles.oiseaux.net\/migration.html#http:\/\/www.oiseaux.net\/oiseaux\/hirondelle.rustique.html#http:\/\/www.oiseaux.net\/oiseaux\/hirondelle.de.fenetre.html "
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "num": "2",
+        "title": "Grand Porte-Queue au jardin ! ",
+        "plural": 0,
+        "difficulty": 0,
+        "seasons": [
+            {
+                "startAt": "09",
+                "endAt": "10"
+            }
+        ],
+        "introduction": "Le Machaon est un des plus grands papillons de jour que l\u2019on ait en France. Son vol se situe entre avril et septembre, m\u00eame si les observations sont plus fr\u00e9quentes au mois de mai et de juillet. Le r\u00f4le du Machaon, comme pour tous les autres pollinisateurs sur terre, est tr\u00e8s important pour le transport du pollen et la fructification des fleurs. C\u2019est aussi une source alimentaire \u00e0 de nombreuses autres esp\u00e8ces, comme les oiseaux. ",
+        "id_taxons": [
+            "3"
+        ],
+        "taxon": [
+            {
+                "id": "3",
+                "cd_nom": "54468",
+                "title": "Machaon",
+                "family": "Insectes",
+                "url": "http:\/\/observatoire.parc-naturel-normandie-maine.fr\/atlas\/espece\/54468",
+                "description": "Le Machaon est un des plus grands papillons de jour que l\u2019on ait en France. Son vol se situe entre avril et septembre, m\u00eame si les observations sont plus fr\u00e9quentes au mois de mai et de juillet. Le r\u00f4le du Machaon, comme pour tous les autres pollinisateurs, est tr\u00e8s important pour la pollinisation des fleurs et la fructification. Ce papillon est aussi une ressource alimentaire pour de nombreux animaux comme les oiseaux.\n",
+                "characteristic": "Apr\u00e8s l\u2019\u00e9closion de l\u2019\u0153uf, la chenille est de couleur orange et noire avec parfois un peu de blanc. Par la suite, la couleur dominante \u00e9volue au vert tendre avec des rayures orange et noires. \nConcernant le papillon (de couleur jaune p\u00e2le avec des dessins noirs dans l\u2019ensemble), le bas des ailes post\u00e9rieures est macul\u00e9 de bleu, et chaque extr\u00e9mit\u00e9 est caract\u00e9ris\u00e9e par un cercle rouge-orang\u00e9 ainsi qu\u2019une \"queue\" appel\u00e9e appendice caudal.\n<figure><img class='img-thumbnail mx-auto d-block' src='data\/image_source\/03_3.jpg'><div class='credits'>Morvan Debroize<\/div><figcaption>Chenille de Machaon (dernier stade)<\/figcaption><\/figure> \n",
+                "environment": "7,5",
+                "environment_description": "En tant que pollinisateur, le Machaon affectionne les lieux fleuris et herbus. On le retrouve donc aussi bien dans les prairies naturelles que dans les jardins fleuris, o\u00f9 il pourra retrouver ces plantes h\u00f4tes afin d\u2019y d\u00e9poser ses \u0153ufs. Il ne pond principalement que sur des Apiac\u00e9es, comme les Carottes sauvages ou cultiv\u00e9es, ou encore l\u2019Ang\u00e9lique sylvestre, mais il affectionne par-dessus tout le Fenouil commun.\n<figure><img class='img-thumbnail mx-auto d-block' src='data\/image_source\/03_2.jpg'><div class='credits'>Morvan Debroize<\/div><figcaption>Prairie fleurie durant l'\u00e9t\u00e9<\/figcaption><\/figure>    \n",
+                "not_confuse": "Il est possible de faire la confusion avec un autre papillon tr\u00e8s proche du Machaon : le Flamb\u00e9. Ce papillon est plus rare sur notre territoire mais pas totalement absent. Il a un aspect plus z\u00e9br\u00e9 que le Machaon avec des appendices plus importants en taille.\n<figure><img class='img-thumbnail mx-auto d-block' src='data\/image_source\/03_4.jpg'><div class='credits'>R\u00e9mi Jardin<\/div><figcaption>Flamb\u00e9 (Iphiclides podalirius)<\/figcaption><\/figure>  \n",
+                "sources": "Chenilles d'Europe David J. Carter, Brian Hargreaves [traduction et adaptation, Jo\u00ebl Minet] 2015#Guide complet des papillons d'Europe et d'Afrique du Nord texte de Lionel G. Higgins 1995"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "num": "3",
+        "title": "La balade du Prince charmant !",
+        "plural": 0,
+        "difficulty": 0,
+        "seasons": [
+            {
+                "startAt": "01",
+                "endAt": "04"
+            }
+        ],
+        "introduction": "Esp\u00e8ces souvent d\u00e9cri\u00e9es pour leurs laideurs dans les contes et l\u00e9gendes, les Crapauds sont pourtant d\u2019une grande importance dans la nature.\nComme pour tous les amphibiens de France, ils ne doivent leur survie qu\u2019aux zones humides (mares, marais \u2026), o\u00f9 ils commencent le d\u00e9but de leur vie et o\u00f9 ils reviennent pondre leurs \u0153ufs chaque ann\u00e9e.\nCe sont aussi des alli\u00e9s du jardinier, grands consommateurs de limaces.",
+        "id_taxons": [
+            "4"
+        ],
+        "taxon": [
+            {
+                "id": "4",
+                "cd_nom": "259",
+                "title": "Crapauds",
+                "family": "Amphibiens",
+                "url": "http:\/\/observatoire.parc-naturel-normandie-maine.fr\/atlas\/espece\/259",
+                "description": "Esp\u00e8ces souvent d\u00e9cri\u00e9es pour leur laideur dans les contes et l\u00e9gendes, les Crapauds sont pourtant d\u2019une grande importance dans la nature.\nComme pour tous les amphibiens de France, ils ne doivent leur survie qu\u2019aux zones humides (mares, marais \u2026), o\u00f9 ils commencent le d\u00e9but de leur vie et o\u00f9 ils reviennent pondre leurs \u0153ufs chaque ann\u00e9e.\nCe sont aussi des alli\u00e9s du jardinier, grands consommateurs de limaces.",
+                "characteristic": "Depuis peu de temps, deux esp\u00e8ces distinctes de Crapauds ont vu le jour : le Crapaud commun et le Crapaud \u00e9pineux.\nCes deux esp\u00e8ces sont morphologiquement similaires, pourtant elles sont tr\u00e8s \u00e9loign\u00e9es g\u00e9n\u00e9tiquement. Le Crapaud \u00e9pineux serait l\u2019esp\u00e8ce la plus courante dans le nord-ouest de la France. \nCes deux Crapauds poss\u00e8dent une peau verruqueuse allant du noir au brun clair et des iris orang\u00e9s avec pupilles noires horizontales.\n<figure><img class='img-thumbnail mx-auto d-block' src='data\/image_source\/04_3.jpg'><div class='credits'>Morvan Debroize<\/div><figcaption>Crapaud \u00e9pineux (Bufo spinosus) : iris orange fonc\u00e9, angle des glandes important<\/figcaption><\/figure> \n",
+                "environment": "11,8,5,4,3",
+                "environment_description": "Les Crapauds vivent dans l\u2019eau comme sur terre.\nIls rejoindront diff\u00e9rents milieux aquatiques pour se reproduire (de janvier jusqu\u2019au d\u00e9but du printemps), puis des milieux bois\u00e9s, des haies ou des jardins \u00e0 la fin de leur reproduction. \nLeurs pontes sont tr\u00e8s caract\u00e9ristiques, formant de grands chapelets d\u2019\u0153ufs dans les mares. En tant qu\u2019esp\u00e8ces prot\u00e9g\u00e9es, le pr\u00e9l\u00e8vement des \u0153ufs ou des t\u00eatards est interdit.\n<figure><img class='img-thumbnail mx-auto d-block' src='data\/image_source\/04_2.jpg'><div class='credits'>Morvan Debroize<\/div><figcaption>Ponte de Crapaud, dit en chapelet<\/figcaption><\/figure>  \n",
+                "not_confuse": "Il existe deux autres cousins au Crapaud \u00e9pineux et au Crapaud commun, formant tous les quatre la famille des Bufonid\u00e9s : le Crapaud calamite et le Crapaud vert.\nLa diff\u00e9rence avec ces deux autres Crapauds est n\u00e9anmoins plus \u00e9vidente (iris de couleur jaune \u00e0 vert-gris\u00e2tre) et ces derniers sont normalement absents du territoire Normandie-Maine.\n<figure><img class='img-thumbnail mx-auto d-block' src='data\/image_source\/04_4.jpg'><div class='credits'>Morvan Debroize<\/div><figcaption>Crapaud calamite (Bufo calamita)<\/figcaption><\/figure>  \n",
+                "sources": "Amphibiens et Reptiles de Normandie. Barrioz Micka\u00ebl, Cochard Pierre-Olivier, Voeltzel Vincent. 2015 - Ed. UR CPIE de Basse-Normandie 288 p."
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "num": "13",
+        "title": "Au bouleau !",
+        "plural": 0,
+        "difficulty": 2,
+        "seasons": [
+            {
+                "startAt": "09",
+                "endAt": "02"
+            }
+        ],
+        "introduction": "",
+        "id_taxons": [
+            "14"
+        ],
+        "taxon": [
+            {
+                "id": "14",
+                "cd_nom": "44020",
+                "title": "Polypore du bouleau",
+                "family": "Champignons",
+                "url": "http:\/\/observatoire.parc-naturel-normandie-maine.fr\/atlas\/espece\/44020",
+                "description": "De couleur marron-clair, en forme de console semi-circulaire et de surface lisse, le chapeau du Polypore du bouleau fait de 5 \u00e0 30 cm de large pour 2 \u00e0 6 cm d'\u00e9paisseur. Il poss\u00e8de un pied rudimentaire voire inexistant.\n\nSa chair est blanche ou l\u00e9g\u00e8rement jaune, presque g\u00e9latineuse. Il d\u00e9gage une odeur aigrelette et a une saveur acidul\u00e9e. Sa face inf\u00e9rieure reste blanch\u00e2tre : elle est compos\u00e9e d'un r\u00e9seau dense de pores qui lib\u00e8rent les spores et dispersent ainsi le champignon vers de nouveaux arbres.\n \nC'est une esp\u00e8ce annuelle mais elle peut rester en place plusieurs ann\u00e9es.",
+                "characteristic": "Caract\u00e8res distinctifs :\n - chapeau en forme de console semi-circulaire\n -surface lisse\n -couleur marron clair sur le dessus et\n blanche dessous\n Taille : 5 \u00e0 30 cm",
+                "environment": "4, 3",
+                "environment_description": "",
+                "not_confuse": "Non renseign\u00e9",
+                "sources": "Non renseign\u00e9"
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "num": "14",
+        "title": "Langue de b\u0153uf",
+        "plural": 0,
+        "difficulty": 2,
+        "seasons": [
+            {
+                "startAt": "08",
+                "endAt": "02"
+            }
+        ],
+        "introduction": "",
+        "id_taxons": [
+            "15"
+        ],
+        "taxon": [
+            {
+                "id": "15",
+                "cd_nom": "42445",
+                "title": "Langue de b\u0153uf",
+                "family": "Champignons",
+                "url": "http:\/\/observatoire.parc-naturel-normandie-maine.fr\/atlas\/espece\/42445",
+                "description": "La Langue de b\u0153uf se reconna\u00eet \u00e0 son chapeau de 7 \u00e0 25 cm de large en forme de console ou de langue parfois port\u00e9e par un pied court fix\u00e9 sur le support. Il est tr\u00e8s visqueux, couvert de petites asp\u00e9rit\u00e9s donnant l'impression d'une langue r\u00e2peuse, et sa couleur est rouge brique, devenant plus fonc\u00e9e en vieillissant. Sur sa face inf\u00e9rieure, les pores forment des tubes courts et serr\u00e9s de couleur cr\u00e8me qui s'assombrissent rapidement lorsqu'ils sont bless\u00e9s. Il peut exsuder un jus couleur sang.",
+                "characteristic": "Caract\u00e8res distinctifs :\n - chapeau en forme de console ou de\n langue\n - surface visqueuse couverte de\n petites asp\u00e9rit\u00e9s\n - couleur rouge brique\n Taille : 7 \u00e0 25 cm",
+                "environment": "4, 3",
+                "environment_description": "",
+                "not_confuse": "Non renseign\u00e9",
+                "sources": "Non renseign\u00e9"
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "num": "17",
+        "title": "P'tit gris !",
+        "plural": 0,
+        "difficulty": 0,
+        "seasons": [
+            {
+                "startAt": "03",
+                "endAt": "10"
+            }
+        ],
+        "introduction": "",
+        "id_taxons": [
+            "18"
+        ],
+        "taxon": [
+            {
+                "id": "18",
+                "cd_nom": "199863",
+                "title": "Petit-gris",
+                "family": "Gast\u00e9ropodes",
+                "url": "http:\/\/observatoire.parc-naturel-normandie-maine.fr\/atlas\/espece\/199863",
+                "description": "La coquille du Petit-gris a un diam\u00e8tre de 25 \u00e0 35 mm pour une hauteur de 25 \u00e0 40 mm. Sa coquille globuleuse pr\u00e9sente des bandes spirales mouchet\u00e9es, interrompues par de fines z\u00e9brures claires. Sa coloration est le plus souvent brune ray\u00e9e de noir.",
+                "characteristic": "Caract\u00e8res distinctifs :\n coquille en bandes spirales mouchet\u00e9es\n interrompues de fines z\u00e9brures claires\n couleur brune ray\u00e9e de noir\n Taille : 2,5 \u00e0 3,5 cm",
+                "environment": "4",
+                "environment_description": "",
+                "not_confuse": "Non renseign\u00e9",
+                "sources": "Non renseign\u00e9"
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "num": "19",
+        "title": "Un Tabac sans risque",
+        "plural": 0,
+        "difficulty": 1,
+        "seasons": [
+            {
+                "startAt": "06",
+                "endAt": "08"
+            }
+        ],
+        "introduction": "",
+        "id_taxons": [
+            "20"
+        ],
+        "taxon": [
+            {
+                "id": "20",
+                "cd_nom": "53878",
+                "title": "Tabac d'Espagne",
+                "family": "L\u00e9pidopt\u00e8res",
+                "url": "http:\/\/observatoire.parc-naturel-normandie-maine.fr\/atlas\/espece\/53878",
+                "description": "Le Tabac d'Espagne est un grand papillon de 6 \u00e0 8 cm d'envergure. On le reconna\u00eet au dessus de ses ailes de couleur fauve avec des points noirs et orn\u00e9 d'une ligne de taches rondes. Le revers des ailes ant\u00e9rieures est identique au dessus, tandis que celui des ailes post\u00e9rieures pr\u00e9sente un lavis argent\u00e9 de grandeur variable.",
+                "characteristic": "Caract\u00e8res distinctifs :\n - tr\u00e8s grandes ailes de couleur orange fauve avec des gros points noirs sur le dessus\n - revers des ailes post\u00e9rieures de couleur olive et travers\u00e9s par des bandes argent\u00e9es\n Taille : 6 \u00e0 8 cm",
+                "environment": "4",
+                "environment_description": "",
+                "not_confuse": "Non renseign\u00e9",
+                "sources": "Non renseign\u00e9"
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "num": "20",
+        "title": "Bob le pap' !",
+        "plural": 0,
+        "difficulty": 1,
+        "seasons": [
+            {
+                "startAt": "03",
+                "endAt": "10"
+            }
+        ],
+        "introduction": "",
+        "id_taxons": [
+            "21"
+        ],
+        "taxon": [
+            {
+                "id": "21",
+                "cd_nom": "53759",
+                "title": "Robert-le-Diable",
+                "family": "L\u00e9pidopt\u00e8res",
+                "url": "http:\/\/observatoire.parc-naturel-normandie-maine.fr\/atlas\/espece\/53759",
+                "description": "Le Robert-le-Diable est facilement reconnaissable avec ses ailes tr\u00e8s d\u00e9coup\u00e9es. Le dessus des ailes pr\u00e9sente un fond orange vif, des marques brunes et des taches claires en bordure. Le revers est marbr\u00e9 de brun et pr\u00e9sente une tache blanche en forme de C. Repli\u00e9, le papillon ressemble \u00e0 une feuille morte.",
+                "characteristic": "Caract\u00e8res distinctifs :\n - ailes tr\u00e8s d\u00e9coup\u00e9es de couleur orange\n vif sur le dessus\n - tache blanche en forme de C sur le\n dessous de l'aile post\u00e9rieure\n Taille : 4,5 cm",
+                "environment": "4",
+                "environment_description": "",
+                "not_confuse": "Non renseign\u00e9",
+                "sources": "Non renseign\u00e9"
+            }
+        ]
+    },
+    {
+        "id": 23,
+        "num": "23",
+        "title": "Quelle Aurore !",
+        "plural": 0,
+        "difficulty": 0,
+        "seasons": [
+            {
+                "startAt": "03",
+                "endAt": "06"
+            }
+        ],
+        "introduction": "",
+        "id_taxons": [
+            "24"
+        ],
+        "taxon": [
+            {
+                "id": "24",
+                "cd_nom": "54451",
+                "title": "Aurore",
+                "family": "L\u00e9pidopt\u00e8res",
+                "url": "http:\/\/observatoire.parc-naturel-normandie-maine.fr\/atlas\/espece\/54451",
+                "description": "Petit papillon blanc de 4 cm d'envergure, l'Aurore poss\u00e8de un dimorphisme sexuel tr\u00e8s marqu\u00e9 : le m\u00e2le est tr\u00e8s facile \u00e0 reconna\u00eetre avec la grande tache orang\u00e9e qui occupe toute la moiti\u00e9 de l'aile ant\u00e9rieure blanche \u00e0 bordure noire. La femelle, elle, ne poss\u00e8de pas cette coloration orang\u00e9e. Chez les deux sexes, le revers des ailes est blanc tachet\u00e9 de verd\u00e2tre.",
+                "characteristic": "Caract\u00e8res distinctifs :\n - revers des 4 ailes blanc tachet\u00e9 de verd\u00e2tre chez les deux sexes\n - grande t\u00e2che orang\u00e9e sur la moiti\u00e9 des 2\n ailes ant\u00e9rieures chez le m\u00e2le\n Taille : 4 cm",
+                "environment": "4",
+                "environment_description": "",
+                "not_confuse": "Non renseign\u00e9",
+                "sources": "Non renseign\u00e9"
+            }
+        ]
+    },
+    {
+        "id": 24,
+        "num": "24",
+        "title": "Attention fragile",
+        "plural": 0,
+        "difficulty": 2,
+        "seasons": [
+            {
+                "startAt": "05",
+                "endAt": "09"
+            }
+        ],
+        "introduction": "",
+        "id_taxons": [
+            "25"
+        ],
+        "taxon": [
+            {
+                "id": "25",
+                "cd_nom": "77490",
+                "title": "Orvet fragile",
+                "family": "Reptiles",
+                "url": "http:\/\/observatoire.parc-naturel-normandie-maine.fr\/atlas\/espece\/77490",
+                "description": "Les m\u00e2les Orvet mesure de 30 \u00e0 40 cm tandis que les femelles atteignent jusqu'\u00e0 50 cm. L'Orvet fragile poss\u00e8de une petite t\u00eate \u00e0 museau conique et arrondi et sa peau est d'aspect lisse et brillant. La couleur de l'animal \u00e9volue au cours de sa vie : le dos varie du jaune au rouge\u00e2tre, parfois bleut\u00e9 ou noir uni, et peut pr\u00e9senter de grandes bandes sombres.",
+                "characteristic": "Caract\u00e8res distinctifs :\n - petite t\u00eate \u00e0 museau conique et arrondi\n - peau lisse et brillante\n - pr\u00e9sence de paupi\u00e8res mobiles, il peut\n cligner des yeux\n Taille : 30 \u00e0 50 cm",
+                "environment": "4",
+                "environment_description": "",
+                "not_confuse": "Non renseign\u00e9",
+                "sources": "Non renseign\u00e9"
+            }
+        ]
+    },
+    {
+        "id": 25,
+        "num": "25",
+        "title": "Multit\u00e2ches !",
+        "plural": 0,
+        "difficulty": 0,
+        "seasons": [
+            {
+                "startAt": "05",
+                "endAt": "09"
+            }
+        ],
+        "introduction": "",
+        "id_taxons": [
+            "26"
+        ],
+        "taxon": [
+            {
+                "id": "26",
+                "cd_nom": "92",
+                "title": "Salamandre tachet\u00e9e",
+                "family": "Amphibiens",
+                "url": "http:\/\/observatoire.parc-naturel-normandie-maine.fr\/atlas\/espece\/92",
+                "description": "La Salamandre tachet\u00e9e est facilement reconnaissable. D'une longueur comprise entre 12 \u00e0 20 cm, sa peau est noire, lisse et luisante avec des bandes ou taches jaunes \u00e0 orange irr\u00e9guli\u00e8res, plus ou moins larges. Le ventre est plus clair, gris\u00e2tre, parfois piquet\u00e9 de points clairs. La t\u00eate de la Salamandre tachet\u00e9e est large, avec de grosses glandes paroto\u00efdes (glandes qui produisent un venin servant \u00e0 tuer ou dissuader les pr\u00e9dateurs) \u00e0 l'arri\u00e8re bien visibles. Plus particuli\u00e8rement, son museau est arrondi et ses yeux saillants tr\u00e8s noirs.",
+                "characteristic": "Caract\u00e8res distinctifs :\n - peau noire lisse et luisante avec des\n taches et des bandes jaunes \u00e0 orange\n - yeux saillants noirs\n Taille : 12 \u00e0 20 cm",
+                "environment": "4",
+                "environment_description": "",
+                "not_confuse": "Non renseign\u00e9",
+                "sources": "Non renseign\u00e9"
+            }
+        ]
+    },
+    {
+        "id": 26,
+        "num": "26",
+        "title": "Un bon cru (de Bourgogne !)",
+        "plural": 0,
+        "difficulty": 0,
+        "seasons": [
+            {
+                "startAt": "05",
+                "endAt": "11"
+            }
+        ],
+        "introduction": "",
+        "id_taxons": [
+            "27"
+        ],
+        "taxon": [
+            {
+                "id": "27",
+                "cd_nom": "64260",
+                "title": "Escargot de Bourgogne",
+                "family": "Gast\u00e9ropodes",
+                "url": "http:\/\/observatoire.parc-naturel-normandie-maine.fr\/atlas\/espece\/64260",
+                "description": "La coquille de l'Escargot de Bourgogne a un diam\u00e8tre de 30 \u00e0 50 mm pour une hauteur de 30 \u00e0 45 mm. Elle pr\u00e9sente 5 \u00e0 6 tours de spires (une boucle ouverte qui annonce ou amorce un mouvement de spirale) et une ouverture de grande taille dont le rebord est \u00e9paissi. La couleur est g\u00e9n\u00e9ralement blanc-cr\u00e8me avec des stries fines brun fonc\u00e9 et des bandes de croissance visibles. Des bandes plus color\u00e9es et dans le sens d'enroulement de la coquille sont parfois pr\u00e9sentes.",
+                "characteristic": "Caract\u00e8res distinctifs :\n - coquille blanc-cr\u00e8me \u00e0 5 ou 6 tours de\n spires avec des stries fines brun fonc\u00e9\n - grande ouverture \u00e0 rebord \u00e9pais\n Taille : 3 \u00e0 5 cm",
+                "environment": "4",
+                "environment_description": "",
+                "not_confuse": "Non renseign\u00e9",
+                "sources": "Non renseign\u00e9"
+            }
+        ]
+    },
+    {
+        "id": 37,
+        "num": "37",
+        "title": "Mission soufr\u00e9e",
+        "plural": 0,
+        "difficulty": 2,
+        "seasons": [
+            {
+                "startAt": "10",
+                "endAt": "02"
+            }
+        ],
+        "introduction": "",
+        "id_taxons": [
+            "38"
+        ],
+        "taxon": [
+            {
+                "id": "38",
+                "cd_nom": "43216",
+                "title": "Polypore soufr\u00e9",
+                "family": "Champignons",
+                "url": "http:\/\/observatoire.parc-naturel-normandie-maine.fr\/atlas\/espece\/43216",
+                "description": "Pouvant atteindre jusqu'\u00e0 50 cm de largeur, le Polypore soufr\u00e9 poss\u00e8de plusieurs chapeaux qui se superposent les uns sur les autres en forme d'\u00e9ventail. Sa face sup\u00e9rieure est de couleur jaune ros\u00e9 \u00e0 jaune orang\u00e9, avec une marge (le bord du chapeau) ondul\u00e9e. Sa face inf\u00e9rieure est de couleur jaune soufre, d'o\u00f9 son nom.\nSa chair est \u00e9paisse d'1 \u00e0 5 cm, de couleur blanche et charnue \u00e0 l'\u00e9tat frais. En revanche, elle devient cassante lorsque le champignon s\u00e8che. Les pores, situ\u00e9s sous le chapeau, \u00e9mettent souvent des gouttelettes de sudation.\nLe polypore soufr\u00e9 se reconna\u00eet gr\u00e2ce \u00e0 son odeur forte et piquante.",
+                "characteristic": "Caract\u00e8res distinctifs :\n - plusieurs chapeaux superpos\u00e9s en forme d'\u00e9ventail\n - couleur jaune ros\u00e9 \u00e0 jaune orang\u00e9\n - bords ondul\u00e9s\n - cassant lorsqu'il s\u00e8che\n Taille : jusqu'\u00e0 50 cm",
+                "environment": "4",
+                "environment_description": "",
+                "not_confuse": "Non renseign\u00e9",
+                "sources": "Non renseign\u00e9"
+            }
+        ]
+    },
+    {
+        "id": 46,
+        "num": "46",
+        "title": "H\u00eatre ou ne pas H\u00eatre ?",
+        "plural": 0,
+        "difficulty": 0,
+        "seasons": [
+            {
+                "startAt": "01",
+                "endAt": "12"
+            }
+        ],
+        "introduction": "",
+        "id_taxons": [
+            "47"
+        ],
+        "taxon": [
+            {
+                "id": "47",
+                "cd_nom": "97947",
+                "title": "H\u00eatre commun",
+                "family": "Fagac\u00e9es",
+                "url": "http:\/\/observatoire.parc-naturel-normandie-maine.fr\/atlas\/espece\/97947",
+                "description": "Le H\u00eatre commun est un arbre qui peuple 10% des for\u00eats fran\u00e7aises et se retrouve dans les for\u00eats de feuillus parfois en m\u00e9lange avec des ch\u00eanes. Il est reconnaissable par son tronc bien droit \u00e0 l\u2019\u00e9corce grise et lisse. Ses bourgeons sont longs et pointus. Ses feuilles sont ovales, l\u00e9g\u00e8rement bord\u00e9es de poils et se r\u00e9partissent de fa\u00e7on alterne sur les rameaux.\nAttention, le H\u00eatre commun est souvent confondu avec le Charme. Pour les distinguer, rappelez-vous \"le charme d\u2019Adam est d\u2019\u00eatre \u00e0 poils\"... les feuilles du Charme sont dent\u00e9es, celles du H\u00eatre pr\u00e9sentent des poils !\n\nVotre mission : reconna\u00eetre un h\u00eatre et photographier ses bourgeons ou ses feuilles !",
+                "characteristic": "Caract\u00e8res distinctifs :\n- arbre au tronc bien droit\n- \u00e9corce grise et lisse\n- bourgeons longs et pointus \n- feuilles ovales, alternes, poilues\nTaille : de 10 \u00e0 35 m\u00e8tres",
+                "environment": "4, 3",
+                "environment_description": "",
+                "not_confuse": "Non renseign\u00e9",
+                "sources": "Non renseign\u00e9"
+            }
+        ]
+    },
+    {
+        "id": 60,
+        "num": "60",
+        "title": "Granivore en vue !\n",
+        "plural": 0,
+        "difficulty": 1,
+        "seasons": [
+            {
+                "startAt": "01",
+                "endAt": "09"
+            }
+        ],
+        "introduction": "Le Chardonneret \u00e9l\u00e9gant porte un nom riche en informations : comme ses cousins de la famille des Fringilid\u00e9s, c\u2019est un oiseau granivore et particuli\u00e8rement friand des graines de chardon. Et l\u2019\u00e9l\u00e9gance de son plumage color\u00e9 est tel qu\u2019il est rare de le confondre avec un autre oiseau. \nIl \u00e9tait m\u00eame autrefois captur\u00e9 pour \u00eatre vendu comme animal de compagnie pour la beaut\u00e9 de son chant et de son plumage.\n",
+        "id_taxons": [
+            "61"
+        ],
+        "taxon": [
+            {
+                "id": "61",
+                "cd_nom": "4583",
+                "title": "Chardonneret \u00e9l\u00e9gant",
+                "family": "Oiseaux",
+                "url": "http:\/\/observatoire.parc-naturel-normandie-maine.fr\/atlas\/espece\/4583",
+                "description": "Le Chardonneret \u00e9l\u00e9gant porte un nom riche en informations : comme ses cousins de la famille des Fringilid\u00e9s, c\u2019est un oiseau granivore et particuli\u00e8rement friand des graines de chardon. Et l\u2019\u00e9l\u00e9gance de son plumage color\u00e9 est tel qu\u2019il est rare de le confondre avec un autre oiseau. \nIl \u00e9tait m\u00eame autrefois captur\u00e9 pour \u00eatre vendu comme animal de compagnie pour la beaut\u00e9 de son chant et de son plumage.",
+                "characteristic": "Le m\u00e2le comme la femelle ont la face macul\u00e9e de rouge avec un bandeau noir, ainsi que des plumes jaune citron au niveau des ailes, que l'ont peut observer en vol comme au repos. Le reste du corps se partage entre le brun chamois (dos et zones pectorales), le blanc (ventre et croupion) et le noir (dessus de la t\u00eate et les ailes).\n<figure><img class='img-thumbnail mx-auto d-block' src='data\/image_source\/61_3.jpg'><div class='credits'>J. LAIGNEL (INPN)<\/div><figcaption>Chardonneret \u00e9l\u00e9gant (Carduelis carduelis)<\/figcaption><\/figure>  \n",
+                "environment": "3, 4, 5",
+                "environment_description": "Le Chardonneret fr\u00e9quente les milieux bois\u00e9s ouverts, compos\u00e9s d\u2019arbres et d\u2019arbustes \u00e9lev\u00e9s pour sa nidification et de sous-bois denses en herbes et riches en graines diverses pour l\u2019alimentation des jeunes. Mais il n\u2019est pas rare de l\u2019observer en petits groupes dans les jardins, \u00e0 l\u2019automne sur diverses plantes \u00e0 graines ou en hiver aux postes de nourrissage.\n<figure><img class='img-thumbnail mx-auto d-block' src='data\/image_source\/61_2.jpg'><div class='credits'>J. LAIGNEL (INPN)<\/div><figcaption>Chardonneret recherchant des graines sur Card\u00e8re sauvage<\/figcaption><\/figure>  \n",
+                "not_confuse": "En France, il est difficile de confondre le chardonneret avec une autre esp\u00e8ce. Les juv\u00e9niles, qui n\u2019ont pas encore leur plumage d\u2019adulte, peuvent-\u00eatre confondus avec le Verdier d\u2019Europe. Mais \u00e0 l\u2019\u00e2ge adulte, ces dernier vont clairement se diff\u00e9rencier par un plumage verd\u00e2tre \u00e0 jaun\u00e2tre. \n<figure><img class='img-thumbnail mx-auto d-block' src='data\/image_source\/61_4.jpg'><div class='credits'>PNRNM - Morvan Debroize<\/div><figcaption>Verdier d'Europe (Carduelis chloris)<\/figcaption><\/figure>  \n",
+                "sources": "http:\/\/www.oiseaux.net\/oiseaux\/chardonneret.elegant.html#\n\"Le guide ornitho\" L. Svensson, D. Zetterst\u00f6m, K. Mullarney, J-L. Parmentier (traduction), delachaux et niestl\u00e9, 2009"
+            }
+        ]
+    },
+    {
+        "id": 61,
+        "num": "61",
+        "title": "\u00c0 pas feutr\u00e9s en for\u00eat !\n",
+        "plural": 0,
+        "difficulty": 0,
+        "seasons": [
+            {
+                "startAt": "01",
+                "endAt": "12"
+            }
+        ],
+        "introduction": "Il n\u2019est pas rare d\u2019apercevoir la silhouette bondissante du Chevreuil europ\u00e9en au beau milieu d\u2019une for\u00eat ou d'une prairie paisible. Grand consommateur de feuilles et de jeunes pousses, il explore aussi les champs de cultures \u00e0 la recherche de ma\u00efs, de luzerne ou de colza. Sa p\u00e9riode de reproduction se situant entre mi-juillet et mi-ao\u00fbt, il est fr\u00e9quent de l\u2019entendre \u00ab aboyer \u00bb \u00e0 ce moment de l\u2019ann\u00e9e.\n",
+        "id_taxons": [
+            "62"
+        ],
+        "taxon": [
+            {
+                "id": "62",
+                "cd_nom": "61057",
+                "title": "Chevreuil europ\u00e9en",
+                "family": "Mammif\u00e8res",
+                "url": "http:\/\/observatoire.parc-naturel-normandie-maine.fr\/atlas\/espece\/61057",
+                "description": "Il n\u2019est pas rare d\u2019apercevoir la silhouette bondissante du Chevreuil europ\u00e9en au beau milieu d\u2019une for\u00eat ou d'une prairie paisible. Grand consommateur de feuilles et de jeunes pousses, il explore aussi les champs de cultures \u00e0 la recherche de ma\u00efs, de luzerne ou de colza. Sa p\u00e9riode de reproduction se situant entre mi-juillet et mi-ao\u00fbt, il est fr\u00e9quent de l\u2019entendre \u00ab aboyer \u00bb \u00e0 ce moment de l\u2019ann\u00e9e.\n",
+                "characteristic": "De couleur fauve \u00e0 roux en \u00e9t\u00e9, le pelage vire progressivement au gris en hiver. Mais ce que l\u2019on remarque souvent, c\u2019est la tache claire qui orne le fessier de l\u2019animal, d'un blanc pur en hiver.\nSeul le brocard (chevreuil m\u00e2le) poss\u00e8de des bois qui tomberont \u00e0 l\u2019automne.\nEnfin, l\u2019empreinte du chevreuil est assez caract\u00e9ristique : deux ongles de petite taille (environ 4,5 cm).\n<figure><img class='img-thumbnail mx-auto d-block' src='data\/image_source\/62_3.jpg'><div class='credits'>Cr\u00e9dit<\/div><figcaption>Empreinte de Chevreuil<\/figcaption><\/figure>  \n",
+                "environment": "2, 3, 4, 6, 7",
+                "environment_description": "Le Chevreuil europ\u00e9en fr\u00e9quente g\u00e9n\u00e9ralement les for\u00eats de feuillus o\u00f9 il pourra trouver le g\u00eete et le couvert sans grand danger. Mais il n\u2019est pas rare de l\u2019observer dans les champs et les prairies \u00e0 la recherche de nourriture, en petits groupes ou seul. C\u2019est aussi un animal qui traverse les routes pour se d\u00e9placer, alors prudence !\n<figure><img class='img-thumbnail mx-auto d-block' src='data\/image_source\/62_2.jpg'><div class='credits'>Morvan Debroize<\/div><figcaption>P\u00e2ture en lisi\u00e8re de for\u00eat<\/figcaption><\/figure>  \n",
+                "not_confuse": "Le Cerf \u00e9laphe est l\u2019autre cervid\u00e9 commun de nos for\u00eats. C\u2019est le plus grand mammif\u00e8re de France m\u00e9tropolitaine, avec une taille de 135 cm au garrot (contre 60 \u00e0 80 cm pour le chevreuil) et un poids pouvant aller jusqu\u2019\u00e0 200 kg chez les m\u00e2les. La confusion est donc possible avec de jeunes individus n\u2019ayant pas encore atteint leur taille adulte. Cependant, les chevreuils disposent d'une tache blanche sur les fesses qui n'est pas pr\u00e9sente chez les cerfs.\n<figure><img class='img-thumbnail mx-auto d-block' src='data\/image_source\/62_4.jpg'><div class='credits'>Nicolas Belcourt (INPN)<\/div><figcaption>Cerf \u00e9laphe (Cervus elaphus)<\/figcaption><\/figure>  \n",
+                "sources": "http:\/\/www.oncfs.gouv.fr\/Connaitre-les-especes-ru73\/Le-Chevreuil-ar977#\nhttp:\/\/www.oncfs.gouv.fr\/Connaitre-les-especes-ru73\/Le-Cerf-elaphe-ar978#\nhttp:\/\/www.gmn.asso.fr\/public\/mammiferes\/Fiche_Chevreuil_europeen.pdf\n"
+            }
+        ]
+    },
+    {
+        "id": 62,
+        "num": "62",
+        "title": "Des m\u00e2les rose bonbon !\n",
+        "plural": 0,
+        "difficulty": 1,
+        "seasons": [
+            {
+                "startAt": "04",
+                "endAt": "06"
+            }
+        ],
+        "introduction": "N\u2019avez-vous jamais remarqu\u00e9 ces belles fleurs roses ornant les talus des routes par une belle journ\u00e9e printani\u00e8re ? Si c\u2019est le cas, il y a de grandes chances que ce soit l\u2019Orchis m\u00e2le, une des orchid\u00e9es sauvages les plus courantes du territoire du Parc. Il existe environ 150 esp\u00e8ces et sous-esp\u00e8ces d\u2019orchid\u00e9es en France, et un certain nombre d\u2019entre elles sont prot\u00e9g\u00e9es.\n",
+        "id_taxons": [
+            "63"
+        ],
+        "taxon": [
+            {
+                "id": "63",
+                "cd_nom": "110914",
+                "title": "Orchis m\u00e2le",
+                "family": "Orchidac\u00e9es",
+                "url": "http:\/\/observatoire.parc-naturel-normandie-maine.fr\/atlas\/espece\/110914",
+                "description": "N\u2019avez-vous jamais remarqu\u00e9 ces belles fleurs roses ornant les talus des routes par une belle journ\u00e9e printani\u00e8re ? Si c\u2019est le cas, il y a de grandes chances que ce soit l\u2019Orchis m\u00e2le, une des orchid\u00e9es sauvages les plus courantes du territoire du Parc. Il existe environ 150 esp\u00e8ces et sous-esp\u00e8ces d\u2019orchid\u00e9es en France, et un certain nombre d\u2019entre elles sont prot\u00e9g\u00e9es.",
+                "characteristic": "Les fleurs, regroup\u00e9es en \u00e9pis compacts pouvant atteindre plus de 50 cm de haut, sont purpurines ou roses (plus rarement compl\u00e8tement blanches). Autre particularit\u00e9, les feuilles de l\u2019esp\u00e8ce sont en g\u00e9n\u00e9ral macul\u00e9es de taches brunes.\n<figure><img class='img-thumbnail mx-auto d-block' src='data\/image_source\/63_3.jpg'><div class='credits'>Morvan Debroize<\/div><figcaption>Feuille d'Orchis m\u00e2le<\/figcaption><\/figure>  \n",
+                "environment": "3, 4, 5, 7",
+                "environment_description": "L\u2019Orchis m\u00e2le fleurit dans de nombreux milieux diff\u00e9rents, que ce soit en pleine lumi\u00e8re comme \u00e0 l\u2019ombre, sur substrats secs \u00e0 humides, acides \u00e0 basiques, dans les bois ou dans les pr\u00e9s, et m\u00eame dans votre jardin. Mais il est facile de l\u2019observer sur les talus non fauch\u00e9s des routes o\u00f9 elle peut \u00eatre associ\u00e9e \u00e0 d\u2019autres esp\u00e8ces d\u2019orchid\u00e9es.\n<figure><img class='img-thumbnail mx-auto d-block' src='data\/image_source\/63_2.jpg'><div class='credits'>PNRNM - Morvan Debroize<\/div><figcaption>Talus avec diff\u00e9rentes esp\u00e8ces d\u2019orchid\u00e9es<\/figcaption><\/figure>  \n",
+                "not_confuse": "L\u2019Orchis \u00e0 fleurs l\u00e2ches, qui comme son nom l\u2019indique, poss\u00e8de des \u00e9pis floraux moins denses en fleurs. Mais cette esp\u00e8ce commence \u00e0 fleurir en juin, au moment o\u00f9 l\u2019Orchis m\u00e2le ne l\u2019est plus.\nL\u2019Orchis bouffon, est-elle plus petite en taille (10 \u00e0 20 cm). Les fleurs sont aussi stri\u00e9es de lignes sombres, ce qui n\u2019est pas le cas chez l\u2019Orchis m\u00e2le. \nLe crit\u00e8re \u00e0 regarder apr\u00e8s la couleur des fleurs, ce sont les feuilles : car seul l\u2019Orchis m\u00e2le, de couleur violette, poss\u00e8de des taches brunes sur ses feuilles. Attention, certaines orchid\u00e9es, de couleur blanche, peuvent avoir des taches sur les feuilles.\n<figure><img class='img-thumbnail mx-auto d-block' src='data\/image_source\/63_4.jpg'><div class='credits'>Morvan Debroize<\/div><figcaption>Orchis bouffon (Orchis morio)<\/figcaption><\/figure>  ",
+                "sources": "https:\/\/www.tela-botanica.org\/bdtfx-nn-4316-synthese#\nhttps:\/\/www.tela-botanica.org\/bdtfx-nn-46035-synthese#\nhttp:\/\/www.orne.fr\/sites\/www.orne.fr\/files\/fichiers\/parution\/13\/03\/72dpiplaquetteorchidee2013.pdf\n"
+            }
+        ]
+    },
+    {
+        "id": 63,
+        "num": "63",
+        "title": "Un, deux, trois, printemps !\n",
+        "plural": 0,
+        "difficulty": 1,
+        "seasons": [
+            {
+                "startAt": "03",
+                "endAt": "05"
+            }
+        ],
+        "introduction": "Le printemps ! La saison o\u00f9 la nature se r\u00e9veille et o\u00f9 de nombreuses fleurs pointent le bout de leur nez afin d'\u00eatre les premi\u00e8res \u00e0 profiter des rayons du soleil. Parmi ces plantes \u00ab vernales \u00bb (qui fleurissent au printemps) nous retrouvons la Jacinthe des bois, l\u2019An\u00e9mone sylvie ou encore la Jonquille.\n",
+        "id_taxons": [
+            "64",
+            "65",
+            "66"
+        ],
+        "taxon": [
+            {
+                "id": "64",
+                "cd_nom": "103057",
+                "title": "Jacinthe des bois",
+                "family": "Liliac\u00e9es",
+                "url": "http:\/\/observatoire.parc-naturel-normandie-maine.fr\/atlas\/espece\/103057",
+                "description": "La Jacinthe des bois est une esp\u00e8ce facile \u00e0 reconna\u00eetre. Au printemps, cette plante forme de grands tapis de fleurs violettes dans les sous-bois des for\u00eats de feuillus. Avec sa cousine le Muguet, elles sont consid\u00e9r\u00e9es comme l\u2019un des plus beaux spectacles floraux d\u2019Europe de l\u2019Ouest.",
+                "characteristic": "La tige florale est g\u00e9n\u00e9ralement pench\u00e9e, laissant pendre des clochettes violettes-bleut\u00e9es (rarement blanches ou roses) regroup\u00e9es par 5 \u00e0 15 sur un seul c\u00f4t\u00e9 de la tige. En fin de floraison, les fleurs disparaissent et laissent place \u00e0 des capsules ovales vertes, contenant les graines de la Jacinthe.\n<figure><img class='img-thumbnail mx-auto d-block' src='data\/image_source\/64_3.jpg'><div class='credits'>PNRNM - Gabriel Soulard<\/div><figcaption>Capsules de graines de Jacinthe<\/figcaption><\/figure>  \n",
+                "environment": "3, 4, 5, 7",
+                "environment_description": "La Jacinthe est principalement une esp\u00e8ce \u00ab\u00a0sylvatique\u00a0\u00bb, c\u2019est-\u00e0-dire se d\u00e9veloppant en sous-bois dans les for\u00eats de ch\u00eanes et de h\u00eatres, ou sur les talus des haies bois\u00e9es. Pour faire simple, c\u2019est une esp\u00e8ce qui pr\u00e9f\u00e8re l\u2019ombre \u00e0 la lumi\u00e8re, m\u00eame s\u2019il n\u2019est pas rare de l\u2019observer au bord des routes en plein soleil.\n<figure><img class='img-thumbnail mx-auto d-block' src='data\/image_source\/64_2.jpg'><div class='credits'>Morvan Debroize<\/div><figcaption>Sous-bois de Jacinthes<\/figcaption><\/figure>  \n",
+                "not_confuse": "La Jacinthe d'Espagne. A l\u2019origine, cette plante n\u2019existe pas \u00e0 l\u2019\u00e9tat naturel en France, mais elle peut s\u2019\u00e9chapper des jardins d\u2019o\u00f9 elle aurait \u00e9t\u00e9 introduite. Cette derni\u00e8re est plus massive avec des clochettes plus grosses.\nAutre plante \u00e9chapp\u00e9e des jardins, le Muscari \u00e0 grappes, plus facile \u00e0 diff\u00e9rencier de la Jacinthe des bois avec sa taille plus petite et des fleurs plus nombreuses mais dont la couleur est identique.\n<figure><img class='img-thumbnail mx-auto d-block' src='data\/image_source\/64_4.jpg'><div class='credits'>J.-J. Milan (INPN)<\/div><figcaption>Muscari \u00e0 grappes (Muscari neglectum)<\/figcaption><\/figure>  \n",
+                "sources": "https:\/\/www.tela-botanica.org\/bdtfx-nn-35000-description\nouvrage : La Flore de la Mayenne, C. David, M. G\u00e9rard, H. Hubert, B. Jarri, Y. de Labarre, M. Ravet, \u00e9ditions Silo\u00eb, 2009\nouvrage : Guide des fleurs sauvages, R.Fitter, A.Fetter, M.Blamey, \u00e9ditions delachaux et niestl\u00e9, 1997"
+            },
+            {
+                "id": "65",
+                "cd_nom": "82637",
+                "title": "An\u00e9mone sylvie ",
+                "family": "Renonculac\u00e9es",
+                "url": "http:\/\/observatoire.parc-naturel-normandie-maine.fr\/atlas\/espece\/82637",
+                "description": "Par son nom, l\u2019An\u00e9mone sylvie fait r\u00e9f\u00e9rence au monde sylvestre puisqu\u2019elle aime s\u2019\u00e9panouir dans les sous-bois frais des anciennes for\u00eats de feuillus. Cette jolie printani\u00e8re aux p\u00e9tales d\u00e9licats est souvent associ\u00e9e \u00e0 la Jacinthe des bois au tout d\u00e9but du printemps.\n",
+                "characteristic": "Les p\u00e9tales des fleurs d\u2019un blanc pur (parfois ros\u00e2tre) sont au nombre de six et entourent les nombreuses \u00e9tamines jaunes situ\u00e9es au c\u0153ur de la fleur. Les feuilles sont quant \u00e0 elles profond\u00e9ment lob\u00e9es et se densifient apr\u00e8s la floraison.\n<figure><img class='img-thumbnail mx-auto d-block' src='data\/image_source\/65_3.jpg'><div class='credits'>Morvan Debroize<\/div><figcaption>Fleur d'An\u00e9mone sylvie<\/figcaption><\/figure>  \n",
+                "environment": "3, 4, 5, 7",
+                "environment_description": "L\u2019An\u00e9mone est commune et abondante dans les bois frais de feuillus. Il est possible de l\u2019observer en lisi\u00e8re de bois et sur les talus des haies bois\u00e9es, o\u00f9 les p\u00e9tales des fleurs s\u2019ouvriront totalement au contact de la lumi\u00e8re.\n<figure><img class='img-thumbnail mx-auto d-block' src='data\/image_source\/65_2.jpg'><div class='credits'>P. Gourdain (INPN)<\/div><figcaption>Tapis d'an\u00e9mones en sous-bois<\/figcaption><\/figure>  \n",
+                "not_confuse": "L\u2019An\u00e9mone sylvie peut \u00eatre confondue avec l\u2019Oseille des bois. Les fleurs de cette derni\u00e8re sont l\u00e9g\u00e8rement plus petites et vein\u00e9es de mauve. Mais la diff\u00e9rence principale se situe au niveau des feuilles, car comme la plupart des Oxalis, les feuilles de l'Oseille ressemblent \u00e0 celles d\u2019un tr\u00e8fle.\n<figure><img class='img-thumbnail mx-auto d-block' src='data\/image_source\/65_4.jpg'><div class='credits'>S. Filoche (INPN)<\/div><figcaption>Oseille des bois (Oxalis acetosella)<\/figcaption><\/figure>   \n",
+                "sources": "https:\/\/www.tela-botanica.org\/bdtfx-nn-4830-synthese\nouvrage : La Flore de la Mayenne, C. David, M. G\u00e9rard, H. Hubert, B. Jarri, Y. de Labarre, M. Ravet, \u00e9ditions Silo\u00eb, 2009\nouvrage : Guide des fleurs sauvages, R.Fitter, A.Fetter, M.Blamey, \u00e9ditions delachaux et niestl\u00e9, 1997\n"
+            },
+            {
+                "id": "66",
+                "cd_nom": "109297",
+                "title": "Jonquille des bois ",
+                "family": "Amaryllidac\u00e9es",
+                "url": "http:\/\/observatoire.parc-naturel-normandie-maine.fr\/atlas\/espece\/109297",
+                "description": "La Jonquille des bois est une esp\u00e8ce printani\u00e8re tr\u00e8s pr\u00e9coce. D\u00e8s le mois de mars, elle commence \u00e0 sortir de terre et peu m\u00eame d\u00e9buter sa floraison sous les climats les plus doux. Ce Narcisse est plus petit que les quelques centaines de vari\u00e9t\u00e9s cultiv\u00e9es dans les jardins, qui se naturalisent parfois dans les campagnes.",
+                "characteristic": "Les fleurs solitaires comprennent 6 t\u00e9pales. On parle de t\u00e9pales lorsqu'il est impossible de distinguer les s\u00e9pales, des p\u00e9tales. Les externes sont d\u2019un jaune p\u00e2le, et une trompette centrale (nomm\u00e9e coronule) est d\u2019un jaune beaucoup plus \u00e9clatant. Le fruit en capsule contient de nombreuses graines qui favorisent la formation de parterres.\n<figure><img class='img-thumbnail mx-auto d-block' src='data\/image_source\/66_3.jpg'><div class='credits'>P. Gourdain (INPN)<\/div><figcaption>Fleur de Jonquille des bois<\/figcaption><\/figure>  \n",
+                "environment": "3, 4, 5, 7",
+                "environment_description": "La Jonquille fleurit dans les bois, les parcs et les prairies fra\u00eeches. On peut aussi l\u2019observer sur les talus non-fauch\u00e9s au d\u00e9but du printemps. Assez abondante en certains endroits, elle a tendance \u00e0 se rar\u00e9fier avec la disparition des prairies naturelles. Cette esp\u00e8ce b\u00e9n\u00e9ficie d'une r\u00e8glementation. Sa cueillette est tol\u00e9r\u00e9e \u00e0 un bouquet tenant dans une main par personne. Il est interdit d'arracher les bulbes.  \n<figure><img class='img-thumbnail mx-auto d-block' src='data\/image_source\/66_2.jpg'><div class='credits'>Morvan Debroize<\/div><figcaption>Prairie de Jonquilles<\/figcaption><\/figure>  \n",
+                "not_confuse": "La Jonquille des bois peut \u00eatre confondue avec les nombreuses vari\u00e9t\u00e9s cultiv\u00e9es de Narcisses, \u00e0 fleurs tr\u00e8s variables de formes, couleurs et tailles.\nL\u2019autre esp\u00e8ce souvent confondue avec la Jonquille est l\u2019Iris des marais. Cette confusion provient de la couleur jaune presque identique entre les deux fleurs, mais l\u2019Iris ne poss\u00e8de pas de trompette.\n<figure><img class='img-thumbnail mx-auto d-block' src='data\/image_source\/66_4.jpg'><div class='credits'>Sylvain Montagner<\/div><figcaption>Iris des marais (Iris pseudacorus)<\/figcaption><\/figure>  ",
+                "sources": "https:\/\/www.tela-botanica.org\/bdtfx-nn-43646-synthese\nouvrage : La Flore de la Mayenne, C. David, M. G\u00e9rard, H. Hubert, B. Jarri, Y. de Labarre, M. Ravet, \u00e9ditions Silo\u00eb, 2009\nouvrage : Fleurs sauvages, Larousse Nature en poche, Neil Fletcher, Guillaume Eyssartier (traduction)\n"
+            }
+        ]
+    },
+    {
+        "id": 64,
+        "num": "64",
+        "title": "Qui a rong\u00e9 la noisette\u00a0?",
+        "plural": 0,
+        "difficulty": 2,
+        "seasons": [
+            {
+                "startAt": "09",
+                "endAt": "11"
+            }
+        ],
+        "introduction": "Le Muscardin, aussi connu sous le nom de \u201ccroque-noisettes\u201d, est un petit rongeur arboricole habitant les milieux de v\u00e9g\u00e9tation dense (ronciers, parcelles de r\u00e9g\u00e9n\u00e9ration de feuillus, bocage parsem\u00e9 de bosquets\u2026). L\u2019esp\u00e8ce ayant une activit\u00e9 nocturne, l\u2019observer n\u2019est pas toujours chose facile. N\u00e9anmoins, l\u2019automne est la saison o\u00f9 l\u2019esp\u00e8ce disperse de nombreuses noisettes rong\u00e9es !\n",
+        "id_taxons": [
+            "67"
+        ],
+        "taxon": [
+            {
+                "id": "67",
+                "cd_nom": "61636",
+                "title": "Muscardin",
+                "family": "Mammif\u00e8res",
+                "url": "http:\/\/observatoire.parc-naturel-normandie-maine.fr\/atlas\/espece\/61636",
+                "description": "Le Muscardin, aussi connu sous le nom de \u201ccroque-noisettes\u201d, est un petit rongeur arboricole habitant les milieux de v\u00e9g\u00e9tation dense (ronciers, parcelles de r\u00e9g\u00e9n\u00e9ration de feuillus, bocage parsem\u00e9 de bosquets\u2026). L\u2019esp\u00e8ce ayant une activit\u00e9 nocturne, l\u2019observer n\u2019est pas toujours chose facile. N\u00e9anmoins, l\u2019automne est la saison o\u00f9 l\u2019esp\u00e8ce disperse de nombreuses noisettes rong\u00e9es !",
+                "characteristic": "Il s\u2019agit donc d\u2019identifier les noisettes rong\u00e9es par le Muscardin :\nLes trous faits par le Muscardin sont tr\u00e8s r\u00e9guliers et souvent presque ronds. Autre particularit\u00e9, des traces de dents sont visibles \u00e0 la surface de la noisette, sur la partie externe (traits verts). Elles sont obliques par rapport au trou et dessinent comme un cercle clair. Enfin, le bord interne du trou (traits orange) ne comporte pas de traces de dents et para\u00eet lisse.\n<figure><img class='img-thumbnail mx-auto d-block' src='data\/image_source\/67_3.jpg'><div class='credits'>PNRNM - Morvan Debroize<\/div><figcaption>Noisette rong\u00e9e par un Muscardin<\/figcaption><\/figure>  \n",
+                "environment": "4",
+                "environment_description": "Le Muscardin vit plut\u00f4t dans les zones de v\u00e9g\u00e9tation buissonnante mais aussi dans les arbres o\u00f9 il y circule avec agilit\u00e9, jusque sur les branches les plus minces. En automne, il consomme m\u00fbres et autres baies, insectes, noisettes, fa\u00eenes ou encore amandes des noyaux de merises. Les taillis de noisetiers sont donc des endroits propices \u00e0 la r\u00e9colte de noisettes rong\u00e9es !\n<figure><img class='img-thumbnail mx-auto d-block' src='data\/image_source\/67_2.jpg'><div class='credits'>PNRNM - Emilie Rossa<\/div><figcaption>Haies de noisetiers<\/figcaption><\/figure>  \n",
+                "not_confuse": "Le Muscardin n\u2019est malheureusement pas le seul \u00e0 convoiter les noisettes durant l\u2019automne : Ecureuil, Mulot, Campagnol et certains oiseaux sont ses principaux rivaux. Ce sont les Campagnols et les Mulots qui, souvent, peuvent brouiller les pistes. Leur principale marque de fabrique, ce sont les multiples traces de dents perpendiculaires sur le bord interne du trou (traits vert).\n<figure><img class='img-thumbnail mx-auto d-block' src='data\/image_source\/67_4.jpg'><div class='credits'>PNRNM - Morvan Debroize<\/div><figcaption>Noisette rong\u00e9e par un Campagnol<\/figcaption><\/figure>  \n",
+                "sources": "https:\/\/cdnfiles1.biolovision.net\/franche-comte.lpo.fr\/userfiles\/observer\/EnquteMuscardin\/QuiarongelanoisetteGuidedidentification.pdf#\nhttp:\/\/gmb.bzh\/wp-content\/uploads\/2018\/02\/LivretMuscardin_Planches.pdf#\nhttp:\/\/gmn.asso.fr\/public\/mammiferes\/Fiche_Muscardin.pdf\n\n"
+            }
+        ]
+    },
+    {
+        "id": 65,
+        "num": "65",
+        "title": "La forteresse \u00e9pineuse !\n",
+        "plural": 0,
+        "difficulty": 0,
+        "seasons": [
+            {
+                "startAt": "03",
+                "endAt": "10"
+            }
+        ],
+        "introduction": "Le H\u00e9risson d\u2019Europe ! Ce mammif\u00e8re au dos h\u00e9riss\u00e9 de piquants, qui s'aventure souvent tout pr\u00e8s de nos habitations, est une esp\u00e8ce semi-nocturne qui consacrera ses nuits \u00e0 la chasse. De ce fait, il r\u00e9gulera les populations d'insectes, de vers, d'escargots, ou encore de limaces, qui peuvent parfois causer des d\u00e9g\u00e2ts dans les potagers et les jardins.\n",
+        "id_taxons": [
+            "68"
+        ],
+        "taxon": [
+            {
+                "id": "68",
+                "cd_nom": "60015",
+                "title": "H\u00e9risson d\u2019Europe ",
+                "family": "Mammif\u00e8res",
+                "url": "http:\/\/observatoire.parc-naturel-normandie-maine.fr\/atlas\/espece\/60015",
+                "description": "Le H\u00e9risson d\u2019Europe ! Ce mammif\u00e8re au dos h\u00e9riss\u00e9 de piquants, qui s'aventure souvent tout pr\u00e8s de nos habitations, est une esp\u00e8ce semi-nocturne qui consacrera ses nuits \u00e0 la chasse. De ce fait, il r\u00e9gulera les populations d'insectes, de vers, d'escargots, ou encore de limaces, qui peuvent parfois causer des d\u00e9g\u00e2ts dans les potagers et les jardins.",
+                "characteristic": "Difficile de ne pas reconna\u00eetre le H\u00e9risson d\u2019Europe ! A commencer par les nombreux piquants (jusqu\u2019\u00e0 5000) situ\u00e9s sur les parties sup\u00e9rieures et lat\u00e9rales de son corps. Les piquants sont efficaces contre les pr\u00e9dateurs, mais pas contre les v\u00e9hicules \u00e0 moteur. Les accidents de la route sont encore trop fr\u00e9quents et participent \u00e0 la r\u00e9gression des populations de H\u00e9risson en France.\n<figure><img class='img-thumbnail mx-auto d-block' src='data\/image_source\/68_3.jpg'><div class='credits'>Sylvain Montagner<\/div><figcaption>H\u00e9risson en position d\u00e9fensive<\/figcaption><\/figure>  \n",
+                "environment": "2, 3, 4, 5, 10",
+                "environment_description": "Tous les terrains un peu bois\u00e9s conviennent au H\u00e9risson. Ce gros insectivore est assez mobile et affectionne particuli\u00e8rement les milieux ouverts de type bocager, o\u00f9 il peut se d\u00e9placer facilement sans \u00eatre observ\u00e9. Mais il fr\u00e9quente aussi les parcs et les jardins, \u00e0 la recherche de nourriture ou d\u2019un endroit o\u00f9 passer l\u2019hiver (tas de bois ou tas de feuilles mortes).\n<figure><img class='img-thumbnail mx-auto d-block' src='data\/image_source\/68_2.jpg'><div class='credits'>PNRNM - Morvan Debroize<\/div><figcaption>Tas de bois et feuilles mortes comme refuge \u00e0 h\u00e9risson<\/figcaption><\/figure>  \n",
+                "not_confuse": "Le H\u00e9risson d\u2019Europe pourrait \u00eatre confondu avec d\u2019autres esp\u00e8ces de H\u00e9risson (comme le H\u00e9risson oriental) mais ils ne sont pas pr\u00e9sents sur le territoire fran\u00e7ais.\n",
+                "sources": "http:\/\/www.gmn.asso.fr\/public\/mammiferes\/Fiche_Herisson_d__Europe.pdf"
+            }
+        ]
+    },
+    {
+        "id": 66,
+        "num": "66",
+        "title": "Mais quelle est cette esp\u00e8ce ?",
+        "plural": 0,
+        "difficulty": 0,
+        "seasons": [
+            {
+                "startAt": "01",
+                "endAt": "12"
+            }
+        ],
+        "introduction": "Tant d\u2019esp\u00e8ces inconnues au bataillon du vaste monde animal ou v\u00e9g\u00e9tal, souvent crois\u00e9es au d\u00e9tour d'un chemin, au bord de la route ou au-dessus de notre t\u00eate ! Un doute ? Le \u00ab Mais quelle est cette esp\u00e8ce ? \u00bb peut vous aider \u00e0 obtenir les r\u00e9ponses \u00e0 vos questions : envoyez une photo accompagn\u00e9e d\u2019informations pr\u00e9cieuses (comme la taille ou l\u2019habitat de l\u2019esp\u00e8ce observ\u00e9e) et l\u2019un de nos experts nature tentera de vous r\u00e9pondre. Attention, il n\u2019est pas possible de d\u00e9terminer toutes les esp\u00e8ces sur photo\u2026 mais apr\u00e8s tout, il est parfois bien plus amusant de mener l\u2019enqu\u00eate soi-m\u00eame !",
+        "id_taxons": [
+            ""
+        ],
+        "taxon": []
+    }
+]
