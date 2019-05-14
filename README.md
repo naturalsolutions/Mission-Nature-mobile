@@ -35,10 +35,6 @@ npm install -g cordova grunt-cli
 npm install
 cordova plugin restore --experimental
 ```
-Enfin, activer la plateforme de test qui vous convient (android ou ios) :
-```
-cordova platform add android
-```
 
 ## Configuration
 
@@ -47,6 +43,16 @@ Copier le fichier :
 cp www/modules/main/config.js.tpl www/modules/main/config.js
 ```
 Puis éditer ce fichier, pour ajouter l'url vers l'application serevur et l'api
+
+## Compilation avec Cordova
+Ajout de la plateforme (android ou ios) :
+```
+cordova platform add android
+```
+Génération d'un APK de type debugue :
+```
+cordova build android
+```
 
 
 ### Gestion des plugins Cordova
