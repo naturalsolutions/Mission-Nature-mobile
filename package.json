@@ -68,6 +68,7 @@
     "bootstrap": "^3.3.5",
     "bootstrap-slider": "^5.0.12",
     "browserify-shim": "^3.8.9",
+    "cordova": "^7.1.0",
     "cordova-android": "^6.4.0",
     "cordova-android-support-gradle-release": "^1.4.7",
     "cordova-plugin-camera": "^4.0.3",

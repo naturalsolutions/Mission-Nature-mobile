@@ -23,6 +23,13 @@ Note : la tâche dev ouvre l'appli dans votre navigateur avec watch + livereload
 
 Merci de documenter brièvement ici les outils que vous ajouterez au fur et à mesure du développement.
 
+## Compatibilité
+
+| Cordova CLI  | Cordova Platform Android	 |
+| ------------ | ------------------------- |
+|     7.1.0    |           6.3.0           |
+
+
 ## Installer l'environnement de développement
 
 Créer une copie locale de la base de code :
@@ -35,6 +42,21 @@ npm install -g cordova grunt-cli
 npm install
 cordova plugin restore --experimental
 ```
+
+## Installer une version spécifique de Cordova
+
+Installer Cordova 7.1 dans le dossier courant :
+
+```
+npm install --save cordova@7.1
+```
+
+Utiliser les commandes Cordova pour la version locale. Cette version de Cordova se trouve dans le dossier des nodes_modules :
+- Pour Mac OS, par exemple :
+
+  ```
+  node_modules/cordova/bin/cordova build android
+  ```
 
 ## Configuration
 
