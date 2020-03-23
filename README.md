@@ -27,7 +27,7 @@ Merci de documenter brièvement ici les outils que vous ajouterez au fur et à m
 
 | Cordova CLI  | Cordova Platform Android	 |
 | ------------ | ------------------------- |
-|     7.1.0    |           6.3.0           |
+|     9.0.0    |           8.1.0           |
 
 
 ## Installer l'environnement de développement
