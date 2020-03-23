@@ -6,13 +6,12 @@
 <div class="media-body text">
 	<a class="js-link-mission" href="#mission/<%= data.mission.id %>">
 	    <div class="media-heading title">
-	    	<span class="badge-circle num"><%= data.mission.num %></span> 
-	    	<div class="text"><%= data.mission.title %></div> 
+	    	<div class="text"><%= data.mission.title %></div>
 	    </div>
 	    <div class="meta">
-	    	<span class="taxon"><%= data.mission.taxon.species %></span> 
+	    	<span class="taxon"><%= data.mission.taxon.species %></span>
 	    	<span class="season text-primary">
-	    		<span class="icon icomoon">time</span> 
+	    		<span class="icon icomoon">time</span>
 	    		<span class="period"><%= data.mission.displaySeason %></span>
             	<span class="delta"><%= i18n.t('mission.deltaLong', {count: data.mission.inSeason.end.delta+1})%>
             	</span>

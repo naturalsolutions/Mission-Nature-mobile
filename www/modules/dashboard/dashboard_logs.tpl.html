@@ -12,7 +12,6 @@
         <div class="description"><%= i18n.t('logs.'+log.type) %></div>
         <div class="meta">
           <% if ( log.category == 'mission' ) { %>
-          <span class="badge-circle"><%= log.data.mission.num %></span>
           <span><%= log.data.mission.title %></span>
           <% } %>
         </div>
