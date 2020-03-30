@@ -151,13 +151,13 @@ module.exports = Marionette.LayoutView.extend({
 
   onAcceptClick: function (e) {
     var user = User.getCurrent();
-    user.toggleAcceptedMission(this.model);
+    user.toggleAcceptedMission(this.mission);
     user.save();
   },
 
   onAcceptChange: function () {
     var user = User.getCurrent();
-    if (user.hasAcceptedMission(this.model))
+    if (user.hasAcceptedMission(this.mission))
       this.$el.addClass('is-accept');
     else
       this.$el.removeClass('is-accept');
