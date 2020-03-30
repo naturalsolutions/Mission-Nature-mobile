@@ -8,6 +8,7 @@ var Backbone = require('backbone'),
   Observation = require('../observation/observation.model'),
 //  TimeForest = require('../time_forest/time_forest.model'),
   CurrentPos = require('../localize/current_position.model'),
+  BGLocationModel = require('../localize/bg_position.model'),
   Router = require('../routing/router'),
   config = require('../main/config'),
   moment = require('moment');
@@ -35,7 +36,7 @@ var View = Marionette.LayoutView.extend({
 //    this.listenTo(User.getCurrent().getTimeForest(), 'change:total', this.displayTimeForest);
 
     /*this.on('btn:clue:click', function(e) {
-      //Hack: enable to 
+      //Hack: enable to
       setTimeout(function() {
         console.log('default btn:clue:click', e);
       });
@@ -156,9 +157,30 @@ var View = Marionette.LayoutView.extend({
 
     var router = require('../routing/router');
     var observationModel = new(Observation.model.getClass())();
-    var currentPos = CurrentPos.model.getInstance();
+    var currentPos = BGLocationModel.model.getInstance();
+    console.log("footer cuurentpos");
 
-    currentPos.watch().always(function(){
+    currentPos.getCurrentLocation().always(function() {
+      //set observation model
+      observationModel.set({
+          'userId': User.getCurrent().get('id'),
+          'date': moment().format('X'),
+          'photos': [{
+            'url': fe ? fe : '',
+            'externId': id ? id : ''
+          }],
+          'coords': {
+            latitude: _.get(currentPos.get('coords'), 'latitude', 0),
+            longitude: _.get(currentPos.get('coords'), 'longitude', 0),
+          },
+          'timestamp': _.get(currentPos.get('time'), ""),
+          'provider':  _.get(currentPos.get('provider'), ""),
+          'locationProvider':  _.get(currentPos.get('locationProvider'), ""),
+          'accuracy': _.get(currentPos.get('accuracy'), "")
+      });
+      console.log("footer getCurrentLocation always");
+
+    /*currentPos.watch().always(function(){
       //set observation model
       observationModel.set({
         'userId': User.getCurrent().get('id'),
@@ -169,9 +191,13 @@ var View = Marionette.LayoutView.extend({
         }],
         'coords': {
           latitude: _.get(currentPos.get('coords'), 'latitude', 0),
-          longitude: _.get(currentPos.get('coords'), 'longitude', 0)
-        }
-      });
+          longitude: _.get(currentPos.get('coords'), 'longitude', 0),
+        },
+        'timestamp': _.get(currentPos.get('time'), ""),
+        'provider':  _.get(currentPos.get('provider'), ""),
+        'locationProvider':  _.get(currentPos.get('locationProvider'), ""),
+        'accuracy': _.get(currentPos.get('accuracy'), "")
+      });*/
 
       //Save observation in localstorage
       Observation.collection.getInstance().add(observationModel)

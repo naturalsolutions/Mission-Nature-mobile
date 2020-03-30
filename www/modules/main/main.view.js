@@ -10,14 +10,13 @@ var Backbone = require('backbone'),
   _ = require('lodash'),
   Dialog = require('bootstrap-dialog'),
   i18n = require('i18next'),
-  moment = require('moment'),
-//  TimeForest = require('../time_forest/time_forest.model'),
-  Router = require('../routing/router'),
-  Session = require('./session.model'),
-  User = require('../profile/user.model'),
-//  Departement = require('./departement.model'),
-  Help = require('./help.model'),
-  CurrentPos = require('../localize/current_position.model');
+  //moment = require('moment'),
+  //Router = require('../routing/router'),
+  //Session = require('./session.model'),
+  User = require('../profile/user.model');
+  //Help = require('./help.model'),
+  //CurrentPos = require('../localize/current_position.model');
+
 
 var Layout = Marionette.LayoutView.extend({
   el: '.app',
@@ -27,45 +26,25 @@ var Layout = Marionette.LayoutView.extend({
   initialize: function() {
     var self = this;
     this.dialogs = [];
-   var currentPos = CurrentPos.model.getInstance();
+
+
+
+    /*var currentPos = CurrentPos.model.getInstance();
     currentPos.on('change', function() {
       var lat = _.get(currentPos.get('coords'), 'latitude', '');
       var lon = _.get(currentPos.get('coords'), 'longitude', '');
       var timeStamp = currentPos.get('timestamp');
       var user = User.getCurrent();
 
-      // if ( !user.get('forceDepartement') ) {
-      //   var selectedDepartements = Departement.collection.getInstance().clone();
-      //   selectedDepartements.forEach(function(departement) {
-      //     var distFromUser = _.getDistanceFromLatLonInKm(lat, lon, departement.get('lat'), departement.get('lon'));
-      //     departement.set('distFromUser', distFromUser);
-      //   });
-      //   selectedDepartements.comparator = 'distFromUser';
-      //   selectedDepartements.sort();
 
-      //   var i = 1;
-      //   while (selectedDepartements.at(i)) {
-      //     var departement = selectedDepartements.at(i);
-      //     if (departement.get('distFromUser') <= 150)
-      //         i++;
-      //     else {
-      //       selectedDepartements.remove(departement);
-      //     }
-      //   }
-      //   user.set('departementIds', selectedDepartements.pluck('id'));
-      // }
       user.save();
     });
     currentPos.on('unwatch', function() {
       var user = User.getCurrent();
       user.set('departementIds', []);
     });
-    currentPos.watch();
-/*
-    var timeForest = User.getCurrent().get('timeForest');
-    if(timeForest.get('isStart'))
-      timeForest.start(timeForest.get('startTime'), timeForest.get('curCountTotalInit'));
-*/
+    currentPos.watch();*/
+
     this.Help = require('./help.model');
     var queryHash = window.location.hash;
     var params = _.parseQueryHash(queryHash);
@@ -98,39 +77,6 @@ var Layout = Marionette.LayoutView.extend({
     this.rgSidenav.show(sidenav.getInstance());
     this.rgFooter.show(footer.getInstance());
   },
-
-  /*onCurrentUserChange: function(currentUser, prev) {
-    var self = this;
-    if (prev)
-      this.stopListening(prev);
-    this.listenTo(currentUser, 'change:level', function(model, level) {
-      if (!level)
-        return false;
-      self.addDialog({
-        cssClass: 'theme-primary with-bg-forest user-score user-level-' + level,
-        badgeClassNames: 'badge-circle bg-wood border-brown text-white',
-        title: i18n.t('dialogs.level.title'),
-        message: i18n.t('dialogs.level.message.level_' + level),
-        button: i18n.t('dialogs.level.button')
-      });
-    });
-    this.listenTo(currentUser, 'change:palm', function(model, palm) {
-      if (!palm)
-        return false;
-      var palmName = currentUser.get('palmName');
-      var nbCompleted = currentUser.get('completedMissions').length;
-      self.addDialog({
-        cssClass: 'theme-primary with-bg-forest user-score user-palm-' + palmName,
-        badgeClassNames: 'badge-circle bg-wood border-brown text-white',
-        badge: nbCompleted + '<div class="text-xs text-bottom">' + i18n.t('mission.label', {
-          count: nbCompleted
-        }) + '</div>',
-        title: i18n.t('dialogs.palm.title'),
-        message: i18n.t('dialogs.palm.message.' + palmName),
-        button: i18n.t('dialogs.palm.button')
-      });
-    });
-  },*/
 
   addDialog: function(data) {
     var self = this;
