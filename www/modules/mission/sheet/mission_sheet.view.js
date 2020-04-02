@@ -21,9 +21,11 @@ module.exports = Marionette.LayoutView.extend({
   attributes: function () {
     var user = User.getCurrent();
     var classNames = 'page page-mission_sheet';
-    if (user.hasCompletedMission(this.model))
+    var mission =  _.get(this.options, 'mission', '');
+
+    if (mission && user.hasCompletedMission(mission))
       classNames += ' is-complete';
-    else if (user.hasAcceptedMission(this.model))
+    else if (mission && user.hasAcceptedMission(mission))
       classNames += ' is-accept';
     return {
       'class': classNames
