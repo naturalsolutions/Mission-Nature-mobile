@@ -6,7 +6,6 @@ var Backbone = require('backbone'),
   _ = require('lodash'),
   User = require('../profile/user.model'),
   Observation = require('../observation/observation.model'),
-//  TimeForest = require('../time_forest/time_forest.model'),
   CurrentPos = require('../localize/current_position.model'),
   BGLocationModel = require('../localize/bg_position.model'),
   Router = require('../routing/router'),
@@ -21,26 +20,15 @@ var View = Marionette.LayoutView.extend({
   events: {
     'click .capture-photo-js': 'capturePhoto',
     'submit form': 'uploadPhoto',
-  //  'click .forest-time-js': 'forestTime',
-//    'click .btn-clue': 'onBtnClueClick',
+
     'click .btn-help': 'toggleHelp'
   },
-  /*triggers: {
-    'click .btn-clue': 'btn:clue:click'
-  },*/
+
 
   initialize: function() {
     this.Main = require('../main/main.view.js');
 
     this.listenTo(User.collection.getInstance(), 'change:current', this.onCurrentUserChange);
-//    this.listenTo(User.getCurrent().getTimeForest(), 'change:total', this.displayTimeForest);
-
-    /*this.on('btn:clue:click', function(e) {
-      //Hack: enable to
-      setTimeout(function() {
-        console.log('default btn:clue:click', e);
-      });
-    });*/
   },
 
   onCurrentUserChange: function(newUser, prevUser) {
@@ -123,7 +111,6 @@ var View = Marionette.LayoutView.extend({
     if (window.cordova) {
       //TODO put tag projet in config
       var tagprojet = 'mission-nature';
-//      var tagprojet = 'noe-obf';
       var fsFail = function(error) {
         console.log('failed with error code: ' + error.code);
       };
