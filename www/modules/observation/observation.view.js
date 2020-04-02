@@ -189,11 +189,11 @@ var Layout = Marionette.LayoutView.extend({
         mission: Mission.collection.getInstance(),
       }
     }).render();
-    
+
     //var formValues = this.formObs.getValue();
     this.$el.append(this.formObs.$el);
     this.$progressBar = this.$el.find('.progress-bar');
- 
+
     Backbone.Form.validators.errMessages.required = i18n.t('validation.errors.required');
 
     if (idToTransmit == this.observationModel.get('id')) {
@@ -260,7 +260,7 @@ var Layout = Marionette.LayoutView.extend({
 
   capturePhoto: function() {
     // Take picture using device camera and retrieve image as a local path
-    
+
     navigator.camera.getPicture(
       _.bind(this.onCapturePhotoSuccess, this),
       _.bind(this.onFail, this), {
@@ -410,7 +410,7 @@ var Layout = Marionette.LayoutView.extend({
 
   saveObs: function() {
     var self = this;
-    
+
     var formValues = self.formObs.getValue();
     var missionId = _.parseInt(formValues.missionId);
     var cd_nom = _.parseInt(formValues.cd_nom); //ajout taxon_cdnom
@@ -450,7 +450,6 @@ var Layout = Marionette.LayoutView.extend({
     self.$el.addClass('sending block-ui');
     this.$el.find('form').addClass('loading');
     var formValues = self.formObs.getValue();
-    var city = _.get(this.user.get('city'), 'attributes' , '');
 
     //clear data photos
     var clearPhoto = function(args) {
@@ -487,7 +486,7 @@ var Layout = Marionette.LayoutView.extend({
       },
       field_code_commune: {
         und: [{
-          value: _.get(city, 'code' , '')
+          value: _.get(this.user.get('city'), 'code' ,'')
         }]
       },
       field_observation_note: {
