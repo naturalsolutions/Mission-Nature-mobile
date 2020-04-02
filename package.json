@@ -1,6 +1,6 @@
 {
   "name": "mission_nature",
-  "version": "1.1.0.",
+  "version": "1.1.1.",
   "description": "TODO",
   "private": true,
   "browser": {
@@ -71,6 +71,7 @@
     "browserify-shim": "^3.8.9",
     "cordova": "^7.1.0",
     "cordova-android": "^8.1.0",
+    "cordova-ios": "^5.1.1",
     "cordova-plugin-camera": "^4.0.3",
     "cordova-plugin-console": "^1.1.0",
     "cordova-plugin-crosswalk-webview": "^2.4.0",
@@ -135,7 +136,8 @@
       }
     },
     "platforms": [
-      "android"
+      "android",
+      "ios"
     ]
   }
 }
