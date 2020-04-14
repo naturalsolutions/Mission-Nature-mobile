@@ -493,6 +493,21 @@ var Layout = Marionette.LayoutView.extend({
         und: [{
           value: self.observationModel.get('note')
         }]
+      },
+      field_geolocation_accuracy: {
+        und: [{
+          value: self.observationModel.get('accuracy') ? Math.round(self.observationModel.get('accuracy') * 100) / 100 : self.observationModel.get('accuracy')
+        }]
+      },
+      field_geolocation_provider: {
+        und: [{
+          value: self.observationModel.get('provider')
+        }]
+      },
+      field_geolocation_timestamp: {
+        und: [{
+          value: { date: self.observationModel.get('timestamp') }
+        }]
       }
     };
     var query = {

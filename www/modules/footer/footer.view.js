@@ -6,12 +6,9 @@ var Backbone = require('backbone'),
   _ = require('lodash'),
   User = require('../profile/user.model'),
   Observation = require('../observation/observation.model'),
-  CurrentPos = require('../localize/current_position.model'),
-  BGLocationModel = require('../localize/bg_position.model'),
   Router = require('../routing/router'),
   config = require('../main/config'),
   moment = require('moment');
-//i18n = require('i18n');
 
 var View = Marionette.LayoutView.extend({
   header: 'none',
@@ -141,11 +138,18 @@ var View = Marionette.LayoutView.extend({
 
   createObservation: function(fe, id) {
     var self = this;
-
     var router = require('../routing/router');
     var observationModel = new(Observation.model.getClass())();
-    var currentPos = BGLocationModel.model.getInstance();
-    console.log("footer cuurentpos");
+
+    // Cordova env use background geolocation
+    var CurrentPos;
+    if(window.cordova && window.BackgroundGeolocation) {
+      CurrentPos = require('../localize/bg_position.model');
+    } else {
+      CurrentPos = require('../localize/current_position.model');
+    }
+    var currentPos = CurrentPos.model.getInstance();
+    console.log("footer currentpos");
 
     currentPos.getCurrentLocation().always(function() {
       //set observation model
@@ -160,31 +164,11 @@ var View = Marionette.LayoutView.extend({
             latitude: _.get(currentPos.get('coords'), 'latitude', 0),
             longitude: _.get(currentPos.get('coords'), 'longitude', 0),
           },
-          'timestamp': _.get(currentPos.get('time'), ""),
-          'provider':  _.get(currentPos.get('provider'), ""),
-          'locationProvider':  _.get(currentPos.get('locationProvider'), ""),
-          'accuracy': _.get(currentPos.get('accuracy'), "")
+          'timestamp': moment(currentPos.get('timestamp')).unix(),
+          'provider': currentPos.get('provider'),
+          'accuracy': currentPos.get('accuracy')
       });
-      console.log("footer getCurrentLocation always");
-
-    /*currentPos.watch().always(function(){
-      //set observation model
-      observationModel.set({
-        'userId': User.getCurrent().get('id'),
-        'date': moment().format('X'),
-        'photos': [{
-          'url': fe ? fe : '',
-          'externId': id ? id : ''
-        }],
-        'coords': {
-          latitude: _.get(currentPos.get('coords'), 'latitude', 0),
-          longitude: _.get(currentPos.get('coords'), 'longitude', 0),
-        },
-        'timestamp': _.get(currentPos.get('time'), ""),
-        'provider':  _.get(currentPos.get('provider'), ""),
-        'locationProvider':  _.get(currentPos.get('locationProvider'), ""),
-        'accuracy': _.get(currentPos.get('accuracy'), "")
-      });*/
+      // DEBUG: console.log("footer getCurrentLocation always, observationModel: ", observationModel);
 
       //Save observation in localstorage
       Observation.collection.getInstance().add(observationModel)

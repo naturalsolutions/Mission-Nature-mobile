@@ -28,7 +28,7 @@ var Layout = Marionette.LayoutView.extend({
     this.dialogs = [];
 
 
-
+    // TODO : UTILE ????
     /*var currentPos = CurrentPos.model.getInstance();
     currentPos.on('change', function() {
       var lat = _.get(currentPos.get('coords'), 'latitude', '');

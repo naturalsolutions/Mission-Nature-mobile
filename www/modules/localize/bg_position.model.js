@@ -11,11 +11,11 @@ var BGLocationModel = Backbone.Model.extend({
     isRunning: false
   },
   defaultOptions: {
-    locationProvider: window.BackgroundGeolocation.ACTIVITY_PROVIDER,
-    desiredAccuracy: window.BackgroundGeolocation.HIGH_ACCURACY,
+    locationProvider: (window.cordova && window.BackgroundGeolocation) ? window.BackgroundGeolocation.ACTIVITY_PROVIDER : 0,
+    desiredAccuracy: (window.cordova && window.BackgroundGeolocation) ? window.BackgroundGeolocation.HIGH_ACCURACY : 1,
     debug: true
   },
-  _locationOptions: {
+  locationOptions: {
     enableHighAccuracy: true,
     maximumAge: 1000*60*10,
     timeout: 1000 * 60
@@ -24,7 +24,7 @@ var BGLocationModel = Backbone.Model.extend({
     var self = this;
 
     // Allow user to customize geolocation options
-    this.options = _.defaults(options || {}, this.defaultOptions);
+    this.options = _.defaults(options || {}, this.locationOptions);
     // configure BackgroundGeolocation
     this._configure();
     // Ensure geolocation callback are called in the context of this model instance
@@ -103,7 +103,7 @@ var BGLocationModel = Backbone.Model.extend({
       locationProvider: position.locationProvider,
       accuracy: position.accuracy
     });
-    this._showLocation("getCurrentlocation", position);
+    // DEBUG: this._showLocation("getCurrentlocation", position);
   },
 
   _error: function(error) {
@@ -115,15 +115,14 @@ var BGLocationModel = Backbone.Model.extend({
     var lastPosTime = this.get('timestamp') || 0;
     var now = Date.now();
     var diffTime = now - lastPosTime;
-    if(diffTime > this._locationOptions.maximumAge) {
+    if(diffTime > this.options.maximumAge) {
       this.clear();
     }
   },
 
   _showSettingsApp : function() {
     setTimeout(function() {
-      var showSettings = confirm("L'application Mision nature sollicite la permission d'utiliser la position de votre appareil pour géocaliser vos observations." +
-      "Voulez-vous ouvrir les préférences de l'application ?");
+      var showSettings = confirm(i18n.t('background_geolocation.settingsapp.message'));
       if (showSettings) {
         return window.BackgroundGeolocation.showAppSettings();
       }
@@ -132,14 +131,14 @@ var BGLocationModel = Backbone.Model.extend({
 
   _showLocationSettings: function() {
     setTimeout(function() {
-      var showSettings = confirm("L'application Mision nature sollicite d'activer la localisation pour géocaliser vos observations."+
-      "Voulez-vous ouvrir les préférences de localisation ?");
+      var showSettings = confirm(i18n.t('background_geolocation.locationsettings.message'));
       if (showSettings) {
         return window.BackgroundGeolocation.showLocationSettings();
       }
     }, 1000);
   },
 
+  // Debug
   _showLocation: function(type, position) {
       alert(
         "type:" + type + ", "+
@@ -176,7 +175,7 @@ var BGLocationModel = Backbone.Model.extend({
 
     this._configure();
     this._checkStatus().always(function(){
-      window.BackgroundGeolocation.getCurrentLocation(self._success, self._error, self._locationOptions);
+      window.BackgroundGeolocation.getCurrentLocation(self._success, self._error, self.options);
     });
     return this._dfd.promise();
   },
@@ -184,7 +183,7 @@ var BGLocationModel = Backbone.Model.extend({
   _configure: function() {
     if(this._isConfigured)
       return;
-    window.BackgroundGeolocation.configure(this.options);
+    window.BackgroundGeolocation.configure(this.defaultOptions);
     this._isConfigured = true;
   },
 
