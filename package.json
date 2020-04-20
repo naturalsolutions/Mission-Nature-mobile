@@ -1,6 +1,6 @@
 {
   "name": "mission_nature",
-  "version": "1.1.1.",
+  "version": "1.2.0.",
   "description": "TODO",
   "private": true,
   "browser": {
@@ -58,6 +58,7 @@
     "node-underscorify": "0.0.14"
   },
   "dependencies": {
+    "@mauron85/cordova-plugin-background-geolocation": "^3.1.0",
     "aliasify": "^1.8.0",
     "backbone": "^1.2.1",
     "backbone-autocomplete": "^1.0.0",
@@ -120,6 +121,18 @@
       },
       "cordova-plugin-customurlscheme": {
         "URL_SCHEME": "obfmobile"
+      },
+      "cordova-plugin-background-geolocation": {
+        "GOOGLE_PLAY_SERVICES_VERSION": "11+",
+        "ANDROID_SUPPORT_LIBRARY_VERSION": "26+",
+        "ICON": "@mipmap/ic_launcher",
+        "SMALL_ICON": "@mipmap/ic_launcher",
+        "ACCOUNT_NAME": "@string/app_name",
+        "ACCOUNT_LABEL": "@string/app_name",
+        "ACCOUNT_TYPE": "$PACKAGE_NAME.account",
+        "CONTENT_AUTHORITY": "$PACKAGE_NAME",
+        "ALWAYS_USAGE_DESCRIPTION": "App requires background tracking ",
+        "MOTION_USAGE_DESCRIPTION": "App requires motion detection"
       }
     },
     "platforms": [
