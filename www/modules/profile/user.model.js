@@ -110,7 +110,7 @@ var UserModel = Backbone.Model.extend({
       var result = this.toggleMission(mission, 'accepted');
       this.addLog((result ? 'mission_accept' : 'mission_unaccept'),{
         mission: {
-          id: mission.get('id'),
+          id: Number(mission.get('id')),
           num: mission.get('num'),
           title: mission.get('title')
         }
@@ -125,14 +125,14 @@ var UserModel = Backbone.Model.extend({
     var missionIds = this.get('completedMissionIds');
     var missions = require('../mission/mission.model').collection.getInstance();
     return missions.filter(function(mission) {
-      return missionIds.indexOf(mission.get('id')) > -1;
+      return missionIds.indexOf(Number(mission.get('id'))) > -1;
     });
   },
   addCompletedMission: function(mission) {
     var result = this.addMission(mission, 'completed');
     this.addLog('mission_complete', {
       mission: {
-        id: mission.get('id'),
+        id: Number(mission.get('id')),
         num: mission.get('num'),
         title: mission.get('title')
       }
@@ -169,13 +169,13 @@ var UserModel = Backbone.Model.extend({
     var missionIds = this.get(listName + 'MissionIds');
     var missions = require('../mission/mission.model').collection.getInstance();
     return missions.filter(function(mission) {
-      return missionIds.indexOf(mission.get('id')) > -1;
+      return missionIds.indexOf(Number(mission.get('id'))) > -1;
     });
   },
   addMission: function(mission, listName) {
-    
+
     var missionIds = this.get(listName + 'MissionIds');
-    missionIds.push(mission.get('id'));
+    missionIds.push(Number(mission.get('id')));
     this.trigger('change:' + listName + 'Missions', this);
 
     return true;
@@ -185,7 +185,7 @@ var UserModel = Backbone.Model.extend({
       return false;
 
     var missionIds = this.get(listName + 'MissionIds');
-    _.pull(missionIds, mission.get('id'));
+    _.pull(missionIds, Number(mission.get('id')) );
     this.trigger('change:' + listName + 'Missions', this);
 
     return true;
@@ -200,7 +200,7 @@ var UserModel = Backbone.Model.extend({
     return true;
   },
   hasMission: function(mission, listName) {
-    var id = mission.get ? mission.get('id') : mission.id;
+    var id = mission.get ? Number(mission.get('id')) : mission.id;
     var missions = this.get(listName + 'MissionIds');
 
     return missions.indexOf(id) > -1;

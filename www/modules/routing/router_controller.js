@@ -107,7 +107,7 @@ module.exports = Marionette.Object.extend({
     var mission = MissionModel.collection.getInstance().get(id);
     var taxons = mission.get('taxon');
     // mission n taxon or mission 1 taxon
-    if (taxons.length > 2) {
+    if (taxons.length >= 2) {
       View = require('../mission/home/mission_home.view');
       main.getInstance().rgMain.show(new View({
         model: mission,

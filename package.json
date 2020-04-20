@@ -1,6 +1,6 @@
 {
-  "name": "obfmobile",
-  "version": "0.1.0",
+  "name": "mission_nature",
+  "version": "1.1.1.",
   "description": "TODO",
   "private": true,
   "browser": {
@@ -68,10 +68,10 @@
     "bootstrap": "^3.3.5",
     "bootstrap-slider": "^5.0.12",
     "browserify-shim": "^3.8.9",
-    "cordova-android": "^6.4.0",
-    "cordova-android-support-gradle-release": "^1.4.7",
+    "cordova": "^7.1.0",
+    "cordova-android": "^8.1.0",
+    "cordova-ios": "^5.1.1",
     "cordova-plugin-camera": "^4.0.3",
-    "cordova-plugin-compat": "^1.2.0",
     "cordova-plugin-console": "^1.1.0",
     "cordova-plugin-crosswalk-webview": "^2.4.0",
     "cordova-plugin-customurlscheme": "^4.3.0",
@@ -107,10 +107,6 @@
       "cordova-plugin-inappbrowser": {},
       "cordova-plugin-whitelist": {},
       "cordova-plugin-splashscreen": {},
-      "cordova-android-support-gradle-release": {
-        "ANDROID_SUPPORT_VERSION": "27.+"
-      },
-      "cordova-plugin-compat": {},
       "cordova-plugin-geolocation": {},
       "cordova-plugin-console": {},
       "cordova-plugin-device": {},
@@ -123,14 +119,12 @@
         "ANDROID_SUPPORT_V4_VERSION": "24.1.1+"
       },
       "cordova-plugin-customurlscheme": {
-        "URL_SCHEME": "obfmobile",
-        "ANDROID_SCHEME": " ",
-        "ANDROID_HOST": " ",
-        "ANDROID_PATHPREFIX": "/"
+        "URL_SCHEME": "obfmobile"
       }
     },
     "platforms": [
-      "android"
+      "android",
+      "ios"
     ]
   }
 }
