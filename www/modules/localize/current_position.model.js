@@ -95,6 +95,11 @@ var GeoModel = Backbone.Model.extend({
     return this._dfd.promise();
   },
 
+  // workarounds use same Background geolocation function
+  getCurrentLocation: function(options) {
+    return this.watch(options);
+  },
+
   positionError: function(error) {
     var errors = {
       1: i18n.t('position.errors.dialogs.permission_denied'),

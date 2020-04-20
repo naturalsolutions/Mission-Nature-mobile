@@ -270,5 +270,13 @@
             },
             "fail": "Echec de l'ouverture de l'application Facebook."
         }
+    },
+    "background_geolocation": {
+        "locationsettings" : {
+            "message": "L'application Mision Nature sollicite l'activation de la localisation pour géocaliser vos observations. Voulez-vous ouvrir les préférences de localisation pour autoriser la localisation?"
+        },
+        "settingsapp": {
+            "message": "L'application Mision nature sollicite la permission d'utiliser la position de votre appareil pour géocaliser vos observations. Voulez-vous ouvrir les préférences de l'application ?"
+        }
     }
 }

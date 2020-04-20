@@ -6,12 +6,9 @@ var Backbone = require('backbone'),
   _ = require('lodash'),
   User = require('../profile/user.model'),
   Observation = require('../observation/observation.model'),
-//  TimeForest = require('../time_forest/time_forest.model'),
-  CurrentPos = require('../localize/current_position.model'),
   Router = require('../routing/router'),
   config = require('../main/config'),
   moment = require('moment');
-//i18n = require('i18n');
 
 var View = Marionette.LayoutView.extend({
   header: 'none',
@@ -20,26 +17,15 @@ var View = Marionette.LayoutView.extend({
   events: {
     'click .capture-photo-js': 'capturePhoto',
     'submit form': 'uploadPhoto',
-  //  'click .forest-time-js': 'forestTime',
-//    'click .btn-clue': 'onBtnClueClick',
+
     'click .btn-help': 'toggleHelp'
   },
-  /*triggers: {
-    'click .btn-clue': 'btn:clue:click'
-  },*/
+
 
   initialize: function() {
     this.Main = require('../main/main.view.js');
 
     this.listenTo(User.collection.getInstance(), 'change:current', this.onCurrentUserChange);
-//    this.listenTo(User.getCurrent().getTimeForest(), 'change:total', this.displayTimeForest);
-
-    /*this.on('btn:clue:click', function(e) {
-      //Hack: enable to 
-      setTimeout(function() {
-        console.log('default btn:clue:click', e);
-      });
-    });*/
   },
 
   onCurrentUserChange: function(newUser, prevUser) {
@@ -122,7 +108,6 @@ var View = Marionette.LayoutView.extend({
     if (window.cordova) {
       //TODO put tag projet in config
       var tagprojet = 'mission-nature';
-//      var tagprojet = 'noe-obf';
       var fsFail = function(error) {
         console.log('failed with error code: ' + error.code);
       };
@@ -153,25 +138,37 @@ var View = Marionette.LayoutView.extend({
 
   createObservation: function(fe, id) {
     var self = this;
-
     var router = require('../routing/router');
     var observationModel = new(Observation.model.getClass())();
-    var currentPos = CurrentPos.model.getInstance();
 
-    currentPos.watch().always(function(){
+    // Cordova env use background geolocation
+    var CurrentPos;
+    if(window.cordova && window.BackgroundGeolocation) {
+      CurrentPos = require('../localize/bg_position.model');
+    } else {
+      CurrentPos = require('../localize/current_position.model');
+    }
+    var currentPos = CurrentPos.model.getInstance();
+    console.log("footer currentpos");
+
+    currentPos.getCurrentLocation().always(function() {
       //set observation model
       observationModel.set({
-        'userId': User.getCurrent().get('id'),
-        'date': moment().format('X'),
-        'photos': [{
-          'url': fe ? fe : '',
-          'externId': id ? id : ''
-        }],
-        'coords': {
-          latitude: _.get(currentPos.get('coords'), 'latitude', 0),
-          longitude: _.get(currentPos.get('coords'), 'longitude', 0)
-        }
+          'userId': User.getCurrent().get('id'),
+          'date': moment().format('X'),
+          'photos': [{
+            'url': fe ? fe : '',
+            'externId': id ? id : ''
+          }],
+          'coords': {
+            latitude: _.get(currentPos.get('coords'), 'latitude', 0),
+            longitude: _.get(currentPos.get('coords'), 'longitude', 0),
+          },
+          'timestamp': moment(currentPos.get('timestamp')).unix(),
+          'provider': currentPos.get('provider'),
+          'accuracy': currentPos.get('accuracy')
       });
+      // DEBUG: console.log("footer getCurrentLocation always, observationModel: ", observationModel);
 
       //Save observation in localstorage
       Observation.collection.getInstance().add(observationModel)
