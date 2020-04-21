@@ -1,5 +1,7 @@
 # MissionNature
 
+:boom: **NE PAS METTRE A JOUR LES BIBLIOTHEQUES JS ou PREVOIR DU TEMPS POUR UNE REVISION GLOBALE DU CODE ( par exemple : https://marionettejs.com/docs/master/upgrade-v3-v4.html )**
+
 ## Environnement de développement
 
 Les dépendances JavaScript (bibliothèques, ...) sont satisfaites par npm.
