@@ -79,7 +79,7 @@
     "cordova-plugin-file": "^6.0.1",
     "cordova-plugin-file-transfer": "^1.7.1",
     "cordova-plugin-geolocation": "^4.0.1",
-    "cordova-plugin-inappbrowser": "^1.4.0",
+    "cordova-plugin-inappbrowser": "^3.1.0",
     "cordova-plugin-network-information": "^2.0.1",
     "cordova-plugin-splashscreen": "^3.2.2",
     "cordova-plugin-statusbar": "^2.1.3",
