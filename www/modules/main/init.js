@@ -12,7 +12,6 @@ var Backbone = require('backbone'),
   bootstrap = require('bootstrap'),
   $nsFabDial = require('jquery-ns-fab_dial'),
   main = require('./main.view'),
-  //currentPos = require('./current-position'),
   moment = require('moment'),
   momentFr = require('moment/locale/fr'),
   momentDurationFormat = require('moment-duration-format'),
@@ -27,10 +26,8 @@ var Backbone = require('backbone'),
   intervalPlural = require('i18next-intervalplural-postprocessor'),
   sprintf = require('i18next-sprintf-postprocessor'),
   User = require('../profile/user.model'),
-  //  TimeForest = require('../time_forest/time_forest.model'),
   Log = require('../logs/log.model'),
   City = require('../localize/city.model'),
-  //  Departement = require('../main/departement.model'),
   Credit = require('../main/credit.model'),
   Help = require('../main/help.model'),
   Mission = require('../mission/mission.model'),
@@ -204,32 +201,6 @@ function init() {
     return City.model.getInstance().load();
   };
 
-  /*  var getDepartements = function() {
-      var deferred = $.Deferred();
-      var departementCollection = new Departement.collection.getInstance();
-
-      $.getJSON('./data/departements.json')
-        .then(function(response) {
-          var departementDatas = response;
-          _.forEach(departementDatas, function(departementData) {
-            var departement = new Departement.Model({
-              id: departementData.code,
-              label: departementData.title,
-              title: departementData.title,
-              lat: departementData.lat,
-              lon: departementData.lon
-            });
-            departementCollection.add(departement);
-          });
-          deferred.resolve();
-        }, function(error) {
-          console.log(error);
-        });
-
-      return deferred;
-    };
-    */
-
   var getCredits = function() {
     var deferred = $.Deferred();
     var creditCollection = new Credit.collection.getInstance();
@@ -302,29 +273,7 @@ function init() {
 
     return deferred;
   };
-  /*
-    var getTimeForest = function() {
-      var deferred = $.Deferred();
-      var collection = TimeForest.collection.getInstance();
-      collection.fetch({
-        success: function(data) {
-          // collection.forEach(function(item) {
-          //   item.set({
-          //     startTime: 0,
-          //     intervalDuration: 0
-          //   }).save();
-          // });
-          deferred.resolve();
-        },
-        error: function(error) {
-          console.log(error);
-          deferred.reject(error);
-        }
-      });
 
-      return deferred;
-    };
-  */
   var checkUrlFile = function () {
     /* jshint ignore:start */
     if (device.platform === 'iOS') {
@@ -350,7 +299,7 @@ function init() {
     Backbone.history.start();
   });
 
-  $.when(getI18n(), getMissions(), getCities(), /*getDepartements(),*/ gethelp(), getCredits(), getUser(), getObservations(), getLogs() /*, getTimeForest()*/ )
+  $.when(getI18n(), getMissions(), getCities(), gethelp(), getCredits(), getUser(), getObservations(), getLogs())
     .done(function () {
       if (window.cordova)
         checkUrlFile();

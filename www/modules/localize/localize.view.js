@@ -1,7 +1,6 @@
 'use strict';
 
 var Marionette = require('backbone.marionette'),
-    CurrentPos = require('./current_position.model'),
     Header = require('../header/header');
 
 module.exports = Marionette.LayoutView.extend({
@@ -11,6 +10,15 @@ module.exports = Marionette.LayoutView.extend({
 
   initialize: function(options) {
     this.options = options;
+
+    // Cordova env use background geolocation
+    var CurrentPos;
+    if(window.cordova && window.BackgroundGeolocation) {
+      CurrentPos = require('../localize/bg_position.model');
+    } else {
+      CurrentPos = require('../localize/current_position.model');
+    }
+
     this.currentPos = CurrentPos.model.getInstance();
     this.maxDuration = this.currentPos.options.timeout;
 
@@ -27,6 +35,7 @@ module.exports = Marionette.LayoutView.extend({
     }
 
     this.watchCurrentPos();
+    this.getCurrentLocation();
   },
 
   stopTimer: function() {
@@ -34,7 +43,7 @@ module.exports = Marionette.LayoutView.extend({
       clearInterval(this.interval);
   },
 
-  watchCurrentPos: function() {
+  getCurrentLocation: function() {
     var self = this;
     var start = new Date();
     self.$progressBar.css({
@@ -48,7 +57,7 @@ module.exports = Marionette.LayoutView.extend({
       });
     }, 1000);
     setTimeout(function() {
-      self.currentPos.watch().then(function(success) {
+      self.currentPos.getCurrentLocation().then(function(success) {
         if ( !self.willBeDestroyed )
         self.onPositionSucess();
       }, function(error) {
