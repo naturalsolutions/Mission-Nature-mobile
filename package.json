@@ -1,6 +1,6 @@
 {
   "name": "mission_nature",
-  "version": "1.1.1.",
+  "version": "1.1.2",
   "description": "TODO",
   "private": true,
   "browser": {
@@ -45,7 +45,14 @@
     }
   },
   "devDependencies": {
+    "@ahovakimyan/cordova-plugin-wkwebviewxhrfix": "git+https://github.com/AraHovakimyan/cordova-plugin-wkwebviewxhrfix.git",
     "browserify": "^10.2.4",
+    "cordova-ios": "^6.1.1",
+    "cordova-plugin-camera": "^5.0.0",
+    "cordova-plugin-file": "^6.0.2",
+    "cordova-plugin-file-transfer": "git+https://github.com/apache/cordova-plugin-file-transfer.git",
+    "cordova-plugin-splashscreen": "^6.0.0",
+    "cordova-plugin-wkwebview-file-xhr": "^3.0.0",
     "grunt": "^0.4.5",
     "grunt-browserify": "^3.8.0",
     "grunt-contrib-connect": "^0.10.1",
@@ -69,19 +76,12 @@
     "bootstrap-slider": "^5.0.12",
     "browserify-shim": "^3.8.9",
     "cordova": "^7.1.0",
-    "cordova-android": "^8.1.0",
-    "cordova-ios": "^5.1.1",
-    "cordova-plugin-camera": "^4.0.3",
     "cordova-plugin-console": "^1.1.0",
     "cordova-plugin-crosswalk-webview": "^2.4.0",
-    "cordova-plugin-customurlscheme": "^4.3.0",
     "cordova-plugin-device": "^2.0.2",
-    "cordova-plugin-file": "^6.0.1",
-    "cordova-plugin-file-transfer": "^1.7.1",
     "cordova-plugin-geolocation": "^4.0.1",
     "cordova-plugin-inappbrowser": "^1.4.0",
     "cordova-plugin-network-information": "^2.0.1",
-    "cordova-plugin-splashscreen": "^3.2.2",
     "cordova-plugin-statusbar": "^2.1.3",
     "cordova-plugin-whitelist": "^1.2.2",
     "cordova-plugin-x-socialsharing": "^5.4.4",
@@ -106,24 +106,24 @@
       "cordova-plugin-statusbar": {},
       "cordova-plugin-inappbrowser": {},
       "cordova-plugin-whitelist": {},
-      "cordova-plugin-splashscreen": {},
       "cordova-plugin-geolocation": {},
       "cordova-plugin-console": {},
       "cordova-plugin-device": {},
       "cordova-plugin-network-information": {},
-      "cordova-plugin-file": {},
-      "cordova-plugin-file-transfer": {},
-      "cordova-plugin-camera": {},
       "ionic-plugin-keyboard": {},
       "cordova-plugin-x-socialsharing": {
         "ANDROID_SUPPORT_V4_VERSION": "24.1.1+"
       },
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-camera": {},
       "cordova-plugin-customurlscheme": {
         "URL_SCHEME": "obfmobile"
-      }
+      },
+      "cordova-plugin-wkwebview-file-xhr": {},
+      "cordova-plugin-file": {},
+      "cordova-plugin-file-transfer": {}
     },
     "platforms": [
-      "android",
       "ios"
     ]
   }

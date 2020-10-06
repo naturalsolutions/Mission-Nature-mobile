@@ -3,7 +3,7 @@
 var Backbone = require('backbone'),
     Marionette = require('backbone.marionette'),
     _ = require('lodash'),
-    $ = require('jQuery'),
+    $ = require('jquery'),
     i18n = require('i18next'),
     User = require('../../profile/user.model.js');
 

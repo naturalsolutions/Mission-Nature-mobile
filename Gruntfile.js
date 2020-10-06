@@ -50,7 +50,8 @@ module.exports = function(grunt) {
           compress: false,
           sourceMap: true,
           sourceMapFilename: 'www/style.css.map',
-          sourceMapURL: 'style.css.map'
+          sourceMapURL: 'style.css.map',
+          javascriptEnabled: true
         }
       }
     },

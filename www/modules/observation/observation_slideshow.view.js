@@ -2,7 +2,7 @@
 
 var Marionette = require('backbone.marionette'),
     _ = require('lodash'),
-    $ = require('jQuery'),
+    $ = require('jquery'),
     Swiper = require('swiper'),
     bootstrap = require('bootstrap'),
     Dialog = require('bootstrap-dialog');
