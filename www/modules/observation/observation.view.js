@@ -6,7 +6,7 @@ var Backbone = require('backbone'),
   _ = require('lodash'),
   ObsModel = require('../observation/observation.model'),
   User = require('../profile/user.model'),
-//  Departement = require('../main/departement.model'),
+  //  Departement = require('../main/departement.model'),
   Mission = require('../mission/mission.model'),
   Taxon = require('../taxons/taxons.model'),
   Session = require('../main/session.model'),
@@ -44,15 +44,15 @@ var Layout = Marionette.LayoutView.extend({
     'keyup textarea': 'updateField'
   },
 
-  initialize: function() {
+  initialize: function () {
     var user = this.user = User.getCurrent();
     this.observationModel = this.model;
     this.listenTo(this.observationModel, 'change:photos', this.render, this);
-//    this.listenTo(this.observationModel, 'change:departement', this.render, this);
+    //    this.listenTo(this.observationModel, 'change:departement', this.render, this);
     this.listenTo(this.observationModel, 'change:shared', this.render, this);
 
     var mainView = Main.getInstance();
-    this.listenTo(user, 'change:nbComputedObs', function(model, nbComputed) {
+    this.listenTo(user, 'change:nbComputedObs', function (model, nbComputed) {
       if (!nbComputed)
         return false;
       mainView.addDialog({
@@ -67,7 +67,7 @@ var Layout = Marionette.LayoutView.extend({
       });
     });
 
-    this.listenTo(user, 'change:level', function(model, level) {
+    this.listenTo(user, 'change:level', function (model, level) {
       if (!level)
         return false;
       mainView.addDialog({
@@ -79,7 +79,7 @@ var Layout = Marionette.LayoutView.extend({
       });
     });
 
-    this.listenTo(user, 'change:palm', function(model, palm) {
+    this.listenTo(user, 'change:palm', function (model, palm) {
       if (!palm)
         return false;
       var palmName = user.get('palmName');
@@ -110,7 +110,7 @@ var Layout = Marionette.LayoutView.extend({
     helps.someHelp(params);
   },
 
-  serializeData: function() {
+  serializeData: function () {
     var observation = this.observationModel.toJSON();
 
     return {
@@ -118,7 +118,7 @@ var Layout = Marionette.LayoutView.extend({
     };
   },
 
-  onRender: function() {
+  onRender: function () {
     var self = this;
     this.$el.attr('data-cid', this.cid);
 
@@ -142,7 +142,7 @@ var Layout = Marionette.LayoutView.extend({
           itemViewOptions: {
             cancelLink: true
           },
-          getSelectedLabel: function(model) {
+          getSelectedLabel: function (model) {
             var title = model.get('title');
             return title;
           },
@@ -167,7 +167,7 @@ var Layout = Marionette.LayoutView.extend({
             placeholder: i18n.t('pages.observation.taxonPlaceholder'),
             selectedvalue: this.observationModel.get('cd_nom')
           },
-          getSelectedLabel: function(model) {
+          getSelectedLabel: function (model) {
             var title = model.get('title');
             return title;
           }
@@ -189,11 +189,11 @@ var Layout = Marionette.LayoutView.extend({
         mission: Mission.collection.getInstance(),
       }
     }).render();
-    
+
     //var formValues = this.formObs.getValue();
     this.$el.append(this.formObs.$el);
     this.$progressBar = this.$el.find('.progress-bar');
- 
+
     Backbone.Form.validators.errMessages.required = i18n.t('validation.errors.required');
 
     if (idToTransmit == this.observationModel.get('id')) {
@@ -213,15 +213,15 @@ var Layout = Marionette.LayoutView.extend({
     if (this.observationModel.get('shared') == 1) {
       this.$el.find('.obs-infos').attr("disabled", "disabled");
 
-      this.$el.find('.obs-infos').prop( "disabled", true );
+      this.$el.find('.obs-infos').prop("disabled", true);
     }
 
-    this.formObs.on('change', function(form) {
+    this.formObs.on('change', function (form) {
       self.updateField();
     });
   },
 
-  onDomRefresh: function(options) {
+  onDomRefresh: function (options) {
     if (this.user.get('city')) {
       this.observationModel.set({
         departementId: this.user.get('city').dpt
@@ -229,11 +229,11 @@ var Layout = Marionette.LayoutView.extend({
     }
   },
 
-  onPhotoClick: function() {
+  onPhotoClick: function () {
     var self = this;
 
     var $body = $('body');
-    var slideshow = new(Slideshow.getClass())({
+    var slideshow = new (Slideshow.getClass())({
       model: self.model
     });
     $body.append(slideshow.$el);
@@ -241,11 +241,11 @@ var Layout = Marionette.LayoutView.extend({
   },
 
 
-  updateField: function(e) {
+  updateField: function (e) {
     this.setFormStatus('unsaved');
   },
 
-  setFormStatus: function(status) {
+  setFormStatus: function (status) {
     if (status == 'unsaved')
       this.$el.alterClass('form-status-*', 'form-status-unsaved');
     else {
@@ -254,55 +254,60 @@ var Layout = Marionette.LayoutView.extend({
     }
   },
 
-  onFail: function(message) {
+  onFail: function (message) {
     console.log(message);
   },
 
-  capturePhoto: function() {
+  capturePhoto: function () {
     // Take picture using device camera and retrieve image as a local path
-    
+
     navigator.camera.getPicture(
       _.bind(this.onCapturePhotoSuccess, this),
       _.bind(this.onFail, this), {
-        /* jshint ignore:start */
-        quality: 75,
-        targetWidth: 1000,
-        targetHeight: 1000,
-        destinationType: Camera.DestinationType.FILE_URI,
-        correctOrientation: true,
-        sourceType: Camera.PictureSourceType.CAMERA,
-        /* jshint ignore:end */
-      }
+      /* jshint ignore:start */
+      quality: 75,
+      targetWidth: 1000,
+      targetHeight: 1000,
+      destinationType: Camera.DestinationType.FILE_URI,
+      correctOrientation: true,
+      sourceType: Camera.PictureSourceType.CAMERA,
+      /* jshint ignore:end */
+    }
     );
   },
 
-  onCapturePhotoSuccess: function(imageURI) {
+  onCapturePhotoSuccess: function (imageURI) {
     var self = this;
 
     if (window.cordova) {
       //TODO put tag projet in config
-      var tagprojet = 'mission-nature';
-      var copiedFile = function(fileEntry) {
-        self.addPhoto(fileEntry.toInternalURL());
-      };
-      var gotFileEntry = function(fileEntry) {
-        var gotFileSystem = function(fileSystem) {
-          fileSystem.root.getDirectory(tagprojet, {
-            create: true,
-            exclusive: false
-          }, function(dossier) {
-            fileEntry.moveTo(dossier, (new Date()).getTime() + '_' + tagprojet + '.jpg', copiedFile, self.onFail);
-          }, self.onFail);
+      if (window.device.platform === 'iOS') {
+        self.createObservation(imageURI);
+      }
+      else {
+        var tagprojet = 'mission-nature';
+        var copiedFile = function (fileEntry) {
+          self.addPhoto(fileEntry.toInternalURL());
         };
-        /* jshint ignore:start */
-        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFileSystem, self.onFail);
-        /* jshint ignore:end */
-      };
-      window.resolveLocalFileSystemURL(imageURI, gotFileEntry, self.onFail);
+        var gotFileEntry = function (fileEntry) {
+          var gotFileSystem = function (fileSystem) {
+            fileSystem.root.getDirectory(tagprojet, {
+              create: true,
+              exclusive: false
+            }, function (dossier) {
+              fileEntry.moveTo(dossier, (new Date()).getTime() + '_' + tagprojet + '.jpg', copiedFile, self.onFail);
+            }, self.onFail);
+          };
+          /* jshint ignore:start */
+          window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFileSystem, self.onFail);
+          /* jshint ignore:end */
+        };
+        window.resolveLocalFileSystemURL(imageURI, gotFileEntry, self.onFail);
+      }
     }
   },
 
-  addPhoto: function(fe) {
+  addPhoto: function (fe) {
     var newValue = {
       'url': fe || '',
       'externUrl': ''
@@ -313,7 +318,7 @@ var Layout = Marionette.LayoutView.extend({
     this.observationModel.trigger('change:photos', this.observationModel);
   },
 
-  onFormSubmit: function(e) {
+  onFormSubmit: function (e) {
     var self = this;
     e.preventDefault();
 
@@ -323,14 +328,14 @@ var Layout = Marionette.LayoutView.extend({
 
     if (this.$el.hasClass('form-status-unsaved')) {
       this.saveObs();
-    } else if ( navigator.onLine ) {
+    } else if (navigator.onLine) {
       if (this.$el.hasClass('form-status-shared-0')) {
-//        this.checkBounds().done(function() {
+        //        this.checkBounds().done(function() {
         this.checkGeolocation().then(
-          function() {
+          function () {
             self.sendObs();
           });
-  ///      });
+        ///      });
       } else if (this.$el.hasClass('form-status-shared-1'))
         this.shareObs();
     } else {
@@ -338,20 +343,20 @@ var Layout = Marionette.LayoutView.extend({
     }
   },
 
-  checkGeolocation: function() { // popup après avoir appuyé sur "Enregistrement"
+  checkGeolocation: function () { // popup après avoir appuyé sur "Enregistrement"
     var self = this;
     var dfd = $.Deferred();
     var geoStatus = this.observationModel.get('hasGeolocation');
-    if(geoStatus === 'has coords'){
+    if (geoStatus === 'has coords') {
       dfd.resolve();
-    } else if(geoStatus === 'has city'){
+    } else if (geoStatus === 'has city') {
       var currentDialog = Dialog.confirm({
         title: 'Validation de la géolocalisation',
         message: 'Cette observation a été prise à ' + self.user.get('city').label + ' ?',
         btnCancelLabel: 'Non',
         btnOKLabel: 'Oui',
         closable: true, // <-- Default value is false
-        callback: function(result) {
+        callback: function (result) {
           if (result) {
             dfd.resolve();
             self.onDomRefresh();
@@ -362,7 +367,7 @@ var Layout = Marionette.LayoutView.extend({
           }
         }
       });
-    } else if(!geoStatus){
+    } else if (!geoStatus) {
       var automplete = new AutompleteCity();
       automplete.render();
 
@@ -372,7 +377,7 @@ var Layout = Marionette.LayoutView.extend({
         message: automplete.$el
       });
 
-      this.user.once('change:city', function() {
+      this.user.once('change:city', function () {
         dialog.close();
         self.onDomRefresh();
         dfd.resolve();
@@ -382,20 +387,20 @@ var Layout = Marionette.LayoutView.extend({
     return dfd.promise();
   },
 
-  checkBounds: function() {
+  checkBounds: function () {
     var dfd = $.Deferred();
 
     var missionId = this.observationModel.get('missionId');
     var mission = Mission.collection.getInstance().get(missionId);
     var isInSeason = mission.isInSeason();
 
-    if ( isInSeason )
+    if (isInSeason)
       dfd.resolve();
     else {
       Dialog.confirm({
         title: i18n.t('pages.observation.dialogs.out_of_title'),
         message: i18n.t('pages.observation.dialogs.out_of_bounds'),
-        callback: function(result) {
+        callback: function (result) {
           if (result)
             dfd.resolve();
           else
@@ -408,9 +413,9 @@ var Layout = Marionette.LayoutView.extend({
 
   },
 
-  saveObs: function() {
+  saveObs: function () {
     var self = this;
-    
+
     var formValues = self.formObs.getValue();
     var missionId = _.parseInt(formValues.missionId);
     var cd_nom = _.parseInt(formValues.cd_nom); //ajout taxon_cdnom
@@ -418,7 +423,7 @@ var Layout = Marionette.LayoutView.extend({
     var obs_note = this.$el.find('textarea').val();
 
     this.checkGeolocation().then(
-      function() {
+      function () {
         self.observationModel.set({
           missionId: missionId,
           mission: mission,
@@ -428,20 +433,20 @@ var Layout = Marionette.LayoutView.extend({
         self.setFormStatus('saved');
         console.log('this.obsM: ', self.observationModel);
       },
-      function() {
+      function () {
         return false;
       }
     );
   },
 
-  onSendError: function() {
+  onSendError: function () {
     this.$el.removeClass('sending block-ui');
     this.$el.find('form').removeClass('loading');
   },
 
   // Save in server time_forest : update user with new time (field_time_forest)
 
-  sendObs: function(e) {
+  sendObs: function (e) {
     var self = this;
 
     if (self.$el.hasClass('sending') || self.observationModel.get('shared') == 1)
@@ -450,12 +455,12 @@ var Layout = Marionette.LayoutView.extend({
     self.$el.addClass('sending block-ui');
     this.$el.find('form').addClass('loading');
     var formValues = self.formObs.getValue();
-    var city = _.get(this.user.get('city'), 'attributes' , '');
+    var city = _.get(this.user.get('city'), 'attributes', '');
 
     //clear data photos
-    var clearPhoto = function(args) {
+    var clearPhoto = function (args) {
       var photos = [];
-      args.forEach(function(item, key) {
+      args.forEach(function (item, key) {
         photos[key] = item.externId;
       });
       return photos.join();
@@ -487,7 +492,7 @@ var Layout = Marionette.LayoutView.extend({
       },
       field_code_commune: {
         und: [{
-          value: _.get(city, 'code' , '')
+          value: _.get(city, 'code', '')
         }]
       },
       field_observation_note: {
@@ -501,15 +506,15 @@ var Layout = Marionette.LayoutView.extend({
       type: 'POST',
       contentType: 'application/json',
       data: JSON.stringify(data),
-      error: function(error) {
-        if ( self.willBeDestroyed )
-            return false;
+      error: function (error) {
+        if (self.willBeDestroyed)
+          return false;
         self.onSendError();
         var dfd;
         if (error.responseJSON[0] === 'Access denied for user anonymous') {
           Dialog.confirm({
             message: i18n.t('pages.observation.dialogs.need_login'),
-            callback: function(result) {
+            callback: function (result) {
               if (result) {
                 self.session.afterLoggedAction = {
                   name: 'showObsAndTransmit',
@@ -537,88 +542,88 @@ var Layout = Marionette.LayoutView.extend({
           });
         }
       },
-      success: function(response) {
+      success: function (response) {
         self.observationModel.set({
           'externId': response.nid
           //'shared': 1
-        }).save().done(function() {
-          if ( self.willBeDestroyed )
+        }).save().done(function () {
+          if (self.willBeDestroyed)
             return false;
-          self.session.updateUser().done(function(response){
+          self.session.updateUser().done(function (response) {
             self.uploadPhotos();
           });
         });
       }
     };
 
-    self.session.getCredentials(query, true).then(function() {
+    self.session.getCredentials(query, true).then(function () {
       $.ajax(query);
     });
   },
 
-  uploadPhotos: function() {
+  uploadPhotos: function () {
     var self = this;
 
-    if ( !window.cordova )
+    if (!window.cordova)
       self.onShared();
     else {
       var photos = this.observationModel.get('photos');
       var dfds = [];
-      photos.forEach(function(photo) {
+      photos.forEach(function (photo) {
         var dfd = self.uploadPhoto(photo);
         dfds.push(dfd);
       });
 
       var isStarted = false;
       var hasError = false;
-      _.forEach(dfds, function(dfd) {
-        dfd.fail(function(error) {
-          if ( !hasError && error && error == 'error' ) {
+      _.forEach(dfds, function (dfd) {
+        dfd.fail(function (error) {
+          if (!hasError && error && error == 'error') {
             hasError = true;
             self.onSendError();
             Dialog.alert({
               closable: true,
               message: i18n.t('dialogs.errorRetry')
             });
-            _.forEach(dfds, function(_dfd) {
-              if ( _dfd != dfd )
+            _.forEach(dfds, function (_dfd) {
+              if (_dfd != dfd)
                 _dfd.reject();
             });
           }
         });
-        dfd.progress(function(data) {
-          if ( !isStarted && data == 'progress' ) {
+        dfd.progress(function (data) {
+          if (!isStarted && data == 'progress') {
             isStarted = true;
             self.onUploadPhotosStart(dfds);
           }
         });
       });
 
-      this.listenToOnce(Router.getInstance(), 'route', function(name, args){
-        _.forEach(dfds, function(dfd) {
-          if ( dfd.jqxhr )
+      this.listenToOnce(Router.getInstance(), 'route', function (name, args) {
+        _.forEach(dfds, function (dfd) {
+          if (dfd.jqxhr)
             dfd.jqxhr.abort();
           else
             dfd.reject();
         });
       });
 
-      $.when.apply($, dfds).done(function(response) {
+      $.when.apply($, dfds).done(function (response) {
         self.stopListening(Router.getInstance());
         self.onShared();
       });
     }
   },
 
-  onUploadPhotosStart: function(dfds) {
+  onUploadPhotosStart: function (dfds) {
     var self = this;
     this.$el.find('form').addClass('progressing');
-    _.forEach(dfds, function(dfd) {
-      dfd.progress(function(data) {
-        if ( data == 'progress' ) {
+    _.forEach(dfds, function (dfd) {
+      dfd.progress(function (data) {
+        if (data == 'progress') {
           var loaded = 0;
           var total = 0;
-          _.forEach(dfds, function(dfd) {
+          _.forEach(dfds, function (dfd) {
             loaded += (dfd.bytesLoaded || 0);
             total += dfd.bytesTotal;
           });
@@ -628,16 +633,16 @@ var Layout = Marionette.LayoutView.extend({
     });
   },
 
-  onUploadPhotosProgress: function(loaded, total) {
-    var ratio = Math.min(1, (loaded/total) );
+  onUploadPhotosProgress: function (loaded, total) {
+    var ratio = Math.min(1, (loaded / total));
     this.$progressBar.css({
-      width: Math.round(ratio*100)+'%'
+      width: Math.round(ratio * 100) + '%'
     });
-    if ( ratio >= 1 )
+    if (ratio >= 1)
       this.$progressBar.addClass('progress-bar-striped active');
   },
 
-  onShared: function() {
+  onShared: function () {
     var self = this;
     this.$el.find('form').removeClass('loading');
     this.$el.find('form').removeClass('progressing');
@@ -651,24 +656,24 @@ var Layout = Marionette.LayoutView.extend({
     this.user.computeScore();
     //this.setFormStatus('shared');
 
-    setTimeout(function() {
+    setTimeout(function () {
       self.$el.removeClass('sending block-ui');
-      Router.getInstance().navigate('dashboard/observations', {trigger: true});
+      Router.getInstance().navigate('dashboard/observations', { trigger: true });
     }, 500);
   },
 
-  uploadPhoto: function(photo) {
+  uploadPhoto: function (photo) {
     var self = this;
     var dfd = $.Deferred();
     dfd.bytesTotal = 0;
 
     /* jshint ignore:start */
-    window.resolveLocalFileSystemURL(photo.url, function(fe) {
-      fe.file(function(file) {
+    window.resolveLocalFileSystemURL(photo.url, function (fe) {
+      fe.file(function (file) {
         dfd.bytesTotal = file.size;
         var reader = new FileReader();
-        reader.onloadend = function(e) {
-          if ( dfd.state() == 'rejected' )
+        reader.onloadend = function (e) {
+          if (dfd.state() == 'rejected')
             return false;
           var data = new Uint8Array(e.target.result);
           var imgBlob = new Blob([data], {
@@ -684,9 +689,9 @@ var Layout = Marionette.LayoutView.extend({
             processData: false, // obligatoire pour de l'upload
             dataType: 'json',
             data: fd,
-            xhr: function() {
+            xhr: function () {
               var xhr = new window.XMLHttpRequest();
-              xhr.upload.addEventListener('progress', function(e) {
+              xhr.upload.addEventListener('progress', function (e) {
                 console.log('progressEvent', e);
                 dfd.bytesLoaded = e.loaded;
                 dfd.notify('progress');
@@ -694,18 +699,18 @@ var Layout = Marionette.LayoutView.extend({
 
               return xhr;
             },
-            success: function(response) {
+            success: function (response) {
               photo.externUrl = response[0];
               dfd.resolve();
             },
-            error: function(error) {
+            error: function (error) {
               console.log(error);
               dfd.reject('error');
 
             }
           };
-          self.session.getCredentials(query).then(function() {
-            if ( dfd.state() != 'rejected' )
+          self.session.getCredentials(query).then(function () {
+            if (dfd.state() != 'rejected')
               dfd.jqxhr = $.ajax(query);
           });
         };
@@ -720,7 +725,7 @@ var Layout = Marionette.LayoutView.extend({
 });
 
 module.exports = {
-  setIdToTransmit: function(value) {
+  setIdToTransmit: function (value) {
     idToTransmit = value;
   },
   Page: Layout

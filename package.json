@@ -45,7 +45,7 @@
     }
   },
   "devDependencies": {
-    "@ahovakimyan/cordova-plugin-wkwebviewxhrfix": "git+https://github.com/AraHovakimyan/cordova-plugin-wkwebviewxhrfix.git",
+    "@ahovakimyan/cordova-plugin-wkwebviewxhrfix": "^1.0.0",
     "browserify": "^10.2.4",
     "cordova-ios": "^6.1.1",
     "cordova-plugin-camera": "^5.0.0",
@@ -53,6 +53,7 @@
     "cordova-plugin-file-transfer": "git+https://github.com/apache/cordova-plugin-file-transfer.git",
     "cordova-plugin-splashscreen": "^6.0.0",
     "cordova-plugin-wkwebview-file-xhr": "^3.0.0",
+    "cordova-res": "^0.15.1",
     "grunt": "^0.4.5",
     "grunt-browserify": "^3.8.0",
     "grunt-contrib-connect": "^0.10.1",
@@ -114,14 +115,12 @@
       "cordova-plugin-x-socialsharing": {
         "ANDROID_SUPPORT_V4_VERSION": "24.1.1+"
       },
-      "cordova-plugin-splashscreen": {},
       "cordova-plugin-camera": {},
-      "cordova-plugin-customurlscheme": {
-        "URL_SCHEME": "obfmobile"
-      },
-      "cordova-plugin-wkwebview-file-xhr": {},
       "cordova-plugin-file": {},
-      "cordova-plugin-file-transfer": {}
+      "cordova-plugin-file-transfer": {},
+      "cordova-plugin-wkwebview-file-xhr": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-wkwebviewxhrfix": {}
     },
     "platforms": [
       "ios"
