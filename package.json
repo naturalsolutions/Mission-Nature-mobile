@@ -45,14 +45,15 @@
     }
   },
   "devDependencies": {
-    "@ahovakimyan/cordova-plugin-wkwebviewxhrfix": "^1.0.0",
     "browserify": "^10.2.4",
     "cordova-ios": "^6.1.1",
     "cordova-plugin-camera": "^5.0.0",
     "cordova-plugin-file": "^6.0.2",
     "cordova-plugin-file-transfer": "git+https://github.com/apache/cordova-plugin-file-transfer.git",
+    "cordova-plugin-inappbrowser": "^4.1.0",
     "cordova-plugin-splashscreen": "^6.0.0",
     "cordova-plugin-wkwebview-file-xhr": "^3.0.0",
+    "cordova-plugin-wkwebview-inject-cookie": "git+https://github.com/CWBudde/cordova-plugin-wkwebview-inject-cookie.git",
     "cordova-res": "^0.15.1",
     "grunt": "^0.4.5",
     "grunt-browserify": "^3.8.0",
@@ -67,7 +68,7 @@
   },
   "dependencies": {
     "aliasify": "^1.8.0",
-    "backbone": "^1.2.1",
+    "backbone": "1.2.1",
     "backbone-autocomplete": "^1.0.0",
     "backbone-forms": "0.14.0",
     "backbone-validation": "^0.11.5",
@@ -81,7 +82,6 @@
     "cordova-plugin-crosswalk-webview": "^2.4.0",
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-geolocation": "^4.0.1",
-    "cordova-plugin-inappbrowser": "^1.4.0",
     "cordova-plugin-network-information": "^2.0.1",
     "cordova-plugin-statusbar": "^2.1.3",
     "cordova-plugin-whitelist": "^1.2.2",
@@ -105,22 +105,26 @@
   "cordova": {
     "plugins": {
       "cordova-plugin-statusbar": {},
-      "cordova-plugin-inappbrowser": {},
       "cordova-plugin-whitelist": {},
-      "cordova-plugin-geolocation": {},
+      "cordova-plugin-geolocation": {
+        "GPS_REQUIRED": "true"
+      },
       "cordova-plugin-console": {},
       "cordova-plugin-device": {},
       "cordova-plugin-network-information": {},
       "ionic-plugin-keyboard": {},
       "cordova-plugin-x-socialsharing": {
-        "ANDROID_SUPPORT_V4_VERSION": "24.1.1+"
+        "ANDROID_SUPPORT_V4_VERSION": "24.1.1+",
+        "PHOTO_LIBRARY_ADD_USAGE_DESCRIPTION": "This app requires photo library access to function properly.",
+        "PHOTO_LIBRARY_USAGE_DESCRIPTION": "This app requires photo library access to function properly."
       },
       "cordova-plugin-camera": {},
       "cordova-plugin-file": {},
       "cordova-plugin-file-transfer": {},
-      "cordova-plugin-wkwebview-file-xhr": {},
       "cordova-plugin-splashscreen": {},
-      "cordova-plugin-wkwebviewxhrfix": {}
+      "cordova-plugin-inappbrowser": {},
+      "cordova-plugin-wkwebview-file-xhr": {},
+      "cordova-plugin-wkwebview-inject-cookie": {}
     },
     "platforms": [
       "ios"

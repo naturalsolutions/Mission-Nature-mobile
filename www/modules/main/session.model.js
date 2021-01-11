@@ -152,6 +152,19 @@ var SessionModel = Backbone.Model.extend({
         },
         success: function(response) {
           self.set('isAuth', true);
+          var apiUrl = new URL(config.apiUrl);
+          window.cordova.exec(function() {
+            console.log('success', arguments);
+          }, function() {
+            console.log('error', arguments);
+          }, 'WKWebViewInjectCookie', 'setCookie', [
+            apiUrl.host,
+            '/',
+            response.session_name,
+            response.sessid,
+            false,
+            2592000
+         ]);
 
           var users = User.collection.getInstance();
           var user = users.findWhere({
