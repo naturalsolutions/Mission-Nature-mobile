@@ -122,14 +122,33 @@ var View = Marionette.LayoutView.extend({
     if (window.cordova) {
       //TODO put tag projet in config
       var tagprojet = 'mission-nature';
+      var fsFail = function (error) {
+        console.log('FS failed with error : ' + error);
+      };
       //      var tagprojet = 'noe-obf';
       if (window.device.platform === 'iOS') {
-        self.createObservation(imageURI);
+        if (imageURI.indexOf('://') < 0) {
+          imageURI = 'file://' + imageURI;
+        }
+        var currentName = imageURI.substr(imageURI.lastIndexOf('/') + 1);
+        var correctPath = imageURI.substr(0, imageURI.lastIndexOf('/') + 1);
+
+        console.log('FileProvider.browse correctPath, currentName, dataDirectory', correctPath, currentName, window.cordova.file.dataDirectory);
+        
+        window.resolveLocalFileSystemURL(correctPath, function (directoryEntry) {
+          directoryEntry.getFile(currentName, {
+            create: false
+          }, function(fileEntry) {
+            window.resolveLocalFileSystemURL(window.cordova.file.dataDirectory, function (newDirectoryEntry) {
+              fileEntry.copyTo(newDirectoryEntry, currentName, function(newFileEntry) {
+                self.createObservation(window.WkWebView.convertFilePath(newFileEntry.toURL()));
+              }, fsFail);
+            }, fsFail);
+          }, fsFail);
+          /* jshint ignore:end */
+        }, fsFail);
       }
       else {
-        var fsFail = function (error) {
-          console.log('failed with error code: ' + error.code);
-        };
         var copiedFile = function (fileEntry) {
           console.log('here');
 

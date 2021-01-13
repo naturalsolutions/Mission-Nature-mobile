@@ -331,10 +331,8 @@ function init() {
       getObservations().done(function (obss) {
         obss.forEach(function (obs, idx) {
           obs.photos.forEach(function (photo) {
-            var absolutePath = photo.url.indexOf('file://');
-            if (absolutePath !== -1)
-              photo.url = 'cdvfile://localhost/persistent/mission-nature/' + photo.url.substr(photo.url.lastIndexOf('/') + 1);
-          });
+            photo.url = window.WkWebView.convertFilePath(window.cordova.file.dataDirectory + photo.url.substr(photo.url.lastIndexOf('/') + 1));
+            });
         });
       });
     }

@@ -23,6 +23,8 @@
         <config-file parent="NSCameraUsageDescription" platform="ios" target="*-Info.plist">
             <string>You can upload your offer/article picture using your camera</string>
         </config-file>
+        <preference name="scheme" value="app" />
+        <preference name="hostname" value="localhost" />
         <icon height="57" src="resources/ios/icon/icon.png" width="57" />
         <icon height="114" src="resources/ios/icon/icon@2x.png" width="114" />
         <icon height="20" src="resources/ios/icon/icon-20.png" width="20" />
