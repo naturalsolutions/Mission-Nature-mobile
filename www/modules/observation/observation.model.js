@@ -4,7 +4,7 @@ var Backbone = require('backbone'),
   _ = require('lodash'),
   config = require('../main/config'),
   User = require('../profile/user.model.js');
-
+  
 Backbone.LocalStorage = require('backbone.localstorage');
 
 var ObservationModel = Backbone.Model.extend({
@@ -63,6 +63,16 @@ var ObservationModel = Backbone.Model.extend({
   toJSON: function() {
     var self = this;
     var result = Backbone.Model.prototype.toJSON.apply(self, arguments);
+
+    if (result.photos) {
+      result.photos.map(function(photo) {
+        if (photo.url) {
+          photo.url = window.WkWebView.convertFilePath(window.cordova.file.dataDirectory + photo.url.substr(photo.url.lastIndexOf('/') + 1));
+        }
+
+        return photo;
+      });
+    }
 
     _.forEach(['mission'/*, 'departement'*/], function(attr) {
       result[attr] = self.get(attr);
@@ -167,6 +177,40 @@ module.exports = {
         collectionInstance = new ObservationCollection();
       return collectionInstance;
     }
-  }
+  },
+  capturePhoto: function (onSuccess, onFail) {
+    if (!window.cordova) {
+      return;
+    }
+
+    navigator.camera.getPicture(
+      function(imageURI) {
+        if (imageURI.indexOf('://') < 0) {
+          imageURI = 'file://' + imageURI;
+        }
+        var currentName = imageURI.substr(imageURI.lastIndexOf('/') + 1);
+        var correctPath = imageURI.substr(0, imageURI.lastIndexOf('/') + 1);
+
+        window.resolveLocalFileSystemURL(correctPath, function (directoryEntry) {
+          directoryEntry.getFile(currentName, {
+            create: false
+          }, function(fileEntry) {
+            window.resolveLocalFileSystemURL(window.cordova.file.dataDirectory, function (newDirectoryEntry) {
+              fileEntry.copyTo(newDirectoryEntry, currentName, function(newFileEntry) {
+                onSuccess(window.WkWebView.convertFilePath(newFileEntry.toURL()));
+              }, onFail);
+            }, onFail);
+          }, onFail);
+        }, onFail);
+      },
+      onFail, {
+      quality: 75,
+      targetWidth: 1000,
+      targetHeight: 1000,
+      destinationType: navigator.camera.DestinationType.FILE_URI,
+      correctOrientation: true,
+      sourceType: navigator.camera.PictureSourceType.CAMERA
+    });
+  },
 };
 

@@ -1,6 +1,6 @@
 {
   "name": "mission_nature",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "TODO",
   "private": true,
   "browser": {
@@ -52,7 +52,7 @@
     "cordova-plugin-file-transfer": "git+https://github.com/apache/cordova-plugin-file-transfer.git",
     "cordova-plugin-inappbrowser": "^4.1.0",
     "cordova-plugin-splashscreen": "^6.0.0",
-    "cordova-plugin-wkwebview-file-xhr": "^3.0.0",
+    "cordova-plugin-wkwebview-file-xhr": "git+https://github.com/NaturalSolutions/cordova-plugin-wkwebview-file-xhr.git",
     "cordova-plugin-wkwebview-inject-cookie": "git+https://github.com/CWBudde/cordova-plugin-wkwebview-inject-cookie.git",
     "cordova-res": "^0.15.1",
     "grunt": "^0.4.5",
@@ -123,8 +123,8 @@
       "cordova-plugin-file-transfer": {},
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-inappbrowser": {},
-      "cordova-plugin-wkwebview-file-xhr": {},
-      "cordova-plugin-wkwebview-inject-cookie": {}
+      "cordova-plugin-wkwebview-inject-cookie": {},
+      "cordova-plugin-wkwebview-file-xhr": {}
     },
     "platforms": [
       "ios"

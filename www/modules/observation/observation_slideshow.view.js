@@ -92,8 +92,9 @@ var View = Marionette.LayoutView.extend({
                 .done(function() {
                   self.render();
                   if (window.cordova) {
-                    	/* jshint ignore:start */
-                    window.resolveLocalFileSystemURL(photo.url, function(fs) {
+                      /* jshint ignore:start */
+                    var photoPath = window.cordova.file.dataDirectory + photo.url.substr(photo.url.lastIndexOf('/') + 1);
+                    window.resolveLocalFileSystemURL(photoPath, function(fs) {
                       //1- Delete file mobile
                       fs.remove(function() {
                         //Dialog ?

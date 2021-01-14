@@ -4,7 +4,7 @@ var Backbone = require('backbone'),
   Marionette = require('backbone.marionette'),
   $ = require('jquery'),
   _ = require('lodash'),
-  ObsModel = require('../observation/observation.model'),
+  Observation = require('../observation/observation.model'),
   User = require('../profile/user.model'),
   //  Departement = require('../main/departement.model'),
   Mission = require('../mission/mission.model'),
@@ -259,63 +259,21 @@ var Layout = Marionette.LayoutView.extend({
   },
 
   capturePhoto: function () {
-    // Take picture using device camera and retrieve image as a local path
-
-    navigator.camera.getPicture(
-      _.bind(this.onCapturePhotoSuccess, this),
-      _.bind(this.onFail, this), {
-      /* jshint ignore:start */
-      quality: 75,
-      targetWidth: 1000,
-      targetHeight: 1000,
-      destinationType: Camera.DestinationType.FILE_URI,
-      correctOrientation: true,
-      sourceType: Camera.PictureSourceType.CAMERA,
-      /* jshint ignore:end */
-    }
-    );
-  },
-
-  onCapturePhotoSuccess: function (imageURI) {
     var self = this;
-
-    if (window.cordova) {
-      //TODO put tag projet in config
-      if (window.device.platform === 'iOS') {
-        self.createObservation(imageURI);
-      }
-      else {
-        var tagprojet = 'mission-nature';
-        var copiedFile = function (fileEntry) {
-          self.addPhoto(fileEntry.toInternalURL());
-        };
-        var gotFileEntry = function (fileEntry) {
-          var gotFileSystem = function (fileSystem) {
-            fileSystem.root.getDirectory(tagprojet, {
-              create: true,
-              exclusive: false
-            }, function (dossier) {
-              fileEntry.moveTo(dossier, (new Date()).getTime() + '_' + tagprojet + '.jpg', copiedFile, self.onFail);
-            }, self.onFail);
-          };
-          /* jshint ignore:start */
-          window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFileSystem, self.onFail);
-          /* jshint ignore:end */
-        };
-        window.resolveLocalFileSystemURL(imageURI, gotFileEntry, self.onFail);
-      }
+    if (!window.cordova) {
+      return;
     }
-  },
-
-  addPhoto: function (fe) {
-    var newValue = {
-      'url': fe || '',
-      'externUrl': ''
-    };
-    this.observationModel.get('photos')
-      .push(newValue);
-    this.observationModel.save();
-    this.observationModel.trigger('change:photos', this.observationModel);
+    Observation.capturePhoto(function(imgPath) {
+      var newValue = {
+        'url': imgPath || '',
+        'externUrl': ''
+      };
+      self.observationModel.get('photos').push(newValue);
+      self.observationModel.save();
+      self.observationModel.trigger('change:photos', self.observationModel);
+    }, function (message) {
+      console.log(message);
+    });
   },
 
   onFormSubmit: function (e) {
@@ -668,7 +626,8 @@ var Layout = Marionette.LayoutView.extend({
     dfd.bytesTotal = 0;
 
     /* jshint ignore:start */
-    window.resolveLocalFileSystemURL(photo.url, function (fe) {
+    var photoPath = window.cordova.file.dataDirectory + photo.url.substr(photo.url.lastIndexOf('/') + 1);
+    window.resolveLocalFileSystemURL(photoPath, function (fe) {
       fe.file(function (file) {
         dfd.bytesTotal = file.size;
         var reader = new FileReader();

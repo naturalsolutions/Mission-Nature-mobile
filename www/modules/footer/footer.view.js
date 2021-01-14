@@ -94,87 +94,17 @@ var View = Marionette.LayoutView.extend({
 
   capturePhoto: function () {
     var self = this;
-
+    if (!window.cordova) {
+      return;
+    }
     this.Main.getInstance().showLoader();
-    if (!window.cordova)
-      self.createObservation();
-    else {
-      // Take picture using device camera and retrieve image as a local path
-      navigator.camera.getPicture(
-        _.bind(self.onSuccess, self),
-        _.bind(self.onFail, self), {
-        /* jshint ignore:start */
-        quality: 75,
-        targetWidth: 1000,
-        targetHeight: 1000,
-        destinationType: Camera.DestinationType.FILE_URI,
-        correctOrientation: true,
-        sourceType: Camera.PictureSourceType.CAMERA,
-        /* jshint ignore:end */
-      }
-      );
-    }
-  },
 
-  onSuccess: function (imageURI) {
-    var self = this;
-
-    if (window.cordova) {
-      //TODO put tag projet in config
-      var tagprojet = 'mission-nature';
-      var fsFail = function (error) {
-        console.log('FS failed with error : ' + error);
-      };
-      //      var tagprojet = 'noe-obf';
-      if (window.device.platform === 'iOS') {
-        if (imageURI.indexOf('://') < 0) {
-          imageURI = 'file://' + imageURI;
-        }
-        var currentName = imageURI.substr(imageURI.lastIndexOf('/') + 1);
-        var correctPath = imageURI.substr(0, imageURI.lastIndexOf('/') + 1);
-
-        console.log('FileProvider.browse correctPath, currentName, dataDirectory', correctPath, currentName, window.cordova.file.dataDirectory);
-        
-        window.resolveLocalFileSystemURL(correctPath, function (directoryEntry) {
-          directoryEntry.getFile(currentName, {
-            create: false
-          }, function(fileEntry) {
-            window.resolveLocalFileSystemURL(window.cordova.file.dataDirectory, function (newDirectoryEntry) {
-              fileEntry.copyTo(newDirectoryEntry, currentName, function(newFileEntry) {
-                self.createObservation(window.WkWebView.convertFilePath(newFileEntry.toURL()));
-              }, fsFail);
-            }, fsFail);
-          }, fsFail);
-          /* jshint ignore:end */
-        }, fsFail);
-      }
-      else {
-        var copiedFile = function (fileEntry) {
-          console.log('here');
-
-          self.createObservation(fileEntry.toInternalURL());
-        };
-        var gotFileEntry = function (fileEntry) {
-          var gotFileSystem = function (fileSystem) {
-            fileSystem.root.getDirectory(tagprojet, {
-              create: true,
-              exclusive: false
-            }, function (dossier) {
-              fileEntry.moveTo(dossier, (new Date()).getTime() + '_' + tagprojet + '.jpg', copiedFile, fsFail);
-            }, fsFail);
-          };
-          /* jshint ignore:start */
-          window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFileSystem, fsFail);
-          /* jshint ignore:end */
-        };
-        window.resolveLocalFileSystemURL(imageURI, gotFileEntry, fsFail);
-      }
-    }
-  },
-
-  onFail: function (message) {
-    console.log(message);
-    this.Main.getInstance().hideLoader();
+    Observation.capturePhoto(function(imgPath) {
+      self.createObservation(imgPath);
+    }, function (message) {
+      console.log(message);
+      self.Main.getInstance().hideLoader();
+    });
   },
 
   createObservation: function (fe, id) {
