@@ -21,10 +21,10 @@
     <platform name="ios">
         <allow-navigation href="http://www.parc-naturel-normandie-maine.fr/*" />
         <config-file parent="NSCameraUsageDescription" platform="ios" target="*-Info.plist">
-            <string>This app requires camera access to function properly.</string>
+            <string>L'appareil photo est requis pour photographier vos observations.</string>
         </config-file>
         <config-file parent="NSLocationWhenInUseUsageDescription" platform="ios" target="*-Info.plist">
-            <string>This app requires location access to function properly.</string>
+            <string>La localisation est requise pour positionner vos observations.</string>
         </config-file>
         <preference name="scheme" value="app" />
         <preference name="hostname" value="localhost" />
